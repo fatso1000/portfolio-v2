@@ -101,7 +101,7 @@ a {
   transition: all 1s ease;
 }
 .navbar_nav.active {
-  top: 71px;
+  top: 77px;
 }
 
 .introduction-container {
@@ -283,6 +283,28 @@ a {
   border-color: transparent transparent #6663fd transparent;
   border-width: 10px;
   border-style: solid;
+}
+
+.about-me .cards {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  align-items: center;
+  row-gap: 7px;
+}
+.about-me .cards h4 {
+  color: #fdf7e7;
+}
+.about-me .cards:hover {
+  background-color: rgba(253, 247, 231, 0.05);
+}
+
+.about-me .cards svg,
+.about-me .cards svg path {
+  stroke: black;
+  color: black;
 }
 
 /* ABOUT ME */

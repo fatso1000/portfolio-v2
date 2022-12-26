@@ -6,6 +6,7 @@ export const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
   const [isAlert, setIsAlert] = useState(true);
   const [screenPosition, setscreenPosition] = useState(0);
+  const [background, setBackground] = useState(true);
   const navbarRef = useRef();
 
   const getScreen = () => {
@@ -20,7 +21,8 @@ export const Navbar = () => {
       );
       if (current > -1) setCurrentScreen(current);
       document.body.className = "";
-      document.body.classList.add(dataColor);
+      console.log(background);
+      if (background) document.body.classList.add(dataColor);
     }
   };
 
@@ -97,8 +99,6 @@ export const Navbar = () => {
     };
   }, []);
 
-  // console.log(screenPosition);
-
   return (
     <header className={`navbar sticky`} ref={navbarRef}>
       <div
@@ -129,7 +129,6 @@ export const Navbar = () => {
           if (isAlert) setIsAlert(false);
         }}
       >
-        {/* <span>Menu</span> */}
         <IoMenu />
       </button>
       {isAlert && (
@@ -145,9 +144,24 @@ export const Navbar = () => {
       )}
       <nav className={`navbar_nav ${showNav && "active"}`}>
         <ul>
-          <li>Toggle background color change</li>
-          <li>Toggle snap-scrolling</li>
-          <li>Download CV</li>
+          <li>
+            <input
+              id="toggle-background"
+              type="checkbox"
+              onClick={() => setBackground(!background)}
+              defaultChecked={true}
+            ></input>
+            <label htmlFor="toggle-background">
+              Toggle background color change
+            </label>
+          </li>
+          <li>
+            <input id="toggle-snap" type="checkbox"></input>
+            <label htmlFor="toggle-snap">Toggle snap-scrolling</label>
+          </li>
+          <li>
+            <button>Download CV</button>
+          </li>
         </ul>
       </nav>
     </header>
