@@ -6,11 +6,7 @@ import ArgentinaFlag from "../../../assets/flag-argentina.png";
 
 export const Introduction = () => {
   return (
-    <div
-      className="section introduction-container"
-      id="home"
-      data-color="#fdf7e7"
-    >
+    <div className="section introduction-container" id="home">
       <div className="introduction-pic-container">
         <img src={ProfilePic} alt="img" />
       </div>
@@ -30,7 +26,6 @@ export const Introduction = () => {
               display: "inline-flex",
               alignItems: "center",
               gap: 2,
-              color: "#8a8a8a",
             }}
           >
             <GrLocationPin />

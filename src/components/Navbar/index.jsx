@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { IoMenu } from "react-icons/io5";
+import { IoMenu, IoAlertCircleOutline } from "react-icons/io5";
 
 export const Navbar = () => {
   const [currentScreen, setCurrentScreen] = React.useState(0);
@@ -7,7 +7,27 @@ export const Navbar = () => {
   const [isAlert, setIsAlert] = useState(true);
   const [screenPosition, setscreenPosition] = useState(0);
   const [background, setBackground] = useState(true);
-  const navbarRef = useRef();
+  const [snapScrolling, setSnapScrolling] = useState(true);
+  const [appTheme, setAppTheme] = useState("#fdf7e7");
+
+  useEffect(() => {
+    if (background) {
+      document.body.className = "";
+      document.body.classList.add(appTheme);
+    } else {
+      document.body.className = "";
+    }
+  }, [appTheme, background]);
+
+  useEffect(() => {
+    const html = document.querySelector("html");
+    if (snapScrolling) {
+      html.className = "";
+      html.classList.add("scroll-snap");
+    } else {
+      html.className = "";
+    }
+  }, [snapScrolling]);
 
   const getScreen = () => {
     const sectionScreens = [...document.querySelectorAll(".section")];
@@ -20,9 +40,7 @@ export const Navbar = () => {
         (val) => val.href === findScreen.id
       );
       if (current > -1) setCurrentScreen(current);
-      document.body.className = "";
-      console.log(background);
-      if (background) document.body.classList.add(dataColor);
+      setAppTheme(dataColor);
     }
   };
 
@@ -100,7 +118,7 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <header className={`navbar sticky`} ref={navbarRef}>
+    <header className={`navbar sticky`} >
       <div
         className="navbar-progress-bar"
         style={{
@@ -139,7 +157,8 @@ export const Navbar = () => {
             setShowNav(true);
           }}
         >
-          App Settings!!<div className="tail"></div>
+          App Settings <IoAlertCircleOutline color={"red"} />
+          <div className="tail"></div>
         </div>
       )}
       <nav className={`navbar_nav ${showNav && "active"}`}>
@@ -156,7 +175,12 @@ export const Navbar = () => {
             </label>
           </li>
           <li>
-            <input id="toggle-snap" type="checkbox"></input>
+            <input
+              id="toggle-snap"
+              type="checkbox"
+              onClick={() => setSnapScrolling(!snapScrolling)}
+              defaultChecked={true}
+            ></input>
             <label htmlFor="toggle-snap">Toggle snap-scrolling</label>
           </li>
           <li>

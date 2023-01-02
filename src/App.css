@@ -1,3 +1,16 @@
+:root {
+  /* --primary: #fdf7e7;
+  --secondary: #6663fd;
+  --third: black; */
+  /* --primary: #074508;
+  --secondary: #d9f7dd;
+  --third: #f8f6f3; */
+  --primary: #052552;
+  --secondary: #bc8b05;
+  --third: #f8f6f3;
+  --complementary: #fdf7e7;
+}
+
 h1,
 h2,
 h3,
@@ -14,13 +27,84 @@ a {
   flex-direction: column;
   height: 100%;
   margin: auto;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 0px transparent !important;
+  border: 1px solid rgba(248, 246, 243, 0.3);
+}
+.accordion ul {
+  list-style-type: none;
+}
+.accordion li span {
+  color: var(--complementary);
+}
+.accordion li h3 {
+  color: var(--secondary);
+  font-weight: 900;
+  font-size: 1.3rem;
+}
+.accordion li {
+  position: relative;
+  margin: 0;
+  padding-bottom: 1em;
+  padding-left: 20px;
+}
+.accordion li:before {
+  content: "";
+  background-color: var(--complementary);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 6px;
+  width: 3px;
+}
+
+.accordion li:after {
+  content: "";
+  border-radius: 50%;
+  background-color: var(--third);
+  position: absolute;
+  left: 1.3px;
+  top: 0;
+  height: 12px;
+  width: 12px;
+}
+.accordion {
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  color: var(--third);
+}
+.accordion button {
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  border: 1px solid rgba(248, 246, 243, 0.3);
+  background-color: transparent;
+  color: var(--third);
+  cursor: pointer;
+}
+.accordion button:hover {
+  background-color: rgba(248, 246, 243, 0.1);
+}
+.accordion.active button {
+  background-color: var(--third);
+  color: #052552;
+}
+.accordion div {
+  border-top: 0px solid transparent !important;
+  border: 1px solid rgba(248, 246, 243, 0.3);
+  height: 0;
+  overflow-y: hidden;
+}
+.accordion.active div {
+  height: auto;
 }
 
 .header-button {
   display: inline-flex;
-  background: black;
-  color: #fdf7e7;
+  background: var(--third);
+  color: var(--primary);
   border-radius: 6px;
   font-size: 0.9rem;
   column-gap: 30px;
@@ -28,7 +112,7 @@ a {
   align-items: center;
   font-weight: 300;
   cursor: pointer;
-  border: 1px solid black;
+  border: 1px solid var(--third);
   transition: 1s ease;
 }
 .header-button:hover {
@@ -40,7 +124,7 @@ a {
 }
 
 .explore-button {
-  border: 1px solid black;
+  border: 1px solid var(--third);
   font-size: 1.5rem;
   font-weight: 300;
   padding: 0.5rem 2rem;
@@ -50,8 +134,8 @@ a {
   cursor: pointer;
 }
 .explore-button:hover {
-  background-color: black;
-  color: #fdf7e7;
+  background-color: var(--third);
+  color: var(--primary);
 }
 
 .navbar {
@@ -68,8 +152,8 @@ a {
   justify-content: space-between;
   align-items: center;
   backdrop-filter: blur(25px);
-  background-color: rgba(253, 247, 231, 0.3);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: rgba(5, 37, 82, 0.3);
+  border-bottom: 1px solid rgb(248, 246, 243, 0.3);
   transition: background-color 1s ease;
 }
 
@@ -88,20 +172,22 @@ a {
 }
 
 .navbar_nav {
-  height: calc(100vh - 80px);
+  height: 0;
   width: 100%;
   max-width: 1200px;
   position: absolute;
-  top: -100vh;
+  display: none;
+  top: 77px;
   left: 0px;
   right: 0px;
   margin-left: auto;
   margin-right: auto;
   background-color: rgb(253, 247, 231);
-  transition: all 1s ease;
+  transition: 1s ease;
 }
 .navbar_nav.active {
-  top: 77px;
+  display: flex;
+  height: calc(100vh - 80px);
 }
 
 .introduction-container {
@@ -113,15 +199,21 @@ a {
 
 .introduction-title h1 {
   font-size: 2.3rem;
-  color: #6663fd;
+  color: var(--secondary);
   font-weight: 700;
+}
+.introduction-title h1:hover {
+  font-style: italic;
 }
 .introduction-title h3 {
   font-weight: 300;
   margin-left: 2px;
 }
+.introduction-title div {
+  color: #bbbbbb;
+}
 .introduction-title svg path {
-  stroke: #747474;
+  stroke: #bbbbbb;
 }
 
 .section-technologies {
@@ -130,16 +222,13 @@ a {
 
 .introduction-pic-container {
   height: 500px;
-  padding: 2rem;
-  background-color: #6663fd;
-  transform: rotate(136deg);
-  border-radius: 50%;
+  background-color: var(--third);
+  border-radius: 5px;
 }
 .introduction-pic-container img {
   object-fit: cover;
   width: auto;
   height: 100%;
-  transform: rotate(224deg);
   border-radius: 5px;
   transition-duration: 600ms;
   transition-timing-function: ease;
@@ -150,7 +239,7 @@ a {
   max-width: 1200px;
   border-radius: 7px;
   height: 1.5px;
-  background-color: black;
+  background-color: var(--third);
   position: absolute;
   top: 0;
   transition: ease;
@@ -164,9 +253,9 @@ a {
 }
 .navbar-progress a {
   text-decoration: none;
-  color: black;
+  color: var(--third);
   opacity: 0.5;
-  transition: 0.3s ease;
+  transition: 0.3s;
   font-weight: 500;
   font-size: 1rem;
 }
@@ -175,6 +264,8 @@ a {
 }
 .navbar-progress a.active {
   opacity: 1;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .navbar h5 {
@@ -187,19 +278,19 @@ a {
 
 @keyframes example {
   0% {
-    color: #6663fd;
+    color: var(--secondary);
   }
   50% {
-    color: black;
+    color: var(--third);
   }
   100% {
-    color: #6663fd;
+    color: var(--secondary);
   }
 }
 
 .introduction-pic-container:hover img {
-  transform: scale(1.3) rotate(224deg);
-  filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.2)) brightness(1.15);
+  transform: scale(1.3);
+  filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.4));
 }
 
 @keyframes buttonHover {
@@ -215,15 +306,15 @@ a {
 }
 
 .introduction-explore:hover {
-  background-color: black;
+  background-color: var(--third);
 }
 .introduction-explore:hover svg path {
-  color: #fdf7e7;
+  color: var(--primary);
 }
 
 .introduction-explore {
-  border: 1px solid black;
-  color: black;
+  border: 1px solid var(--third);
+  color: var(--third);
   border-radius: 50%;
   background-color: transparent;
   padding: 1rem;
@@ -249,6 +340,7 @@ a {
   justify-content: center;
   align-items: center;
   row-gap: 1rem;
+  color: var(--primary);
 }
 
 .section {
@@ -262,9 +354,11 @@ a {
   position: absolute;
   top: 80px;
   right: 2%;
+  display: inline-flex;
+  align-items: center;
   margin-left: auto;
   margin-right: auto;
-  background-color: #6663fd;
+  background-color: var(--third);
   color: white;
   border-radius: 5px;
   padding: 1rem;
@@ -274,13 +368,18 @@ a {
 .introduction-alert:hover {
   opacity: 0.9;
 }
+.introduction-alert svg {
+  width: 24px;
+  height: 24px;
+  margin-left: 3px;
+}
 .introduction-alert .tail {
   position: absolute;
   top: -20px;
   right: 12px;
   width: 0;
   height: 0;
-  border-color: transparent transparent #6663fd transparent;
+  border-color: transparent transparent var(--third) transparent;
   border-width: 10px;
   border-style: solid;
 }
@@ -295,7 +394,7 @@ a {
   row-gap: 7px;
 }
 .about-me .cards h4 {
-  color: #fdf7e7;
+  color: var(--primary);
 }
 .about-me .cards:hover {
   background-color: rgba(253, 247, 231, 0.05);
@@ -303,8 +402,8 @@ a {
 
 .about-me .cards svg,
 .about-me .cards svg path {
-  stroke: black;
-  color: black;
+  stroke: var(--primary);
+  color: var(--primary);
 }
 
 /* ABOUT ME */
@@ -312,32 +411,42 @@ a {
 body.about-me .navbar {
   background-color: rgba(102, 99, 252, 0.3);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  color: #fdf7e7;
+  color: var(--primary);
 }
 body.about-me .tail {
-  border-color: transparent transparent #fdf7e7 transparent;
+  border-color: transparent transparent var(--primary) transparent;
 }
 body.about-me .navbar_nav {
-  background-color: #6663fd;
-  color: #fdf7e7;
+  background-color: var(--secondary);
+  color: var(--primary);
 }
 body.about-me .introduction-alert {
-  background-color: #fdf7e7;
-  color: black;
+  background-color: var(--primary);
+  color: var(--third);
 }
 body.about-me .navbar-progress-bar {
-  background-color: #fdf7e7;
+  background-color: var(--primary);
 }
 body.about-me .navbar-progress a {
-  color: #fdf7e7;
+  color: var(--primary);
 }
 body.about-me .header-button {
-  background: #fdf7e7;
-  color: #6663fd;
-  border: 1px solid #fdf7e7;
+  background: var(--primary);
+  color: var(--secondary);
+  border: 1px solid var(--primary);
 }
 body.about-me .app-container {
   border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.about-me {
+  background-color: var(--secondary);
+}
+
+/* EXPERIENCE */
+body.experience {
+  display: flex;
+  flex-direction: column;
 }
 
 @media only screen and (max-width: 1000px) {
