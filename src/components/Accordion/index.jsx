@@ -2,32 +2,32 @@ import React from "react";
 
 export const Accordion = (props) => {
   const [isOpen, setIsOpen] = React.useState(false);
-  const { position, enterprise, date } = props;
+  const { position, enterprise, date, location, experiences, logo } = props;
   return (
     <div className={isOpen ? "accordion active" : "accordion"}>
       <button onClick={() => setIsOpen(!isOpen)}>
-        <h3>{position}</h3>
-        <span>{enterprise}</span>
-        <span>{date}</span>
+        <img src={logo} alt="lol" />
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            marginLeft: "0.8rem",
+          }}
+        >
+          <h2>{position}</h2>
+          <span>{enterprise}</span>
+          <span className="muted">{date}</span>
+          <span className="muted">{location}</span>
+        </div>
       </button>
-      <div>
+      <div className="button-list">
         <ul>
-          <li>
-            <h3>ENFOKE</h3>
-            <span>React</span>
-          </li>
-          <li>
-            <h3>LAFKEN</h3>
-            <span>React-Native</span>
-          </li>
-          <li>
-            <h3>IOF</h3>
-            <span>React & NodeJS</span>
-          </li>
-          <li>
-            <h3>SEVENTEEN</h3>
-            <span>Angular</span>
-          </li>
+          {experiences.map((value) => (
+            <li>
+              <h3>{value.title}</h3>
+              <span>{value.description}</span>
+            </li>
+          ))}
         </ul>
       </div>
     </div>

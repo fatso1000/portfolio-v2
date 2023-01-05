@@ -21,6 +21,10 @@ a {
   margin: 0;
 }
 
+.muted {
+  color: #bbbbbb;
+}
+
 .app-container {
   max-width: 1200px;
   display: flex;
@@ -73,16 +77,24 @@ a {
   background: transparent;
   color: var(--third);
 }
+.accordion img {
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid var(--third);
+}
+.accordion.active img {
+  border: 1px solid var(--primary);
+}
 .accordion button {
   transition: 0.3s ease;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  display: inline-flex;
+  text-align: start;
   padding: 1rem;
   border: 1px solid rgba(248, 246, 243, 0.3);
   background-color: transparent;
   color: var(--third);
   cursor: pointer;
+  row-gap: 0.2rem;
 }
 .accordion button:hover {
   background-color: rgba(248, 246, 243, 0.1);
@@ -91,13 +103,16 @@ a {
   background-color: var(--third);
   color: #052552;
 }
-.accordion div {
+.accordion.active button .muted {
+  color: #868686;
+}
+.accordion .button-list {
   border-top: 0px solid transparent !important;
   border: 1px solid rgba(248, 246, 243, 0.3);
   height: 0;
   overflow-y: hidden;
 }
-.accordion.active div {
+.accordion.active .button-list {
   height: auto;
 }
 
