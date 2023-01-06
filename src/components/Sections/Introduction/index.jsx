@@ -39,18 +39,7 @@ export const Introduction = () => {
           </div>
         </div>
       </div>
-      <a
-        style={{
-          position: "absolute",
-          bottom: 50,
-          left: 0,
-          right: 0,
-          marginLeft: "auto",
-          marginRight: "auto",
-        }}
-        href="#about-me"
-        className="introduction-explore"
-      >
+      <a href="#about-me" className="introduction-explore">
         <IoArrowDownOutline />
       </a>
     </div>

@@ -2,13 +2,13 @@
   /* --primary: #fdf7e7;
   --secondary: #6663fd;
   --third: black; */
-  /* --primary: #074508;
+  --primary: #424518;
   --secondary: #d9f7dd;
-  --third: #f8f6f3; */
-  --primary: #052552;
+  --third: #ffffff;
+  /* --primary: #17171a;
   --secondary: #bc8b05;
-  --third: #f8f6f3;
-  --complementary: #fdf7e7;
+  --third: #f2eee0; */
+  /* --complementary: #fdf7e7; */
 }
 
 h1,
@@ -31,17 +31,15 @@ a {
   flex-direction: column;
   height: 100%;
   margin: auto;
-  border-top: 0px transparent !important;
-  border: 1px solid rgba(248, 246, 243, 0.3);
+  /* border: 1px solid rgba(242, 238, 224, 0.3); */
 }
 .accordion ul {
   list-style-type: none;
 }
 .accordion li span {
-  color: var(--complementary);
+  color: var(--third);
 }
 .accordion li h3 {
-  color: var(--secondary);
   font-weight: 900;
   font-size: 1.3rem;
 }
@@ -53,7 +51,7 @@ a {
 }
 .accordion li:before {
   content: "";
-  background-color: var(--complementary);
+  background-color: var(--third);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -74,6 +72,7 @@ a {
 .accordion {
   display: flex;
   flex-direction: column;
+  text-align: start;
   background: transparent;
   color: var(--third);
 }
@@ -90,52 +89,50 @@ a {
   display: inline-flex;
   text-align: start;
   padding: 1rem;
-  border: 1px solid rgba(248, 246, 243, 0.3);
+  border: 0px;
+  border-bottom: 1px solid #ffffff;
   background-color: transparent;
   color: var(--third);
   cursor: pointer;
   row-gap: 0.2rem;
 }
 .accordion button:hover {
-  background-color: rgba(248, 246, 243, 0.1);
+  background-color: rgba(242, 238, 224, 0.1);
 }
 .accordion.active button {
   background-color: var(--third);
-  color: #052552;
+  color: var(--primary);
 }
 .accordion.active button .muted {
   color: #868686;
 }
 .accordion .button-list {
-  border-top: 0px solid transparent !important;
-  border: 1px solid rgba(248, 246, 243, 0.3);
   height: 0;
   overflow-y: hidden;
 }
 .accordion.active .button-list {
   height: auto;
+  border-top: 0px solid transparent !important;
+  border: 1px solid rgba(248, 246, 243, 0.3);
 }
 
 .header-button {
   display: inline-flex;
-  background: var(--third);
-  color: var(--primary);
-  border-radius: 6px;
-  font-size: 0.9rem;
+  color: var(--third);
+  background: transparent;
+  border: 0px;
   column-gap: 30px;
-  padding: 0.5rem 0.5rem;
   align-items: center;
   font-weight: 300;
   cursor: pointer;
-  border: 1px solid var(--third);
   transition: 1s ease;
 }
 .header-button:hover {
   opacity: 0.9;
 }
 .header-button svg {
-  width: 20px;
-  height: 20px;
+  width: 43px;
+  height: 43px;
 }
 
 .explore-button {
@@ -161,14 +158,13 @@ a {
   margin-left: auto;
   margin-right: auto;
   top: 0;
-  padding: 0.5rem 2rem;
-  height: 60px;
+  padding: 0.5rem 0px;
+  height: 40px;
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
-  backdrop-filter: blur(25px);
-  background-color: rgba(5, 37, 82, 0.3);
-  border-bottom: 1px solid rgb(248, 246, 243, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 1);
+  background-color: var(--primary);
   transition: background-color 1s ease;
 }
 
@@ -206,23 +202,24 @@ a {
 }
 
 .introduction-container {
-  justify-content: space-evenly;
+  justify-content: center;
+  row-gap: 1rem;
   align-items: center;
   padding: 0rem 2rem;
-  display: inline-flex;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 .introduction-title h1 {
   font-size: 2.3rem;
-  color: var(--secondary);
+  color: var(--third);
   font-weight: 700;
-}
-.introduction-title h1:hover {
-  font-style: italic;
 }
 .introduction-title h3 {
   font-weight: 300;
   margin-left: 2px;
+  color: rgb(228, 228, 228);
 }
 .introduction-title div {
   color: #bbbbbb;
@@ -236,15 +233,14 @@ a {
 }
 
 .introduction-pic-container {
-  height: 500px;
-  background-color: var(--third);
-  border-radius: 5px;
+  margin-top: auto;
+  height: 560px;
+  background-color: #ffffff12;
 }
 .introduction-pic-container img {
   object-fit: cover;
   width: auto;
   height: 100%;
-  border-radius: 5px;
   transition-duration: 600ms;
   transition-timing-function: ease;
   transition-property: transform, filter;
@@ -269,18 +265,16 @@ a {
 .navbar-progress a {
   text-decoration: none;
   color: var(--third);
-  opacity: 0.5;
   transition: 0.3s;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 1.05rem;
 }
 .navbar-progress a:hover {
   opacity: 0.8;
 }
 .navbar-progress a.active {
   opacity: 1;
-  font-weight: bold;
-  font-size: 1.2rem;
+  border-bottom: 1px solid var(--third);
 }
 
 .navbar h5 {
@@ -291,21 +285,9 @@ a {
   top: -60px;
 }
 
-@keyframes example {
-  0% {
-    color: var(--secondary);
-  }
-  50% {
-    color: var(--third);
-  }
-  100% {
-    color: var(--secondary);
-  }
-}
-
 .introduction-pic-container:hover img {
-  transform: scale(1.3);
-  filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.4));
+  transform: scale(1.1);
+  filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.3));
 }
 
 @keyframes buttonHover {
@@ -340,6 +322,8 @@ a {
   animation-iteration-count: infinite;
   transition: 0.3s ease;
   cursor: pointer;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 .introduction-explore svg {
   width: 26px;
@@ -359,9 +343,10 @@ a {
 }
 
 .section {
-  min-height: calc(100vh - 80px);
+  min-height: calc(100vh - 61px);
   padding: 0px 2rem;
-  padding-top: 70px !important;
+  text-align: center;
+  padding-top: 60px !important;
   scroll-snap-align: center;
 }
 
@@ -488,10 +473,6 @@ body.experience {
 }
 
 @media only screen and (max-width: 768px) {
-  .introduction-container {
-    flex-direction: column;
-    justify-content: center;
-  }
   .navbar {
     padding: 0.25rem 1rem;
   }

@@ -118,7 +118,7 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <header className={`navbar sticky`} >
+    <header className={`navbar sticky`}>
       <div
         className="navbar-progress-bar"
         style={{

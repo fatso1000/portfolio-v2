@@ -6,8 +6,8 @@ body {
   padding: 0;
   height: 100%;
   width: 100%;
-  /* font-family: "Chivo Mono", monospace; */
-  font-family: "Playfair Display", serif;
+  font-family: "Chivo Mono", monospace;
+  /* font-family: "Playfair Display", serif; */
 }
 
 body {
@@ -15,6 +15,12 @@ body {
   color: var(--third);
   transition: background-color 1s ease;
   overflow-x: hidden;
+}
+
+button {
+  /* font-family: "Playfair Display", serif; */
+    font-family: "Chivo Mono", monospace;
+
 }
 
 a {
