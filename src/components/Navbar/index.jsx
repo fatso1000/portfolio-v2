@@ -119,12 +119,12 @@ export const Navbar = () => {
 
   return (
     <header className={`navbar sticky`}>
-      <div
+      {/* <div
         className="navbar-progress-bar"
         style={{
-          width: `calc(${screenPosition}% - 4rem)`,
+          width: `calc(${screenPosition}% )`,
         }}
-      ></div>
+      ></div> */}
       <div>
         <h5>MB</h5>
       </div>

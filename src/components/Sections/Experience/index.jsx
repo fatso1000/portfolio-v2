@@ -5,8 +5,15 @@ import SoyHenryLogo from "../../../assets/soyhenry_logo.jfif";
 
 export const Experience = () => {
   return (
-    <div id="experience" className="section" data-color="experience">
-      <h1>EXPERIENCE</h1>
+    <div
+      id="experience"
+      className="section"
+      data-color="experience"
+      style={{ flexDirection: "column" }}
+    >
+      <h1 style={{ fontSize: "5rem", textAlign: "start", paddingLeft: "1rem" }}>
+        Experience
+      </h1>
       <div
         style={{
           display: "flex",

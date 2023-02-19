@@ -1,14 +1,7 @@
 :root {
-  /* --primary: #fdf7e7;
+  --primary: #fdf7e7;
   --secondary: #6663fd;
-  --third: black; */
-  --primary: #424518;
-  --secondary: #d9f7dd;
-  --third: #ffffff;
-  /* --primary: #17171a;
-  --secondary: #bc8b05;
-  --third: #f2eee0; */
-  /* --complementary: #fdf7e7; */
+  --third: rgba(0, 0, 0, 0.722);
 }
 
 h1,
@@ -22,7 +15,7 @@ a {
 }
 
 .muted {
-  color: #bbbbbb;
+  color: #918d84;
 }
 
 .app-container {
@@ -62,7 +55,7 @@ a {
 .accordion li:after {
   content: "";
   border-radius: 50%;
-  background-color: var(--third);
+  background-color: black;
   position: absolute;
   left: 1.3px;
   top: 0;
@@ -79,6 +72,7 @@ a {
 .accordion img {
   width: 4rem;
   height: 4rem;
+  border-radius: 20px;
   border: 1px solid var(--third);
 }
 .accordion.active img {
@@ -90,21 +84,24 @@ a {
   text-align: start;
   padding: 1rem;
   border: 0px;
-  border-bottom: 1px solid #ffffff;
   background-color: transparent;
   color: var(--third);
   cursor: pointer;
   row-gap: 0.2rem;
+  border-radius: 20px;
 }
 .accordion button:hover {
-  background-color: rgba(242, 238, 224, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.accordion.active button:hover {
+  background-color: rgba(0, 0, 0, 0.65);
 }
 .accordion.active button {
   background-color: var(--third);
   color: var(--primary);
 }
 .accordion.active button .muted {
-  color: #868686;
+  color: #a09a8f;
 }
 .accordion .button-list {
   height: 0;
@@ -112,23 +109,26 @@ a {
 }
 .accordion.active .button-list {
   height: auto;
-  border-top: 0px solid transparent !important;
-  border: 1px solid rgba(248, 246, 243, 0.3);
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .header-button {
   display: inline-flex;
-  color: var(--third);
+  color: var(--primary);
   background: transparent;
   border: 0px;
   column-gap: 30px;
   align-items: center;
   font-weight: 300;
+  padding: 0;
   cursor: pointer;
-  transition: 1s ease;
+  border-radius: 20px;
+  transition: 0.3s ease;
 }
 .header-button:hover {
-  opacity: 0.9;
+  background-color: var(--primary);
+  color: var(--third);
 }
 .header-button svg {
   width: 43px;
@@ -158,13 +158,16 @@ a {
   margin-left: auto;
   margin-right: auto;
   top: 0;
-  padding: 0.5rem 0px;
+  padding: 0.5rem 1rem;
   height: 40px;
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 1);
-  background-color: var(--primary);
+  color: var(--primary);
+  background-color: var(--third);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  margin-top: 1rem;
   transition: background-color 1s ease;
 }
 
@@ -219,7 +222,7 @@ a {
 .introduction-title h3 {
   font-weight: 300;
   margin-left: 2px;
-  color: rgb(228, 228, 228);
+  color: #00000099;
 }
 .introduction-title div {
   color: #bbbbbb;
@@ -234,13 +237,17 @@ a {
 
 .introduction-pic-container {
   margin-top: auto;
-  height: 560px;
-  background-color: #ffffff12;
+  background-color: var(--secondary);
+  padding: 0.3rem;
+  border-radius: 50%;
+  width: 20rem;
+  height: 20rem;
 }
 .introduction-pic-container img {
   object-fit: cover;
-  width: auto;
-  height: 100%;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
   transition-duration: 600ms;
   transition-timing-function: ease;
   transition-property: transform, filter;
@@ -250,7 +257,7 @@ a {
   max-width: 1200px;
   border-radius: 7px;
   height: 1.5px;
-  background-color: var(--third);
+  background-color: var(--primary);
   position: absolute;
   top: 0;
   transition: ease;
@@ -260,21 +267,26 @@ a {
 .navbar-progress {
   display: inline-flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.6rem;
 }
 .navbar-progress a {
   text-decoration: none;
-  color: var(--third);
+  color: rgba(253, 247, 231, 0.6);
   transition: 0.3s;
   font-weight: 500;
   font-size: 1.05rem;
+  border-radius: 20px;
+  padding: 0.4rem 0.6rem;
 }
 .navbar-progress a:hover {
-  opacity: 0.8;
+  color: var(--third);
+  background-color: var(--primary);
 }
 .navbar-progress a.active {
-  opacity: 1;
-  border-bottom: 1px solid var(--third);
+  color: var(--primary);
+}
+.navbar-progress a.active:hover {
+  color: var(--third);
 }
 
 .navbar h5 {
@@ -343,10 +355,10 @@ a {
 }
 
 .section {
-  min-height: calc(100vh - 61px);
+  min-height: calc(100vh - 76px);
   padding: 0px 2rem;
   text-align: center;
-  padding-top: 60px !important;
+  padding-top: 76px !important;
   scroll-snap-align: center;
 }
 
@@ -409,9 +421,8 @@ a {
 /* ABOUT ME */
 
 body.about-me .navbar {
-  background-color: rgba(102, 99, 252, 0.3);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  color: var(--primary);
+  background-color: var(--primary);
+  color: var(--secondary);
 }
 body.about-me .tail {
   border-color: transparent transparent var(--primary) transparent;
@@ -428,15 +439,17 @@ body.about-me .navbar-progress-bar {
   background-color: var(--primary);
 }
 body.about-me .navbar-progress a {
+  color: rgba(101, 99, 253, 0.6);
+}
+body.about-me .navbar-progress a.active {
+  color: var(--secondary);
+}
+body.about-me .navbar-progress a:hover {
   color: var(--primary);
+  background-color: var(--secondary);
 }
 body.about-me .header-button {
-  background: var(--primary);
-  color: var(--secondary);
-  border: 1px solid var(--primary);
-}
-body.about-me .app-container {
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--primary);
 }
 
 body.about-me {
@@ -458,9 +471,6 @@ body.experience {
 @media only screen and (max-width: 950px) {
   .introduction-title h1 {
     font-size: 1.5rem;
-  }
-  .introduction-pic-container {
-    height: 400px;
   }
   .introduction-explore {
     width: 20px;
@@ -484,9 +494,6 @@ body.experience {
   }
   .introduction-text-container {
     margin-top: 30px;
-  }
-  .introduction-pic-container {
-    height: 300px;
   }
   .navbar-progress {
     display: none;

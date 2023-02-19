@@ -1,7 +1,7 @@
 import React from "react";
 
 export const Accordion = (props) => {
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = React.useState(true);
   const { position, enterprise, date, location, experiences, logo } = props;
   return (
     <div className={isOpen ? "accordion active" : "accordion"}>
