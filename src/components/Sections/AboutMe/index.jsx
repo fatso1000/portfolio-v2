@@ -5,13 +5,13 @@ import { GrPersonalComputer } from "react-icons/gr";
 export const AboutMe = () => {
   return (
     <div id="about-me" data-color="about-me" className="section about-me">
-      <h1 style={{ fontSize: "3rem" }}>ABOUT ME</h1>
+      <h1 style={{ fontSize: "5rem" }}>ABOUT ME</h1>
       <div>
         <p>Talented and experienced Front-End developer.</p>
       </div>
       <div style={{ display: "inline-flex" }}>
         <div style={{ display: "flex" }}>
-          <h3 style={{ fontSize: "2rem" }}>3</h3>
+          <h3 style={{ fontSize: "2rem" }}>2</h3>
           <span>years of experience</span>
         </div>
         <div>

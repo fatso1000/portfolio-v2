@@ -351,7 +351,7 @@ a {
   justify-content: center;
   align-items: center;
   row-gap: 1rem;
-  color: var(--primary);
+  color: var(--third);
 }
 
 .section {
@@ -374,7 +374,7 @@ a {
   color: white;
   border-radius: 5px;
   padding: 1rem;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.72);
   cursor: pointer;
 }
 .introduction-alert:hover {
@@ -400,61 +400,25 @@ a {
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.72);
   border-radius: 5px;
   align-items: center;
   row-gap: 7px;
 }
 .about-me .cards h4 {
-  color: var(--primary);
+  color: var(--third);
 }
 .about-me .cards:hover {
-  background-color: rgba(253, 247, 231, 0.05);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .about-me .cards svg,
 .about-me .cards svg path {
-  stroke: var(--primary);
-  color: var(--primary);
-}
-
-/* ABOUT ME */
-
-body.about-me .navbar {
-  background-color: var(--primary);
-  color: var(--secondary);
-}
-body.about-me .tail {
-  border-color: transparent transparent var(--primary) transparent;
-}
-body.about-me .navbar_nav {
-  background-color: var(--secondary);
-  color: var(--primary);
-}
-body.about-me .introduction-alert {
-  background-color: var(--primary);
+  stroke: var(--third);
   color: var(--third);
 }
-body.about-me .navbar-progress-bar {
-  background-color: var(--primary);
-}
-body.about-me .navbar-progress a {
-  color: rgba(101, 99, 253, 0.6);
-}
-body.about-me .navbar-progress a.active {
-  color: var(--secondary);
-}
-body.about-me .navbar-progress a:hover {
-  color: var(--primary);
-  background-color: var(--secondary);
-}
-body.about-me .header-button {
-  color: var(--primary);
-}
 
-body.about-me {
-  background-color: var(--secondary);
-}
+
 
 /* EXPERIENCE */
 body.experience {
