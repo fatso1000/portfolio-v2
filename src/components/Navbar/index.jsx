@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { IoMenu } from "react-icons/io5";
 
 export const Navbar = () => {
