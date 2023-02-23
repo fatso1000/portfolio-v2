@@ -14,8 +14,8 @@ export const Accordion = (props) => {
             marginLeft: "0.8rem",
           }}
         >
-          <h2>{position}</h2>
-          <span>{enterprise}</span>
+          <h2 style={{ fontSize: "1.8em" }}>{position}</h2>
+          <span style={{ fontSize: "1.17em" }}>{enterprise}</span>
           <span className="muted">{date}</span>
           <span className="muted">{location}</span>
         </div>

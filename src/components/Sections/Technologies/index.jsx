@@ -15,7 +15,7 @@ export const Technologies = () => {
         </div>
         <div>
           <h2>Projects</h2>
-          <span>5</span>
+          <span>5+</span>
         </div>
         <div>
           <h2>Professionalism</h2>

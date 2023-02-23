@@ -9,20 +9,37 @@ export const Experience = () => {
       id="experience"
       className="section"
       data-color="experience"
-      style={{ flexDirection: "column" }}
+      style={{
+        flexDirection: "column",
+        display: "flex",
+        justifyContent: "center",
+      }}
     >
-      <h1 style={{ fontSize: "5rem", textAlign: "start" }}>Experience</h1>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          textAlign: "center",
+          justifyContent: "center",
+          background: "var(--secondary)",
+          borderRadius: "20px",
+          padding: "1rem",
+          color: "var(--primary)",
+          border: "1px solid var(--secondary)",
+        }}
+      >
+        <h1 style={{ fontSize: "2.3em" }}>Working Experience</h1>
+      </div>
       <div
         style={{
           display: "flex",
           flexDirection: "column",
-          paddingTop: "0.6rem",
         }}
       >
         <Accordion
           position={"Front End Developer"}
           enterprise={"MOBEATS"}
-          date={"Apr 2021 - Present · 1 yr 10 mos"}
+          date={`Apr 2021 - Present · 2 years`}
           location={"Berazategui, Buenos Aires Province, Argentina"}
           experiences={[
             { title: "ENFOKE", description: "React" },
@@ -37,6 +54,7 @@ export const Experience = () => {
           position={"Full Stack Developer"}
           enterprise={"SOY HENRY"}
           date={"Dec 2020 - Apr 2021"}
+          location={"Remote, Latin America"}
           experiences={[{ title: "Individual Project", description: "lol" }]}
           logo={SoyHenryLogo}
         />

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { IoMenu } from "react-icons/io5";
+import { IoMenu, IoLanguage } from "react-icons/io5";
+import { RiFileDownloadFill } from "react-icons/ri";
 
 export const Navbar = () => {
   const [currentScreen, setCurrentScreen] = React.useState(0);
   const [showNav, setShowNav] = useState(false);
-  const [isAlert, setIsAlert] = useState(true);
 
   const getScreen = () => {
     const sectionScreens = [...document.querySelectorAll(".section")];
@@ -94,18 +94,39 @@ export const Navbar = () => {
         className="header-button"
         onClick={() => {
           setShowNav(!showNav);
-          if (isAlert) setIsAlert(false);
         }}
       >
         <IoMenu />
       </button>
-      <nav className={`navbar_nav ${showNav && "active"}`}>
-        <ul>
-          <li>
-            <button>Download CV</button>
-          </li>
-        </ul>
-      </nav>
+      {showNav && (
+        <div
+          className="introduction-alert"
+          onClick={() => {
+            setShowNav(true);
+          }}
+        >
+          <ul>
+            <li>
+              <a
+                href="https://drive.google.com/file/d/17gQMcn9OEfFNXJUzj_fpuLEKvLtniAbD/view?usp=sharing"
+                target="_blank"
+                rel="noreferrer"
+                style={{ width: "calc(100% - 1rem)" }}
+              >
+                <RiFileDownloadFill />
+                Download CV
+              </a>
+            </li>
+            <li>
+              <button>
+                <IoLanguage />
+                English
+              </button>
+            </li>
+          </ul>
+          <div className="tail"></div>
+        </div>
+      )}
     </header>
   );
 };
