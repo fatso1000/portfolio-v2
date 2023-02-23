@@ -37,36 +37,9 @@ export const AboutMe = () => {
           style={{ width: "20rem", paddingTop: "1.7rem", textAlign: "center" }}
           className="muted"
         >
-          <span>
-            {"{"}Appasionated for programming and science 👨‍💻.{"}"}
-          </span>
+          <i>{"/*Appasionated for programming and science 👨‍💻.*/"}</i>
         </div>
       </div>
-      {/* <div style={{ display: "inline-flex" }}>
-        <div style={{ display: "flex" }}>
-          <h2 style={{ fontSize: "1.8em" }}>2</h2>
-          <span>years of experience</span>
-        </div>
-        <div>
-          <h2 style={{ fontSize: "1.8em" }}>10+</h2>
-          <span>projects</span>
-        </div>
-      </div> */}
-      {/* <h1 style={{ fontSize: "3rem", color: "#fdf7e7" }}>My Stack</h1>
-      <div style={{ display: "inline-flex", gap: "7px" }}>
-        <div className="cards">
-          <IoDesktopOutline style={{ height: 24, width: 24 }} />
-          <h4>Front-End Developer</h4>
-        </div>
-        <div className="cards">
-          <GrPersonalComputer style={{ height: 24, width: 24 }} />
-          <h4>Backend-Stack Developer</h4>
-        </div>
-        <div className="cards">
-          <IoPhonePortraitOutline style={{ height: 24, width: 24 }} />
-          <h4>Mobile Developer</h4>
-        </div>
-      </div> */}
     </div>
   );
 };
