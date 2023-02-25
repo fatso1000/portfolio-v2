@@ -4,16 +4,7 @@ import { IoLogoLinkedin, IoMail, IoLogoGithub } from "react-icons/io5";
 export const ContactMe = () => {
   return (
     <div data-color="violet" id="contact-me" className="section contact-me">
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          padding: "1.7rem",
-          background: "rgba(0,0,0,0.1)",
-          borderRadius: "20px",
-          margin: "auto 0",
-        }}
-      >
+      <div className="card">
         <h1 style={{ fontSize: "2.3em", color: "var(--secondary)" }}>
           Contact Me
         </h1>
@@ -30,7 +21,7 @@ export const ContactMe = () => {
               target="_blank"
               rel="noreferrer"
             >
-              Agustin Benitez
+              Matias Benitez
             </a>
           </div>
           <div>

@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { IoMenu, IoLanguage } from "react-icons/io5";
 import { RiFileDownloadFill } from "react-icons/ri";
+import { useTranslation } from "react-i18next";
 
 export const Navbar = () => {
   const [currentScreen, setCurrentScreen] = React.useState(0);
   const [showNav, setShowNav] = useState(false);
+
+  const { t, i18n } = useTranslation();
 
   const getScreen = () => {
     const sectionScreens = [...document.querySelectorAll(".section")];
@@ -108,19 +111,23 @@ export const Navbar = () => {
           <ul>
             <li>
               <a
-                href="https://drive.google.com/file/d/17gQMcn9OEfFNXJUzj_fpuLEKvLtniAbD/view?usp=sharing"
+                href="https://drive.google.com/file/d/12E09jc5VaAZ2eLQfcP7C9HuxGvjLIdZ4/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
                 style={{ width: "calc(100% - 1rem)" }}
               >
                 <RiFileDownloadFill />
-                Download CV
+                {t("header.navbar.download")}
               </a>
             </li>
             <li>
-              <button>
+              <button
+                onClick={() => {
+                  i18n.changeLanguage(i18n.language === "es" ? "en" : "es");
+                }}
+              >
                 <IoLanguage />
-                English
+                {i18n.language === "es" ? "English" : "Español"}
               </button>
             </li>
           </ul>

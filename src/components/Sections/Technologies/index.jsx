@@ -1,9 +1,15 @@
 import React from "react";
-import { IoLogoReact, IoLogoNodejs, IoHeartOutline } from "react-icons/io5";
+import {
+  IoLogoReact,
+  IoLogoNodejs,
+  IoHeartOutline,
+  IoTimeOutline,
+} from "react-icons/io5";
 import { SiTypescript, SiRedux, SiJavascript } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
 import { VscOrganization } from "react-icons/vsc";
 import { HiOutlineBookOpen } from "react-icons/hi";
+import { BsPuzzle } from "react-icons/bs";
 
 export const Technologies = () => {
   return (
@@ -66,6 +72,14 @@ export const Technologies = () => {
             <div>
               <HiOutlineBookOpen />
               <span>Fast Learning</span>
+            </div>
+            <div>
+              <IoTimeOutline />
+              <span>Time Management</span>
+            </div>
+            <div>
+              <BsPuzzle />
+              <span>Problem Solving</span>
             </div>
           </div>
         </div>
