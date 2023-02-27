@@ -5,6 +5,7 @@ import { ContactMe } from "../components/Sections/Contact";
 import { Education } from "../components/Sections/Education";
 import { Experience } from "../components/Sections/Experience";
 import { Introduction } from "../components/Sections/Introduction";
+import { Projects } from "../components/Sections/Projects";
 import { Technologies } from "../components/Sections/Technologies";
 
 export const Layout = () => {
@@ -16,6 +17,7 @@ export const Layout = () => {
       <Technologies />
       <Education />
       <Experience />
+      <Projects />
       <ContactMe />
     </div>
   );

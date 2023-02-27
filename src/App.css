@@ -523,6 +523,30 @@ a {
   height: 2.5rem;
 }
 
+/* Projects */
+.projects .cards {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease;
+  color: var(--third);
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+.projects .cards .img-container {
+  width: 100%;
+  height: 10rem;
+  background-color: var(--third);
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+.projects .cards {
+}
+
+/*  */
+
 .section {
   min-height: calc(100vh - 76px);
   padding: 0px 2rem;
@@ -746,5 +770,8 @@ body.experience {
   }
   .introduction-explore:hover svg path {
     color: var(--primary);
+  }
+  .projects .cards:hover {
+    background-color: rgba(0, 0, 0, 0.2);
   }
 }
