@@ -1,6 +1,9 @@
-const generics = {};
 const es = {
   translation: {
+    aboutMe: {
+      text: "Hola! Me llamo Matias Benitez, un talentoso y experimentado <span>desarrollador Front-End</span>, actualmente en Buenos Aires, Argentina.",
+      sub: "/* Apasionado por la programacion y la ciencia 👨‍💻.*/",
+    },
     experiences: {
       date: "Abril 2021 - Presente · 2 años",
       list: [
@@ -18,7 +21,7 @@ const es = {
       home: "Inicio",
       aboutMe: "Acerca de mí",
       technologies: "Tecnologías",
-      experiences: "Experiencia",
+      experience: "Experiencia",
       contact: "Contáctame",
       navbar: { download: "Descargar CV" },
     },
@@ -26,12 +29,16 @@ const es = {
 };
 const en = {
   translation: {
+    aboutMe: {
+      text: "Hi! I'm Matias Benitez, a talented and experienced <span>Front-End Developer</span> based on Buenos Aires, Argentina.",
+      sub: "/* Appasionated for programming and science 👨‍💻.*/",
+    },
     header: {
-      home: "Inicio",
-      aboutMe: "Acerca de mí",
-      technologies: "Tecnologías",
-      experiences: "Experiencia",
-      contact: "Contáctame",
+      home: "Home",
+      aboutMe: "About Me",
+      technologies: "Technologies",
+      experience: "Experience",
+      contact: "Contact Me",
       navbar: {
         download: "Download CV",
       },

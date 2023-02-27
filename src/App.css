@@ -627,7 +627,23 @@ body.experience {
   flex-direction: column;
 }
 
+@media only screen and (max-width: 1200px) {
+  .navbar {
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+  }
+}
+
 @media only screen and (max-width: 768px) {
+  .introduction-pic-container {
+    width: 15rem;
+    height: 15rem;
+  }
+  .introduction-pic-container img {
+    width: 15rem;
+    height: 15rem;
+  }
+
   .navbar {
     padding: 0.25rem 1rem;
   }
@@ -646,10 +662,12 @@ body.experience {
     display: flex;
     flex-direction: column;
     text-align: center;
+    padding: 1rem;
   }
   .about-me__section .label {
     text-align: center;
     margin: auto;
+    width: auto;
   }
   .about-me__section .description {
     display: flex;
@@ -659,7 +677,7 @@ body.experience {
   }
   .about-me__section .description > span {
     font-size: var(--fs-sub-mobile);
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0rem;
   }
   .about-me__profile-pic {
     width: 15rem;
@@ -688,6 +706,12 @@ body.experience {
   }
 
   /* TECHNOLOGIES */
+  .technologies .tech-header {
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 1rem 0;
+    row-gap: 0.5rem;
+  }
   .technologies .tech-header span {
     font-size: var(--fs-title-mobile);
   }

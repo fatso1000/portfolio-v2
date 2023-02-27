@@ -42,20 +42,20 @@ export const Navbar = () => {
 
   const navbarScreens = [
     {
-      name: "Home",
+      name: t("header.home"),
       href: "home",
     },
     {
-      name: "About Me",
+      name: t("header.aboutMe"),
       href: "about-me",
     },
-    { name: "Technologies", href: "technologies" },
+    { name: t("header.technologies"), href: "technologies" },
     {
-      name: "Experience",
+      name: t("header.experience"),
       href: "experience",
     },
     {
-      name: "Contact",
+      name: t("header.contact"),
       href: "contact-me",
     },
   ];
