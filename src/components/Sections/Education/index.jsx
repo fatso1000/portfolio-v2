@@ -1,7 +1,7 @@
 import React from "react";
 import { Accordion } from "../../Accordion";
-import MobeatsLogo from "../../../assets/mobeats_logo.jfif";
 import SoyHenryLogo from "../../../assets/soyhenry_logo.jfif";
+import Tec4Logo from "../../../assets/tec4.png";
 
 export const Education = () => {
   return (
@@ -28,7 +28,7 @@ export const Education = () => {
               technologies: "React Typescript",
             },
           ]}
-          logo={MobeatsLogo}
+          logo={Tec4Logo}
         />
         <Accordion
           position={"Full Stack Developer"}
