@@ -1,11 +1,13 @@
 import React from "react";
+import { IoHeartOutline, IoTimeOutline } from "react-icons/io5";
 import {
-  IoLogoReact,
-  IoLogoNodejs,
-  IoHeartOutline,
-  IoTimeOutline,
-} from "react-icons/io5";
-import { SiTypescript, SiRedux, SiJavascript } from "react-icons/si";
+  SiTypescript,
+  SiRedux,
+  SiJavascript,
+  SiNodedotjs,
+  SiReact,
+  SiFigma,
+} from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
 import { VscOrganization } from "react-icons/vsc";
 import { HiOutlineBookOpen } from "react-icons/hi";
@@ -33,7 +35,7 @@ export const Technologies = () => {
           <h2>Hard Skills</h2>
           <div className="list">
             <div>
-              <IoLogoReact />
+              <SiReact />
               <span>React</span>
             </div>
             <div>
@@ -49,12 +51,16 @@ export const Technologies = () => {
               <span>Javascript</span>
             </div>
             <div>
-              <IoLogoNodejs />
+              <SiNodedotjs />
               <span>NodeJS</span>
             </div>
             <div>
               <TbBrandReactNative />
               <span>React Native</span>
+            </div>
+            <div>
+              <SiFigma />
+              <span>Figma</span>
             </div>
           </div>
         </div>

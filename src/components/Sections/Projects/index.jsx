@@ -66,6 +66,23 @@ export const Projects = () => {
             </a>
           </div>
         </a>
+        <a href="2" className="cards">
+          <div className="img-container">
+            <span>😥</span>
+          </div>
+          <div className="cards-body">
+            <h3>VideoGamesDB Search</h3>
+            <span>
+              Este proyecto fue hecho para SoyHenry, utilizando una API privada
+              debia filtrar y buscar videojuegos, utlizando React, NodeJS y
+              Postgresql. Actualmente se encuentra obsoleto, debido a que la API
+              utilizada ya no existe.
+            </span>
+            <a href="https://github.com/fatso1000/individual-project-henry">
+              <IoLogoGithub />
+            </a>
+          </div>
+        </a>
       </div>
     </div>
   );

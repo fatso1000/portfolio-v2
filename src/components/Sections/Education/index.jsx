@@ -22,25 +22,27 @@ export const Education = () => {
           location={"Berazategui, Buenos Aires, Argentina"}
           experiences={[
             {
-              title: "ENFOKE",
+              title: "Programming Technician",
               description:
-                'New Eges, "The Management software that optimizes the most important Diagnostic Centers in Argentina"',
-              technologies: "React Typescript",
+                "Programming Technician career, developed various projects for the school.",
+              technologies:
+                "React, javascript, C, C++, Python, Mysql, Arduino, nodeJs, RaspberryPi, Relational Databases.",
             },
           ]}
           logo={Tec4Logo}
         />
         <Accordion
-          position={"Full Stack Developer"}
+          position={"Full-Stack Developer"}
           enterprise={"SOY HENRY"}
           date={"Nov 2020 - Apr 2021"}
           location={"Remote, Latin America"}
           experiences={[
             {
-              title: "Individual Project",
-              description: "lol",
+              title: "Full-Stack Career",
+              description:
+                "Full-Stack career, intensive bootcamp where you learn the mayority of technologies and how to develop new projects.",
               technologies:
-                "React Typescript, NodeJs Typescript, Postgresql, Heroku",
+                "React Typescript, NodeJs Typescript, Postgresql, Redux, API, Data Structures, WebPack, Non-Relational databases",
             },
           ]}
           logo={SoyHenryLogo}

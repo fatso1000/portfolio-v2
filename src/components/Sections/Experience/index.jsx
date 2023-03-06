@@ -35,8 +35,9 @@ export const Experience = () => {
             },
             {
               title: "IOF",
-              description: "FullStack",
-              technologies: "React typescript, NodeJs, MaterialUI, Bootstrap",
+              description:
+                "Backoffice and AppWeb to monitor and control the temperature of crops and silo bags.",
+              technologies: "React typescript, NodeJs, MaterialUI, Bootstrap, Mysql",
             },
             {
               title: "SEVENTEEN",
@@ -45,7 +46,7 @@ export const Experience = () => {
             },
             {
               title: "ZECATDIFAPRO",
-              description: "FullStack",
+              description: "E-Commerce, Proveedor integral de productos promocionales",
               technologies: "Vue, NodeJs",
             },
           ]}
@@ -58,14 +59,9 @@ export const Experience = () => {
           location={"Remote, Latin America"}
           experiences={[
             {
-              title: "Individual Project",
-              description: "lol",
-              technologies:
-                "React Typescript, NodeJs Typescript, Postgresql, Heroku",
-            },
-            {
-              title: "Groupal Project",
-              description: "",
+              title: "VideoGamesDB Search",
+              description:
+                "WebApp utilizando una API privada debia filtrar y buscar videojuegos, utlizando React, NodeJS y Postgresql. Actualmente se encuentra obsoleto, debido a que la API utilizada ya no existe.",
               technologies:
                 "React Typescript, NodeJs Typescript, Postgresql, Heroku",
             },
