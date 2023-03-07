@@ -5,9 +5,9 @@ import Tec4Logo from "../../../assets/tec4.png";
 
 export const Education = () => {
   return (
-    <div id="education" className="section experience">
-      <div className="experience-container">
-        <h1>Education</h1>
+    <section id="education" className="section experience">
+      <div className="experience__container">
+        <h2>Education</h2>
       </div>
       <div
         style={{
@@ -48,6 +48,6 @@ export const Education = () => {
           logo={SoyHenryLogo}
         />
       </div>
-    </div>
+    </section>
   );
 };

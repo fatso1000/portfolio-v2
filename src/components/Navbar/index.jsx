@@ -81,7 +81,7 @@ export const Navbar = () => {
       <div>
         <h5>MB</h5>
       </div>
-      <div className="navbar-progress">
+      <nav className="navbar-progress">
         {navbarScreens.map((val, i) => (
           <a
             href={`#${val.href}`}
@@ -92,7 +92,7 @@ export const Navbar = () => {
             {val.name}
           </a>
         ))}
-      </div>
+      </nav>
       <button
         className="header-button"
         onClick={() => {
@@ -102,8 +102,8 @@ export const Navbar = () => {
         <IoMenu />
       </button>
       {showNav && (
-        <div
-          className="introduction-alert"
+        <nav
+          className="introduction__alert"
           onClick={() => {
             setShowNav(true);
           }}
@@ -132,7 +132,7 @@ export const Navbar = () => {
             </li>
           </ul>
           <div className="tail"></div>
-        </div>
+        </nav>
       )}
     </header>
   );

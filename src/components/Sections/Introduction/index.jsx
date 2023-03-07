@@ -6,8 +6,8 @@ import ArgentinaFlag from "../../../assets/flag-argentina.png";
 
 export const Introduction = () => {
   return (
-    <div className="section introduction-container" id="home">
-      <div className="introduction-pic-container">
+    <section className="section introduction__container" id="home">
+      <div className="introduction__pic__container">
         <img src={ProfilePic} alt="img" />
       </div>
       <div
@@ -18,9 +18,9 @@ export const Introduction = () => {
         }}
         className="introduction-text-container"
       >
-        <div className="introduction-title">
-          <h1>Matias Benitez</h1>
-          <h3>Front-End Developer</h3>
+        <div className="introduction__title">
+          <h2>Matias Benitez</h2>
+          <h1>Front-End Developer</h1>
           <div
             style={{
               display: "inline-flex",
@@ -39,9 +39,9 @@ export const Introduction = () => {
           </div>
         </div>
       </div>
-      <a href="#about-me" className="introduction-explore">
+      <a href="#about-me" className="introduction__explore">
         <IoArrowDownOutline />
       </a>
-    </div>
+    </section>
   );
 };

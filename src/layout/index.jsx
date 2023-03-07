@@ -10,7 +10,7 @@ import { Technologies } from "../components/Sections/Technologies";
 
 export const Layout = () => {
   return (
-    <div className="app-container">
+    <main className="app-container">
       <Navbar />
       <Introduction />
       <AboutMe />
@@ -19,6 +19,6 @@ export const Layout = () => {
       <Experience />
       <Projects />
       <ContactMe />
-    </div>
+    </main>
   );
 };

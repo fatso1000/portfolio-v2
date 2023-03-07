@@ -3,11 +3,11 @@ import { IoLogoLinkedin, IoMail, IoLogoGithub } from "react-icons/io5";
 
 export const ContactMe = () => {
   return (
-    <div data-color="violet" id="contact-me" className="section contact-me">
+    <section data-color="violet" id="contact-me" className="section contact-me">
       <div className="card">
-        <h1 style={{ fontSize: "2.3em", color: "var(--secondary)" }}>
+        <h2 style={{ fontSize: "2.3em", color: "var(--secondary)" }}>
           Contact Me
-        </h1>
+        </h2>
         <span>I hope we can get in touch soon! {"<3"}</span>
         <div style={{ margin: "1.2rem 0" }} className="contact-me__list">
           <div>
@@ -36,7 +36,7 @@ export const ContactMe = () => {
           </div>
         </div>
       </div>
-      <div
+      <footer
         style={{
           display: "flex",
           flexDirection: "column",
@@ -45,7 +45,7 @@ export const ContactMe = () => {
       >
         <h5>Designed and developed by Matias Benitez :P</h5>
         <h5 style={{ fontSize: "0.78em" }}>2023</h5>
-      </div>
-    </div>
+      </footer>
+    </section>
   );
 };

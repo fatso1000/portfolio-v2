@@ -13,83 +13,63 @@ import { VscOrganization } from "react-icons/vsc";
 import { HiOutlineBookOpen } from "react-icons/hi";
 import { BsPuzzle } from "react-icons/bs";
 
+const TechHeader = (props) => (
+  <div>
+    <h2>{props.title}</h2>
+    <span>{props.label}</span>
+  </div>
+);
+
+const TechSkills = (props) => (
+  <div>
+    {props.icon}
+    <span>{props.label}</span>
+  </div>
+);
+
+const hardSkills = [
+    { icon: <SiTypescript />, label: "Typescript" },
+    { icon: <SiJavascript />, label: "Javascript" },
+    { icon: <SiReact />, label: "React" },
+    { icon: <SiRedux />, label: "Redux" },
+    { icon: <SiNodedotjs />, label: "NodeJS" },
+    { icon: <TbBrandReactNative />, label: "React Native" },
+    { icon: <SiFigma />, label: "Figma" },
+  ],
+  softSkills = [
+    { icon: <VscOrganization />, label: "Team Work" },
+    { icon: <IoHeartOutline />, label: "Good Mood" },
+    { icon: <HiOutlineBookOpen />, label: "Fast Learning" },
+    { icon: <IoTimeOutline />, label: "Time Management" },
+    { icon: <BsPuzzle />, label: "Problem Solving" },
+  ];
+
 export const Technologies = () => {
   return (
-    <div id="technologies" data-color="blue" className="section technologies">
-      <div className="tech-header">
-        <div>
-          <h2>Experience</h2>
-          <span>2 Years</span>
-        </div>
-        <div>
-          <h2>Projects</h2>
-          <span>5+</span>
-        </div>
-        <div>
-          <h2>Professionalism</h2>
-          <span>100%</span>
-        </div>
+    <section id="technologies" data-color="blue" className="section technologies">
+      <div className="tech__header">
+        <TechHeader title="Experience" label="2 Years" />
+        <TechHeader title="Projects" label="5+" />
+        <TechHeader title="Professionalism" label="100%" />
       </div>
-      <div className="tech-body">
+      <div className="tech__body">
         <div className="hard-skills">
           <h2>Hard Skills</h2>
           <div className="list">
-            <div>
-              <SiReact />
-              <span>React</span>
-            </div>
-            <div>
-              <SiTypescript />
-              <span>Typescript</span>
-            </div>
-            <div>
-              <SiRedux />
-              <span>Redux</span>
-            </div>
-            <div>
-              <SiJavascript />
-              <span>Javascript</span>
-            </div>
-            <div>
-              <SiNodedotjs />
-              <span>NodeJS</span>
-            </div>
-            <div>
-              <TbBrandReactNative />
-              <span>React Native</span>
-            </div>
-            <div>
-              <SiFigma />
-              <span>Figma</span>
-            </div>
+            {hardSkills.map(({ icon, label }) => (
+              <TechSkills icon={icon} label={label} />
+            ))}
           </div>
         </div>
         <div className="hard-skills">
           <h2>Soft Skills</h2>
           <div className="list">
-            <div>
-              <VscOrganization />
-              <span>Team Work</span>
-            </div>
-            <div>
-              <IoHeartOutline />
-              <span>Good Mood</span>
-            </div>
-            <div>
-              <HiOutlineBookOpen />
-              <span>Fast Learning</span>
-            </div>
-            <div>
-              <IoTimeOutline />
-              <span>Time Management</span>
-            </div>
-            <div>
-              <BsPuzzle />
-              <span>Problem Solving</span>
-            </div>
+            {softSkills.map(({ icon, label }) => (
+              <TechSkills icon={icon} label={label} />
+            ))}
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

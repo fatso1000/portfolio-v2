@@ -5,9 +5,13 @@ import SoyHenryLogo from "../../../assets/soyhenry_logo.jfif";
 
 export const Experience = () => {
   return (
-    <div id="experience" className="section experience" data-color="experience">
-      <div className="experience-container">
-        <h1>Working Experience</h1>
+    <section
+      id="experience"
+      className="section experience"
+      data-color="experience"
+    >
+      <div className="experience__container">
+        <h2>Working Experience</h2>
       </div>
       <div
         style={{
@@ -37,7 +41,8 @@ export const Experience = () => {
               title: "IOF",
               description:
                 "Backoffice and AppWeb to monitor and control the temperature of crops and silo bags.",
-              technologies: "React typescript, NodeJs, MaterialUI, Bootstrap, Mysql",
+              technologies:
+                "React typescript, NodeJs, MaterialUI, Bootstrap, Mysql",
             },
             {
               title: "SEVENTEEN",
@@ -46,7 +51,8 @@ export const Experience = () => {
             },
             {
               title: "ZECATDIFAPRO",
-              description: "E-Commerce, Proveedor integral de productos promocionales",
+              description:
+                "E-Commerce, Proveedor integral de productos promocionales",
               technologies: "Vue, NodeJs",
             },
           ]}
@@ -69,6 +75,6 @@ export const Experience = () => {
           logo={SoyHenryLogo}
         />
       </div>
-    </div>
+    </section>
   );
 };

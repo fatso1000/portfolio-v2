@@ -6,9 +6,9 @@ import { IoLogoGithub } from "react-icons/io5";
 
 export const Projects = () => {
   return (
-    <div id="projects" className="section projects">
-      <div className="experience-container">
-        <h1>Projects</h1>
+    <section id="projects" className="section projects">
+      <div className="experience__container">
+        <h2>Projects</h2>
       </div>
       <div
         style={{
@@ -19,10 +19,10 @@ export const Projects = () => {
         }}
       >
         <a href="https://youtu.be/R6dPAIne0AE" className="cards">
-          <div className="img-container">
+          <div className="img__container">
             <img src={XKCDImg} alt="lol" />
           </div>
-          <div className="cards-body">
+          <div className="cards__body">
             <h3>XKCD Comic Search</h3>
             <span>
               Buscador de comics XKCD mediante su id, no funciona debido a la
@@ -37,10 +37,10 @@ export const Projects = () => {
           href="https://github.com/fatso1000/mercadolibre-clone"
           className="cards"
         >
-          <div className="img-container">
+          <div className="img__container">
             <img src={MELIImg} alt="lol" />
           </div>
-          <div className="cards-body">
+          <div className="cards__body">
             <h3>MercadoLibre Clone</h3>
             <span>
               Clon de mercado libre creado con react-native, solamente
@@ -52,10 +52,10 @@ export const Projects = () => {
           </div>
         </a>
         <a href="2" className="cards">
-          <div className="img-container">
+          <div className="img__container">
             <img src={PORTFOLIOImg} alt="" />
           </div>
-          <div className="cards-body">
+          <div className="cards__body">
             <h3>Portfolio</h3>
             <span>
               Este proyecto es mi ultimo portfolio, es el mismo en el que estas
@@ -67,10 +67,10 @@ export const Projects = () => {
           </div>
         </a>
         <a href="2" className="cards">
-          <div className="img-container">
+          <div className="img__container">
             <span>😥</span>
           </div>
-          <div className="cards-body">
+          <div className="cards__body">
             <h3>VideoGamesDB Search</h3>
             <span>
               Este proyecto fue hecho para SoyHenry, utilizando una API privada
@@ -84,6 +84,6 @@ export const Projects = () => {
           </div>
         </a>
       </div>
-    </div>
+    </section>
   );
 };
