@@ -2,13 +2,102 @@ import React from "react";
 import XKCDImg from "../../../assets/projects/xkcd.jpeg";
 import MELIImg from "../../../assets/projects/mercadolibre_clone.png";
 import PORTFOLIOImg from "../../../assets/projects/portfolio.png";
-import { IoLogoGithub } from "react-icons/io5";
+import SOCLONEImg from "../../../assets/projects/so_clone.jpeg";
+import { IoGlobe, IoLogoGithub, IoLogoYoutube } from "react-icons/io5";
+import { useTranslation } from "react-i18next";
+
+const ProjectCard = (props) => (
+  <div className="cards">
+    <div className="img__container">
+      {props.img ? (
+        <img src={props.img} alt={props.imgAlt} />
+      ) : (
+        <span>{props.imgAlt}</span>
+      )}
+    </div>
+    <div className="cards__body">
+      <h3>{props.title}</h3>
+      <span>{props.text}</span>
+      <div>
+        {props.links.map((val, i) => (
+          <a href={val.href} target="_blank" rel="noreferrer" key={i}>
+            {val.icon}
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+);
 
 export const Projects = () => {
+  const { t, i18n } = useTranslation();
+
+  const extraData = [
+    {
+      img: XKCDImg,
+      imgAlt: "XKCD-APP",
+      links: [
+        {
+          href: "https://github.com/fatso1000/xkcd-react",
+          icon: <IoLogoGithub />,
+        },
+        { href: "https://youtu.be/R6dPAIne0AE", icon: <IoLogoYoutube /> },
+      ],
+    },
+    {
+      img: MELIImg,
+      imgAlt: "MERCADOLIBRE-CLONE-APP",
+      links: [
+        {
+          href: "https://github.com/fatso1000/mercadolibre-clone",
+          icon: <IoLogoGithub />,
+        },
+      ],
+    },
+    {
+      img: PORTFOLIOImg,
+      imgAlt: "PORTFOLIO-APP",
+      links: [
+        {
+          href: "https://github.com/fatso1000/portfolio-v2",
+          icon: <IoLogoGithub />,
+        },
+      ],
+    },
+    {
+      img: null,
+      imgAlt: "😥",
+      links: [
+        {
+          href: "https://github.com/fatso1000/individual-project-henry",
+          icon: <IoLogoGithub />,
+        },
+        {
+          href: "https://pi-videogames.netlify.app/",
+          icon: <IoGlobe />,
+        },
+      ],
+    },
+    {
+      img: SOCLONEImg,
+      imgAlt: "SO-CLONE-IMG",
+      links: [
+        {
+          href: "https://github.com/fatso1000/windows-clone-copy",
+          icon: <IoLogoGithub />,
+        },
+        {
+          href: "https://so-clone.netlify.app/",
+          icon: <IoGlobe />,
+        },
+      ],
+    },
+  ];
+
   return (
     <section id="projects" className="section projects">
       <div className="experience__container">
-        <h2>Projects</h2>
+        <h2>{t("header.projects")}</h2>
       </div>
       <div
         style={{
@@ -18,71 +107,9 @@ export const Projects = () => {
           width: "100%",
         }}
       >
-        <a href="https://youtu.be/R6dPAIne0AE" className="cards">
-          <div className="img__container">
-            <img src={XKCDImg} alt="lol" />
-          </div>
-          <div className="cards__body">
-            <h3>XKCD Comic Search</h3>
-            <span>
-              Buscador de comics XKCD mediante su id, no funciona debido a la
-              baja de la API
-            </span>
-            <a href="https://github.com/fatso1000/xkcd-react">
-              <IoLogoGithub />
-            </a>
-          </div>
-        </a>
-        <a
-          href="https://github.com/fatso1000/mercadolibre-clone"
-          className="cards"
-        >
-          <div className="img__container">
-            <img src={MELIImg} alt="lol" />
-          </div>
-          <div className="cards__body">
-            <h3>MercadoLibre Clone</h3>
-            <span>
-              Clon de mercado libre creado con react-native, solamente
-              funcionalidades esteticas y de interfaz
-            </span>
-            <a href="https://github.com/fatso1000/mercadolibre-clone">
-              <IoLogoGithub />
-            </a>
-          </div>
-        </a>
-        <a href="2" className="cards">
-          <div className="img__container">
-            <img src={PORTFOLIOImg} alt="" />
-          </div>
-          <div className="cards__body">
-            <h3>Portfolio</h3>
-            <span>
-              Este proyecto es mi ultimo portfolio, es el mismo en el que estas
-              viendo esto :p
-            </span>
-            <a href="https://github.com/fatso1000/portfolio-v2">
-              <IoLogoGithub />
-            </a>
-          </div>
-        </a>
-        <a href="2" className="cards">
-          <div className="img__container">
-            <span>😥</span>
-          </div>
-          <div className="cards__body">
-            <h3>VideoGamesDB Search</h3>
-            <span>
-              Este proyecto fue hecho para SoyHenry, utilizando una API privada
-              debia filtrar y buscar videojuegos, utlizando React, NodeJS y
-              Postgresql. Actualmente se encuentra obsoleto, debido a que la API
-              utilizada ya no existe.
-            </span>
-            <a href="https://github.com/fatso1000/individual-project-henry">
-              <IoLogoGithub />
-            </a>
-          </div>
-        </a>
+        {t("projects", { returnObjects: true }).map((val, i) => (
+          <ProjectCard {...val} key={i} {...extraData[i]} />
+        ))}
       </div>
     </section>
   );

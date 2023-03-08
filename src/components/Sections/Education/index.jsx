@@ -2,12 +2,15 @@ import React from "react";
 import { Accordion } from "../../Accordion";
 import SoyHenryLogo from "../../../assets/soyhenry_logo.jfif";
 import Tec4Logo from "../../../assets/tec4.png";
+import { useTranslation } from "react-i18next";
 
 export const Education = () => {
+  const { t, i18n } = useTranslation();
+
   return (
     <section id="education" className="section experience">
       <div className="experience__container">
-        <h2>Education</h2>
+        <h2>{t("header.education")}</h2>
       </div>
       <div
         style={{
@@ -16,35 +19,23 @@ export const Education = () => {
         }}
       >
         <Accordion
-          position={"Programming Technician"}
-          enterprise={"Escuela Tecnica Nro 4 de Berazategui"}
-          date={`Feb 2014 - Dec 2020 · 6 years`}
-          location={"Berazategui, Buenos Aires, Argentina"}
-          experiences={[
-            {
-              title: "Programming Technician",
-              description:
-                "Programming Technician career, developed various projects for the school.",
-              technologies:
-                "React, javascript, C, C++, Python, Mysql, Arduino, nodeJs, RaspberryPi, Relational Databases.",
-            },
-          ]}
+          position={t("education.eestn4.position")}
+          enterprise={t("education.eestn4.enterprise")}
+          date={t("education.eestn4.date")}
+          location={t("education.eestn4.location")}
+          experiences={t("education.eestn4.experiences", {
+            returnObjects: true,
+          })}
           logo={Tec4Logo}
         />
         <Accordion
-          position={"Full-Stack Developer"}
-          enterprise={"SOY HENRY"}
-          date={"Nov 2020 - Apr 2021"}
-          location={"Remote, Latin America"}
-          experiences={[
-            {
-              title: "Full-Stack Career",
-              description:
-                "Full-Stack career, intensive bootcamp where you learn the mayority of technologies and how to develop new projects.",
-              technologies:
-                "React Typescript, NodeJs Typescript, Postgresql, Redux, API, Data Structures, WebPack, Non-Relational databases",
-            },
-          ]}
+          position={t("education.soyHenry.position")}
+          enterprise={t("education.soyHenry.enterprise")}
+          date={t("education.soyHenry.date")}
+          location={t("education.soyHenry.location")}
+          experiences={t("education.soyHenry.experiences", {
+            returnObjects: true,
+          })}
           logo={SoyHenryLogo}
         />
       </div>

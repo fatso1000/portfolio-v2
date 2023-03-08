@@ -50,10 +50,12 @@ export const Navbar = () => {
       href: "about-me",
     },
     { name: t("header.technologies"), href: "technologies" },
+    { name: t("header.education"), href: "education" },
     {
       name: t("header.experience"),
       href: "experience",
     },
+    { name: t("header.projects"), href: "projects" },
     {
       name: t("header.contact"),
       href: "contact-me",
@@ -92,6 +94,12 @@ export const Navbar = () => {
             {val.name}
           </a>
         ))}
+        <a
+          href={`#${navbarScreens[currentScreen].href}`}
+          className="individual-nav active"
+        >
+          {navbarScreens[currentScreen].name}
+        </a>
       </nav>
       <button
         className="header-button"

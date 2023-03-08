@@ -22,8 +22,8 @@ export const Accordion = (props) => {
       </button>
       <div className="button-list">
         <ul>
-          {experiences.map((value) => (
-            <li>
+          {experiences.map((value, i) => (
+            <li key={i}>
               <h3>{value.title}</h3>
               <span>{value.description}</span>
               <p className="muted">{value.technologies}</p>

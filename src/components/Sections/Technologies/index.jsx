@@ -12,6 +12,7 @@ import { TbBrandReactNative } from "react-icons/tb";
 import { VscOrganization } from "react-icons/vsc";
 import { HiOutlineBookOpen } from "react-icons/hi";
 import { BsPuzzle } from "react-icons/bs";
+import { useTranslation } from "react-i18next";
 
 const TechHeader = (props) => (
   <div>
@@ -27,45 +28,75 @@ const TechSkills = (props) => (
   </div>
 );
 
-const hardSkills = [
-    { icon: <SiTypescript />, label: "Typescript" },
-    { icon: <SiJavascript />, label: "Javascript" },
-    { icon: <SiReact />, label: "React" },
-    { icon: <SiRedux />, label: "Redux" },
-    { icon: <SiNodedotjs />, label: "NodeJS" },
-    { icon: <TbBrandReactNative />, label: "React Native" },
-    { icon: <SiFigma />, label: "Figma" },
-  ],
-  softSkills = [
-    { icon: <VscOrganization />, label: "Team Work" },
-    { icon: <IoHeartOutline />, label: "Good Mood" },
-    { icon: <HiOutlineBookOpen />, label: "Fast Learning" },
-    { icon: <IoTimeOutline />, label: "Time Management" },
-    { icon: <BsPuzzle />, label: "Problem Solving" },
-  ];
-
 export const Technologies = () => {
+  const { t, i18n } = useTranslation();
+
+  const hardSkills = [
+      { icon: <SiTypescript />, label: "Typescript" },
+      { icon: <SiJavascript />, label: "Javascript" },
+      { icon: <SiReact />, label: "React" },
+      { icon: <SiRedux />, label: "Redux" },
+      { icon: <SiNodedotjs />, label: "NodeJS" },
+      { icon: <TbBrandReactNative />, label: "React Native" },
+      { icon: <SiFigma />, label: "Figma" },
+    ],
+    softSkills = [
+      {
+        icon: <VscOrganization />,
+        label: t("technologies.softSkills.teamWork"),
+      },
+      {
+        icon: <IoHeartOutline />,
+        label: t("technologies.softSkills.goodMood"),
+      },
+      {
+        icon: <HiOutlineBookOpen />,
+        label: t("technologies.softSkills.fastLearning"),
+      },
+      {
+        icon: <IoTimeOutline />,
+        label: t("technologies.softSkills.timeManagement"),
+      },
+      {
+        icon: <BsPuzzle />,
+        label: t("technologies.softSkills.problemSolving"),
+      },
+    ];
+
   return (
-    <section id="technologies" data-color="blue" className="section technologies">
+    <section
+      id="technologies"
+      data-color="blue"
+      className="section technologies"
+    >
       <div className="tech__header">
-        <TechHeader title="Experience" label="2 Years" />
-        <TechHeader title="Projects" label="5+" />
-        <TechHeader title="Professionalism" label="100%" />
+        <TechHeader
+          title={t("technologies.header.experience")}
+          label={t("technologies.header.experienceLabel")}
+        />
+        <TechHeader
+          title={t("technologies.header.projects")}
+          label={t("technologies.header.projectsLabel")}
+        />
+        <TechHeader
+          title={t("technologies.header.professionalism")}
+          label={t("technologies.header.professionalismLabel")}
+        />
       </div>
       <div className="tech__body">
         <div className="hard-skills">
           <h2>Hard Skills</h2>
           <div className="list">
-            {hardSkills.map(({ icon, label }) => (
-              <TechSkills icon={icon} label={label} />
+            {hardSkills.map(({ icon, label }, i) => (
+              <TechSkills icon={icon} label={label} key={i} />
             ))}
           </div>
         </div>
         <div className="hard-skills">
           <h2>Soft Skills</h2>
           <div className="list">
-            {softSkills.map(({ icon, label }) => (
-              <TechSkills icon={icon} label={label} />
+            {softSkills.map(({ icon, label }, i) => (
+              <TechSkills icon={icon} label={label} key={i} />
             ))}
           </div>
         </div>

@@ -150,8 +150,8 @@
   transition: 0.3s ease;
 }
 .header-button svg {
-  width: 43px;
-  height: 43px;
+  width: 34px;
+  height: 34px;
 }
 
 .explore-button {
@@ -254,6 +254,9 @@
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
+}
+.navbar-progress .individual-nav {
+  display: none;
 }
 .navbar-progress a {
   text-decoration: none;
@@ -512,7 +515,6 @@
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   margin: 1rem;
-  max-height: 277px;
 }
 .projects .cards .img__container {
   width: 100%;
@@ -655,6 +657,15 @@ body.experience {
   }
 }
 
+@media only screen and (max-width: 1000px) {
+  .navbar-progress a:not(.individual-nav) {
+    display: none;
+  }
+  .navbar-progress .individual-nav {
+    display: initial;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .introduction__pic__container {
     width: 15rem;
@@ -673,9 +684,6 @@ body.experience {
   }
   .introduction__title h2 {
     font-size: 2em;
-  }
-  .navbar-progress {
-    display: none;
   }
 
   /* ABOUT ME */
@@ -780,5 +788,8 @@ body.experience {
   .contact-me__list a:hover {
     background-color: var(--third);
     color: var(--primary);
+  }
+  .projects .cards .cards__body a:hover {
+    opacity: 0.9;
   }
 }

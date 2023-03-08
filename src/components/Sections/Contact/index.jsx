@@ -1,14 +1,19 @@
 import React from "react";
 import { IoLogoLinkedin, IoMail, IoLogoGithub } from "react-icons/io5";
+import { useTranslation } from "react-i18next";
 
 export const ContactMe = () => {
+  const { t, i18n } = useTranslation();
+
   return (
     <section data-color="violet" id="contact-me" className="section contact-me">
       <div className="card">
         <h2 style={{ fontSize: "2.3em", color: "var(--secondary)" }}>
-          Contact Me
+          {t("header.contact")}
         </h2>
-        <span>I hope we can get in touch soon! {"<3"}</span>
+        <span>
+          {t("contactMe.text")} {"<3"}
+        </span>
         <div style={{ margin: "1.2rem 0" }} className="contact-me__list">
           <div>
             <IoMail />
@@ -43,7 +48,7 @@ export const ContactMe = () => {
           marginBottom: "2rem",
         }}
       >
-        <h5>Designed and developed by Matias Benitez :P</h5>
+        <h5>{t("contactMe.designed")}</h5>
         <h5 style={{ fontSize: "0.78em" }}>2023</h5>
       </footer>
     </section>
