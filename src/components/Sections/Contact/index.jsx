@@ -8,9 +8,7 @@ export const ContactMe = () => {
   return (
     <section data-color="violet" id="contact-me" className="section contact-me">
       <div className="card">
-        <h2 style={{ fontSize: "2.3em", color: "var(--secondary)" }}>
-          {t("header.contact")}
-        </h2>
+        <h2 style={{ color: "var(--secondary)" }}>{t("header.contact")}</h2>
         <span>
           {t("contactMe.text")} {"<3"}
         </span>

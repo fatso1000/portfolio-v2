@@ -530,6 +530,8 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
 }
 .projects .cards .img__container span {
   font-size: 2.5rem;
@@ -643,6 +645,9 @@
   border-radius: 20px;
   margin: auto 0px;
 }
+.contact-me .card h2 {
+  font-size: var(--fs-title);
+}
 
 /* EXPERIENCE */
 body.experience {
@@ -663,6 +668,10 @@ body.experience {
   }
   .navbar-progress .individual-nav {
     display: initial;
+    font-size: 1rem;
+  }
+  .navbar h5 {
+    font-size: 1.5rem;
   }
 }
 
@@ -671,11 +680,16 @@ body.experience {
     width: 15rem;
     height: 15rem;
   }
+  .contact-me .card h2 {
+    font-size: var(--fs-title-mobile);
+  }
   .introduction__pic__container img {
     width: 15rem;
     height: 15rem;
   }
-
+  .experience__container h2 {
+    font-size: var(--fs-title-mobile);
+  }
   .navbar {
     padding: 0.25rem 1rem;
   }

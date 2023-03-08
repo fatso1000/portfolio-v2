@@ -3,17 +3,14 @@ import XKCDImg from "../../../assets/projects/xkcd.jpeg";
 import MELIImg from "../../../assets/projects/mercadolibre_clone.png";
 import PORTFOLIOImg from "../../../assets/projects/portfolio.png";
 import SOCLONEImg from "../../../assets/projects/so_clone.jpeg";
+import GAMESDBImg from "../../../assets/projects/gamesdb.PNG";
 import { IoGlobe, IoLogoGithub, IoLogoYoutube } from "react-icons/io5";
 import { useTranslation } from "react-i18next";
 
 const ProjectCard = (props) => (
   <div className="cards">
     <div className="img__container">
-      {props.img ? (
-        <img src={props.img} alt={props.imgAlt} />
-      ) : (
-        <span>{props.imgAlt}</span>
-      )}
+      <img src={props.img} alt={props.imgAlt} />
     </div>
     <div className="cards__body">
       <h3>{props.title}</h3>
@@ -65,8 +62,8 @@ export const Projects = () => {
       ],
     },
     {
-      img: null,
-      imgAlt: "😥",
+      img: GAMESDBImg,
+      imgAlt: "GAMES-DB-APP",
       links: [
         {
           href: "https://github.com/fatso1000/individual-project-henry",
