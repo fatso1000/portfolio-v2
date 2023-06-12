@@ -119,7 +119,7 @@ export const Navbar = () => {
           <ul>
             <li>
               <a
-                href="https://drive.google.com/file/d/12E09jc5VaAZ2eLQfcP7C9HuxGvjLIdZ4/view?usp=sharing"
+                href="https://drive.google.com/file/d/1zvfWD7QVUy6u712VfMY702dFsZaIg2qV/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
                 style={{ width: "calc(100% - 1rem)" }}
