@@ -45,10 +45,10 @@ export const Navbar = () => {
       name: t("header.home"),
       href: "home",
     },
-    {
-      name: t("header.aboutMe"),
-      href: "about-me",
-    },
+    // {
+    //   name: t("header.aboutMe"),
+    //   href: "about-me",
+    // },
     { name: t("header.technologies"), href: "technologies" },
     { name: t("header.education"), href: "education" },
     {
@@ -80,35 +80,37 @@ export const Navbar = () => {
 
   return (
     <header className={`navbar sticky`}>
-      <div>
-        <h5>MB</h5>
-      </div>
-      <nav className="navbar-progress">
-        {navbarScreens.map((val, i) => (
+      <div className="navbar__container">
+        <div>
+          <h5>MB</h5>
+        </div>
+        <nav className="navbar-progress">
+          {navbarScreens.map((val, i) => (
+            <a
+              href={`#${val.href}`}
+              className={currentScreen === i ? "active" : ""}
+              onClick={() => setCurrentScreen(i)}
+              key={i}
+            >
+              {val.name}
+            </a>
+          ))}
           <a
-            href={`#${val.href}`}
-            className={currentScreen === i ? "active" : ""}
-            onClick={() => setCurrentScreen(i)}
-            key={i}
+            href={`#${navbarScreens[currentScreen].href}`}
+            className="individual-nav active"
           >
-            {val.name}
+            {navbarScreens[currentScreen].name}
           </a>
-        ))}
-        <a
-          href={`#${navbarScreens[currentScreen].href}`}
-          className="individual-nav active"
+        </nav>
+        <button
+          className="header-button"
+          onClick={() => {
+            setShowNav(!showNav);
+          }}
         >
-          {navbarScreens[currentScreen].name}
-        </a>
-      </nav>
-      <button
-        className="header-button"
-        onClick={() => {
-          setShowNav(!showNav);
-        }}
-      >
-        <IoMenu />
-      </button>
+          <IoMenu />
+        </button>
+      </div>
       {showNav && (
         <nav
           className="introduction__alert"
@@ -139,7 +141,6 @@ export const Navbar = () => {
               </button>
             </li>
           </ul>
-          <div className="tail"></div>
         </nav>
       )}
     </header>

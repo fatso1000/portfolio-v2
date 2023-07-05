@@ -6,7 +6,7 @@ export const AboutMe = () => {
   const { t, i18n } = useTranslation();
 
   return (
-    <div id="about-me" data-color="about-me" className="section about-me">
+    <section id="about-me" data-color="about-me" className="section about-me">
       <div className="about-me__section">
         <div className="description">
           <div className="about-me__profile-pic">
@@ -27,6 +27,6 @@ export const AboutMe = () => {
           <i>{t("aboutMe.sub")}</i>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

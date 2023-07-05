@@ -1,5 +1,10 @@
 import React from "react";
-import { IoHeartOutline, IoTimeOutline } from "react-icons/io5";
+import {
+  IoHeartOutline,
+  IoTimeOutline,
+  IoLogoSass,
+  IoLogoAngular,
+} from "react-icons/io5";
 import {
   SiTypescript,
   SiRedux,
@@ -7,9 +12,12 @@ import {
   SiNodedotjs,
   SiReact,
   SiFigma,
+  SiNextdotjs,
+  SiVite,
 } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
 import { VscOrganization } from "react-icons/vsc";
+import { FaRegComments } from "react-icons/fa";
 import { HiOutlineBookOpen } from "react-icons/hi";
 import { BsPuzzle } from "react-icons/bs";
 import { useTranslation } from "react-i18next";
@@ -39,6 +47,10 @@ export const Technologies = () => {
       { icon: <SiNodedotjs />, label: "NodeJS" },
       { icon: <TbBrandReactNative />, label: "React Native" },
       { icon: <SiFigma />, label: "Figma" },
+      { icon: <IoLogoSass />, label: "Sass" },
+      { icon: <SiNextdotjs />, label: "NextJS" },
+      { icon: <IoLogoAngular />, label: "Angular" },
+      { icon: <SiVite />, label: "Vite" },
     ],
     softSkills = [
       {
@@ -60,6 +72,10 @@ export const Technologies = () => {
       {
         icon: <BsPuzzle />,
         label: t("technologies.softSkills.problemSolving"),
+      },
+      {
+        icon: <FaRegComments />,
+        label: t("technologies.softSkills.communication"),
       },
     ];
 

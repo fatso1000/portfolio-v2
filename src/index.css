@@ -19,8 +19,7 @@ body {
 
 button {
   /* font-family: "Playfair Display", serif; */
-    font-family: "Chivo Mono", monospace;
-
+  font-family: "Chivo Mono", monospace;
 }
 
 a {
@@ -48,11 +47,10 @@ html {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.3);
-  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.4);
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.6);
 }

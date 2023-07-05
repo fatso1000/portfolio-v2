@@ -6,29 +6,32 @@ const es = {
     },
     contactMe: {
       text: "¡Espero que podamos ponernos en contacto pronto!",
-      designed: "Diseñado y desarrollado por Matías Benítez :P",
+      designed: "Diseñado y desarrollado por Matías Benítez ",
     },
     experiences: [
       {
         position: "Desarrollador Front End",
         enterprise: "MOBEATS",
-        date: "Abr 2021 - Presente · 2 años",
+        date: "Abr 2021 - Jul 2023 · 2 años",
         location: "Berazategui, Buenos Aires, Argentina",
         experiences: [
           {
             title: "ENFOKE",
+            link: "https://www.enfoke.com/",
             description:
               'New Eges, "El software de gestión que optimiza los Centros de Diagnóstico más importantes de Argentina"',
             technologies: "React Typescript",
           },
           {
             title: "LAFKEN",
+            link: "https://grupolafken.com/",
             description:
               "Lafken App, aplicacione mobile para seguir y monitorear las medicinas del paciente",
             technologies: "React Native",
           },
           {
             title: "IOF",
+            link: "https://iofcompany.com/",
             description:
               "Backoffice y AppWeb para monitorear y controlar la temperatura de los cultivos y silobolsas.",
             technologies:
@@ -36,11 +39,13 @@ const es = {
           },
           {
             title: "SEVENTEEN",
+            link: "https://seventeensrl.com.ar/",
             description: "E-Commerce de cortinas",
             technologies: "Angular, PHP",
           },
           {
             title: "ZECATDIFAPRO",
+            link: "https://www.zecat.com/",
             description:
               "E-Commerce, Proveedor integral de productos promocionales",
             technologies: "Vue, NodeJs",
@@ -142,6 +147,7 @@ const es = {
         fastLearning: "Aprendizaje Rapido",
         timeManagement: "Manejo del Tiempo",
         problemSolving: "Resolucion de Problemas",
+        communication: "Comunicación",
       },
     },
   },
@@ -154,7 +160,7 @@ const en = {
     },
     contactMe: {
       text: "I hope we can get in touch soon!",
-      designed: "Designed and developed by Matias Benitez :P",
+      designed: "Designed and developed by Matias Benitez ",
     },
     header: {
       home: "Home",
@@ -194,23 +200,26 @@ const en = {
       {
         position: "Front End Developer",
         enterprise: "MOBEATS",
-        date: "April 2021 - Present · 2 years",
+        date: "April 2021 - Jul 2023 · 2 years",
         location: "Berazategui, Buenos Aires, Argentina",
         experiences: [
           {
             title: "ENFOKE",
+            link: "https://www.enfoke.com/",
             description:
               'New Eges, "The Management software that optimizes the most important Diagnostic Centers in Argentina"',
             technologies: "React Typescript",
           },
           {
             title: "LAFKEN",
+            link: "https://grupolafken.com/",
             description:
               "Lafken App, mobile app to track and manage the patient's medicines",
             technologies: "React Native",
           },
           {
             title: "IOF",
+            link: "https://iofcompany.com/",
             description:
               "Backoffice and AppWeb to monitor and control the temperature of crops and silo bags.",
             technologies:
@@ -218,11 +227,13 @@ const en = {
           },
           {
             title: "SEVENTEEN",
+            link: "https://seventeensrl.com.ar/",
             description: "E-Commerce of curtains",
             technologies: "Angular, PHP",
           },
           {
             title: "ZECATDIFAPRO",
+            link: "https://www.zecat.com/",
             description:
               "E-Commerce, One-stop provider of promotional products",
             technologies: "Vue, NodeJs",
@@ -292,6 +303,7 @@ const en = {
         fastLearning: "Fast Learning",
         timeManagement: "Time Management",
         problemSolving: "Problem Solving",
+        communication: "Communication",
       },
     },
   },

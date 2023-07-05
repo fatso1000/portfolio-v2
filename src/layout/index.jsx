@@ -13,7 +13,7 @@ export const Layout = () => {
     <main className="app-container">
       <Navbar />
       <Introduction />
-      <AboutMe />
+      {/* <AboutMe /> */}
       <Technologies />
       <Education />
       <Experience />

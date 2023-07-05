@@ -17,7 +17,13 @@ const ProjectCard = (props) => (
       <span>{props.text}</span>
       <div>
         {props.links.map((val, i) => (
-          <a href={val.href} target="_blank" rel="noreferrer" key={i}>
+          <a
+            href={val.href}
+            target="_blank"
+            rel="noreferrer"
+            key={i}
+            style={{ lineHeight: "1rem" }}
+          >
             {val.icon}
           </a>
         ))}
@@ -102,6 +108,7 @@ export const Projects = () => {
           flexDirection: "row",
           flexWrap: "wrap",
           width: "100%",
+          gap: 4,
         }}
       >
         {t("projects", { returnObjects: true }).map((val, i) => (

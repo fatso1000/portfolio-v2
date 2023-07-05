@@ -1,7 +1,7 @@
 :root {
   --primary: #fdf7e7;
   --secondary: #6663fd;
-  --third: rgba(0, 0, 0, 0.722);
+  --third: #464540;
   /* 36.8px */
   --fs-title: 2.3rem;
   --fs-title-mobile: 1.8rem;
@@ -47,15 +47,23 @@
 .accordion li span {
   color: var(--third);
 }
-.accordion li h3 {
+.accordion li h3,
+.accordion li a {
   font-weight: 900;
   font-size: 1.3rem;
+}
+.accordion li a {
+  width: auto;
+  text-decoration: underline;
 }
 .accordion li {
   position: relative;
   margin: 0;
   padding-bottom: 1em;
   padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  column-gap: 5px;
 }
 .accordion li:before {
   content: "";
@@ -86,11 +94,11 @@
 .accordion img {
   width: 4rem;
   height: 4rem;
-  border-radius: 20px;
-  border: 1px solid var(--third);
+  border-radius: 5px;
+  border: 1px solid #e3decf;
 }
 .accordion.active img {
-  border: 1px solid var(--primary);
+  border: 1px solid #585651;
 }
 
 .accordion .title {
@@ -108,12 +116,12 @@
   color: var(--third);
   cursor: pointer;
   row-gap: 0.2rem;
-  border-radius: 20px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid #e3decf;
 }
 .accordion.active button {
   background-color: var(--third);
   color: var(--primary);
+  border-color: var(--third);
 }
 .accordion.active button .muted {
   color: #a09a8f;
@@ -124,8 +132,7 @@
 }
 .accordion.active .button-list {
   height: auto;
-  border-radius: 20px;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: #e3decf;
 }
 .button-list span {
   font-size: 0.96em;
@@ -138,7 +145,7 @@
 
 .header-button {
   display: inline-flex;
-  color: var(--primary);
+  color: var(--third);
   background: transparent;
   border: 0px;
   column-gap: 30px;
@@ -172,22 +179,29 @@
 .navbar {
   z-index: 5;
   left: 0;
-  max-width: calc(1200px - 6rem);
   right: 0;
   margin-left: auto;
   margin-right: auto;
   top: 0;
-  padding: 0.5rem 1rem;
+  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  /* height: 40px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--third);
+  background-color: #e3decfbd;
+  border-bottom: 1px solid #63625a;
+  backdrop-filter: blur(20px);
+}
+
+.navbar__container {
   height: 40px;
+  max-width: 1200px;
+  min-width: 100%;
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
-  color: var(--primary);
-  background-color: var(--third);
-  backdrop-filter: blur(12px);
-  border-radius: 20px;
-  margin-top: 1rem;
-  transition: background-color 1s ease;
 }
 
 .navbar.sticky {
@@ -259,23 +273,23 @@
   display: none;
 }
 .navbar-progress a {
-  text-decoration: none;
-  color: rgba(253, 247, 231, 0.6);
+  color: rgba(0, 0, 0, 0.5);
   transition: 0.3s;
-  font-weight: 500;
+  /* font-weight: 600; */
   font-size: 1.05rem;
-  border-radius: 20px;
   padding: 0.4rem 0.6rem;
 }
 .navbar-progress a:hover {
-  color: var(--third);
-  background-color: var(--primary);
+  color: var(--primary);
+  background-color: var(--third);
+  text-decoration: underline;
 }
 .navbar-progress a.active {
-  color: var(--primary);
+  color: var(--third);
+  text-decoration: underline;
 }
 .navbar-progress a.active:hover {
-  color: var(--third);
+  color: var(--primary);
 }
 
 .navbar h5 {
@@ -364,7 +378,7 @@
   display: flex;
   flex-direction: column;
   padding: 1.7rem;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: #e3decf;
   border-radius: 20px;
 }
 
@@ -423,7 +437,6 @@
   text-align: center;
   justify-content: center;
   background: var(--secondary);
-  border-radius: 20px;
   padding: 1rem;
   color: var(--primary);
   border: 1px solid var(--secondary);
@@ -458,13 +471,12 @@
 }
 
 .technologies .tech__header {
-  border-radius: 20px;
   background-color: var(--third);
   color: var(--primary);
   display: inline-flex;
   justify-content: space-around;
   width: 100%;
-  padding: 2rem 0rem;
+  padding: 1rem 0rem;
   align-items: center;
 }
 .technologies .tech__header h2 {
@@ -480,11 +492,10 @@
   align-items: start;
   display: flex;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.1);
-  border-radius: 20px;
+  background-color: #e3decf;
 }
 .hard-skills .list > div {
-  border-radius: 20px;
+  border-radius: 5px;
   background-color: var(--third);
   color: var(--primary);
   padding: 0.7rem;
@@ -506,22 +517,18 @@
   justify-content: center;
 }
 .projects .cards {
-  width: calc(50% - 2rem);
+  width: calc(50% - 2px);
   display: flex;
   flex-direction: column;
   align-items: center;
   transition: 0.3s ease;
   color: var(--third);
-  background-color: rgba(0, 0, 0, 0.1);
-  border-radius: 20px;
-  margin: 1rem;
+  background: #e3decf;
 }
 .projects .cards .img__container {
   width: 100%;
   height: 10rem;
   background-color: var(--third);
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -530,8 +537,6 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
 }
 .projects .cards .img__container span {
   font-size: 2.5rem;
@@ -542,48 +547,33 @@
 .projects .cards .cards__body {
   padding: 0.5rem;
   display: flex;
+  row-gap: 5px;
   flex-direction: column;
   align-items: center;
+}
+.projects .cards .cards__body h3 {
+  color: var(--secondary);
 }
 
 /*  */
 
 .section {
   min-height: calc(100vh - 76px);
-  padding: 0px 2rem;
   text-align: center;
   padding-top: 76px !important;
   scroll-snap-align: center;
 }
 
 .introduction__alert {
-  position: absolute;
-  top: 80px;
-  right: 2%;
+  max-width: 1200px;
   display: inline-flex;
   align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: var(--primary);
-  border-radius: 20px;
-  padding: 1rem;
-  cursor: pointer;
+  color: var(--third);
 }
 .introduction__alert svg {
   width: 24px;
   height: 24px;
   margin-left: 3px;
-}
-.introduction__alert .tail {
-  position: absolute;
-  top: -20px;
-  right: 17px;
-  width: 0;
-  height: 0;
-  border-color: transparent transparent rgba(0, 0, 0, 0.8) transparent;
-  border-width: 10px;
-  border-style: solid;
 }
 
 .introduction__alert ul {
@@ -595,11 +585,10 @@
 .introduction__alert a {
   border: 0;
   background-color: transparent;
-  color: var(--primary);
+  color: var(--third);
   display: inline-flex;
   align-items: center;
   width: 100%;
-  border-radius: 20px;
   padding: 0.5rem;
   gap: 0.3rem;
   cursor: pointer;
@@ -628,7 +617,7 @@
   color: var(--third);
 }
 .about-me .cards:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: #e3decf;
 }
 
 .about-me .cards svg,
@@ -641,8 +630,7 @@
   display: flex;
   flex-direction: column;
   padding: 1.7rem;
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 20px;
+  background: #e3decf;
   margin: auto 0px;
 }
 .contact-me .card h2 {
@@ -657,8 +645,8 @@ body.experience {
 
 @media only screen and (max-width: 1200px) {
   .navbar {
-    margin-left: 0.3rem;
-    margin-right: 0.3rem;
+    /* margin-left: 0.3rem;
+    margin-right: 0.3rem; */
   }
 }
 
@@ -691,10 +679,10 @@ body.experience {
     font-size: var(--fs-title-mobile);
   }
   .navbar {
-    padding: 0.25rem 1rem;
+    /* padding: 0.25rem 1rem; */
   }
   .section {
-    padding: 0px 1rem;
+    padding: 0px 0.5rem;
   }
   .introduction__title h2 {
     font-size: 2em;
@@ -741,7 +729,7 @@ body.experience {
   .accordion .subtitle {
     font-size: var(--fs-normal-mobile);
   }
-  .accordion li h3 {
+  .accordion li a {
     font-size: var(--fs-regular-mobile);
   }
   .experience__container h1 {
@@ -771,19 +759,18 @@ body.experience {
 
   /* CARDS */
   .projects .cards {
-    width: calc(100%);
-    margin: 1rem 0px;
+    width: 100%;
   }
 }
 
 @media (hover: hover) {
   /* when hover is supported */
   .accordion button:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: #e3decf;
   }
   .accordion.active button:hover {
-    background-color: rgba(0, 0, 0, 0.65);
-    border: 1px solid rgba(0, 0, 0, 0.65);
+    background-color: #63625a;
+    border: 1px solid #63625a;
   }
   .header-button:hover {
     background-color: var(--primary);
@@ -796,14 +783,15 @@ body.experience {
   .introduction__explore:hover svg path {
     color: var(--primary);
   }
-  .projects .cards:hover {
-    background-color: rgba(0, 0, 0, 0.2);
-  }
   .contact-me__list a:hover {
     background-color: var(--third);
     color: var(--primary);
   }
   .projects .cards .cards__body a:hover {
     opacity: 0.9;
+  }
+  .accordion li a:hover {
+    color: var(--primary);
+    background-color: var(--third);
   }
 }

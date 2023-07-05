@@ -24,7 +24,15 @@ export const Accordion = (props) => {
         <ul>
           {experiences.map((value, i) => (
             <li key={i}>
-              <h3>{value.title}</h3>
+              {value.link ? (
+                <div>
+                  <a target="_blank" rel="noreferrer" href={value.link}>
+                    {value.title}
+                  </a>
+                </div>
+              ) : (
+                <h3>{value.title}</h3>
+              )}
               <span>{value.description}</span>
               <p className="muted">{value.technologies}</p>
             </li>

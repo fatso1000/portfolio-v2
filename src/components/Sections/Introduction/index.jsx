@@ -39,7 +39,7 @@ export const Introduction = () => {
           </div>
         </div>
       </div>
-      <a href="#about-me" className="introduction__explore">
+      <a href="#technologies" className="introduction__explore">
         <IoArrowDownOutline />
       </a>
     </section>

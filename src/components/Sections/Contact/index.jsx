@@ -46,7 +46,7 @@ export const ContactMe = () => {
           marginBottom: "2rem",
         }}
       >
-        <h5>{t("contactMe.designed")}</h5>
+        <h5>{t("contactMe.designed")}&#128140;</h5>
         <h5 style={{ fontSize: "0.78em" }}>2023</h5>
       </footer>
     </section>
