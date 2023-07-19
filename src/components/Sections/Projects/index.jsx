@@ -3,6 +3,7 @@ import XKCDImg from "../../../assets/projects/xkcd.jpeg";
 import MELIImg from "../../../assets/projects/mercadolibre_clone.png";
 import PORTFOLIOImg from "../../../assets/projects/portfolio.png";
 import SOCLONEImg from "../../../assets/projects/so_clone.jpeg";
+import PERSONALBLOGImg from "../../../assets/projects/personal_blog.png";
 import GAMESDBImg from "../../../assets/projects/gamesdb.PNG";
 import { IoGlobe, IoLogoGithub, IoLogoYoutube } from "react-icons/io5";
 import { useTranslation } from "react-i18next";
@@ -37,6 +38,44 @@ export const Projects = () => {
 
   const extraData = [
     {
+      img: PERSONALBLOGImg,
+      imgAlt: "PERSONAL-BLOG-IMG",
+      links: [
+        {
+          href: "https://github.com/fatso1000/personal-blog",
+          icon: <IoLogoGithub />,
+        },
+        {
+          href: "https://personal-blog-delta-amber.vercel.app/",
+          icon: <IoGlobe />,
+        },
+      ],
+    },
+    {
+      img: SOCLONEImg,
+      imgAlt: "SO-CLONE-IMG",
+      links: [
+        {
+          href: "https://github.com/fatso1000/windows-clone-copy",
+          icon: <IoLogoGithub />,
+        },
+        {
+          href: "https://so-clone.netlify.app/",
+          icon: <IoGlobe />,
+        },
+      ],
+    },
+    {
+      img: PORTFOLIOImg,
+      imgAlt: "PORTFOLIO-APP",
+      links: [
+        {
+          href: "https://github.com/fatso1000/portfolio-v2",
+          icon: <IoLogoGithub />,
+        },
+      ],
+    },
+    {
       img: XKCDImg,
       imgAlt: "XKCD-APP",
       links: [
@@ -58,16 +97,6 @@ export const Projects = () => {
       ],
     },
     {
-      img: PORTFOLIOImg,
-      imgAlt: "PORTFOLIO-APP",
-      links: [
-        {
-          href: "https://github.com/fatso1000/portfolio-v2",
-          icon: <IoLogoGithub />,
-        },
-      ],
-    },
-    {
       img: GAMESDBImg,
       imgAlt: "GAMES-DB-APP",
       links: [
@@ -77,20 +106,6 @@ export const Projects = () => {
         },
         {
           href: "https://pi-videogames.netlify.app/",
-          icon: <IoGlobe />,
-        },
-      ],
-    },
-    {
-      img: SOCLONEImg,
-      imgAlt: "SO-CLONE-IMG",
-      links: [
-        {
-          href: "https://github.com/fatso1000/windows-clone-copy",
-          icon: <IoLogoGithub />,
-        },
-        {
-          href: "https://so-clone.netlify.app/",
           icon: <IoGlobe />,
         },
       ],

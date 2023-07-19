@@ -102,6 +102,18 @@ const es = {
     },
     projects: [
       {
+        title: "Blog Personal",
+        text: "Blog personal creado con NextJS 13, prisma, postgresql. Donde subo cosas que me parecen importantes saber!",
+      },
+      {
+        title: "SO Clone",
+        text: "Este proyecto fue realizado para SoyHenry, utilizando una API privada para filtrar y buscar videojuegos. Actualmente está desactualizado, ya que la API que se utilizó ya no existe.",
+      },
+      {
+        title: "Portfolio",
+        text: "Este proyecto es mi ultimo portfolio, es el mismo en el que estas viendo esto :p",
+      },
+      {
         title: "XKCD Comic Search",
         text: "Buscador de comics XKCD mediante su id, no funciona debido a la baja de la API",
       },
@@ -109,17 +121,10 @@ const es = {
         title: "MercadoLibre Clone",
         text: "Clon de mercado libre creado con react-native, solamente funcionalidades esteticas y de interfaz",
       },
-      {
-        title: "Portfolio",
-        text: "Este proyecto es mi ultimo portfolio, es el mismo en el que estas viendo esto :p",
-      },
+
       {
         title: "VideoGamesDB Search",
         text: "Este proyecto fue hecho para SoyHenry, utilizando una API privada debia filtrar y buscar videojuegos. Actualmente se encuentra obsoleto, debido a que la API utilizada ya no existe.",
-      },
-      {
-        title: "SO Clone",
-        text: "This project was made for SoyHenry, using a private API to filter and search for video games. It is currently deprecated, because the API used no longer exists.",
       },
     ],
     header: {
@@ -176,6 +181,18 @@ const en = {
     },
     projects: [
       {
+        title: "Personal Blog",
+        text: "Blog personal made with NextJS 13, prisma and postgresql. This place is where I post content I think is important to know!",
+      },
+      {
+        title: "SO Clone",
+        text: "This project was made for SoyHenry, using a private API to filter and search for video games. It is currently deprecated, because the API used no longer exists.",
+      },
+      {
+        title: "Portfolio",
+        text: "This project is my last portfolio, it is the same one in which you are seeing this",
+      },
+      {
         title: "XKCD Comic Search",
         text: "XKCD comics search engine through its id, does not work due to the cancellation of the API",
       },
@@ -184,15 +201,7 @@ const en = {
         text: "MercadoLibre clone created with react-native, only aesthetic and interface functionalities",
       },
       {
-        title: "Portfolio",
-        text: "This project is my last portfolio, it is the same one in which you are seeing this",
-      },
-      {
         title: "VideoGamesDB Search",
-        text: "This project was made for SoyHenry, using a private API to filter and search for video games. It is currently deprecated, because the API used no longer exists.",
-      },
-      {
-        title: "SO Clone",
         text: "This project was made for SoyHenry, using a private API to filter and search for video games. It is currently deprecated, because the API used no longer exists.",
       },
     ],
