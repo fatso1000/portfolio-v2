@@ -6,7 +6,7 @@ export const Accordion = (props) => {
   return (
     <div className={isOpen ? "accordion active" : "accordion"}>
       <button onClick={() => setIsOpen(!isOpen)}>
-        <img src={logo} alt="lol" />
+        <img src={logo} alt="logo" />
         <div
           style={{
             display: "flex",

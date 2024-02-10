@@ -1,10 +1,11 @@
 import React from "react";
-import XKCDImg from "../../../assets/projects/xkcd.jpeg";
-import MELIImg from "../../../assets/projects/mercadolibre_clone.png";
-import PORTFOLIOImg from "../../../assets/projects/portfolio.png";
-import SOCLONEImg from "../../../assets/projects/so_clone.jpeg";
+import XKCDImg from "../../../assets/projects/xkcd.jpg";
+import MELIImg from "../../../assets/projects/mercadolibre_clone.jpg";
+import PORTFOLIOImg from "../../../assets/projects/portfolio.jpg";
+import SOCLONEImg from "../../../assets/projects/so_clone.jpg";
 import PERSONALBLOGImg from "../../../assets/projects/personal_blog.png";
-import GAMESDBImg from "../../../assets/projects/gamesdb.PNG";
+import LearnLanguagesOnlineImg from "../../../assets/projects/learn_languages_online.jpg";
+import GAMESDBImg from "../../../assets/projects/gamesdb.jpg";
 import { IoGlobe, IoLogoGithub, IoLogoYoutube } from "react-icons/io5";
 import { useTranslation } from "react-i18next";
 
@@ -38,8 +39,22 @@ export const Projects = () => {
 
   const extraData = [
     {
+      img: LearnLanguagesOnlineImg,
+      imgAlt: "LEARN LENGUAGES ONLINE",
+      links: [
+        {
+          href: "https://github.com/fatso1000/learn-languages",
+          icon: <IoLogoGithub />,
+        },
+        {
+          href: "https://learn-languages-zeta.vercel.app/",
+          icon: <IoGlobe />,
+        },
+      ],
+    },
+    {
       img: PERSONALBLOGImg,
-      imgAlt: "PERSONAL-BLOG-IMG",
+      imgAlt: "PERSONAL BLOG",
       links: [
         {
           href: "https://github.com/fatso1000/personal-blog",
@@ -53,7 +68,7 @@ export const Projects = () => {
     },
     {
       img: SOCLONEImg,
-      imgAlt: "SO-CLONE-IMG",
+      imgAlt: "SO CLONE",
       links: [
         {
           href: "https://github.com/fatso1000/windows-clone-copy",
@@ -67,7 +82,7 @@ export const Projects = () => {
     },
     {
       img: PORTFOLIOImg,
-      imgAlt: "PORTFOLIO-APP",
+      imgAlt: "PORTFOLIO",
       links: [
         {
           href: "https://github.com/fatso1000/portfolio-v2",
@@ -77,7 +92,7 @@ export const Projects = () => {
     },
     {
       img: XKCDImg,
-      imgAlt: "XKCD-APP",
+      imgAlt: "XKCD",
       links: [
         {
           href: "https://github.com/fatso1000/xkcd-react",
@@ -88,7 +103,7 @@ export const Projects = () => {
     },
     {
       img: MELIImg,
-      imgAlt: "MERCADOLIBRE-CLONE-APP",
+      imgAlt: "MERCADOLIBRE CLONE",
       links: [
         {
           href: "https://github.com/fatso1000/mercadolibre-clone",
@@ -98,7 +113,7 @@ export const Projects = () => {
     },
     {
       img: GAMESDBImg,
-      imgAlt: "GAMES-DB-APP",
+      imgAlt: "GAMES DB",
       links: [
         {
           href: "https://github.com/fatso1000/individual-project-henry",

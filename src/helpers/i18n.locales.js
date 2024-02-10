@@ -99,8 +99,26 @@ const es = {
           },
         ],
       },
+      accenture: {
+        position: "Sap BTP CAP-UI5",
+        enterprise: "Accenture",
+        date: "Sep 2023 - Oct 2023",
+        location: "Remote, Argentina",
+        experiences: [
+          {
+            title: "Sap BTP CAP-UI5",
+            description:
+              "Desarrollo e introducción al mundo de SAP. Uso de todas las tecnologías SAP, centrándose en CAP y UI5.",
+            technologies: "SQL, NodeJS, SAP FIORI, React, Javascript, MTA.",
+          },
+        ],
+      },
     },
     projects: [
+      {
+        title: "Learn Lenguages Online",
+        text: "App web creada con la funcion de aprender idiomas de una manera facil y rapida!",
+      },
       {
         title: "Blog Personal",
         text: "Blog personal creado con NextJS 13, prisma, postgresql. Donde subo cosas que me parecen importantes saber!",
@@ -180,6 +198,10 @@ const en = {
       },
     },
     projects: [
+      {
+        title: "Learn Lenguages Online",
+        text: "Web app created with the function of learning languages in an easy and fast way!",
+      },
       {
         title: "Personal Blog",
         text: "Blog personal made with NextJS 13, prisma and postgresql. This place is where I post content I think is important to know!",
@@ -293,6 +315,20 @@ const en = {
               "Full-Stack career, intensive bootcamp where you learn the majority of technologies and how to develop new projects.",
             technologies:
               "React Typescript, NodeJs Typescript, Postgresql, Redux, API, Data Structures, WebPack, Non-Relational databases",
+          },
+        ],
+      },
+      accenture: {
+        position: "Sap BTP CAP-UI5",
+        enterprise: "Accenture",
+        date: "Sep 2023 - Oct 2023",
+        location: "Remote, Argentina",
+        experiences: [
+          {
+            title: "Sap BTP CAP-UI5",
+            description:
+              "Development and introduction to the world of SAP. Use of all SAP technologies, focusing on CAP and UI5. Hana databases, SQL, NodeJS, SAP FIORI, React, Javascript, MTA.",
+            technologies: "SQL, NodeJS, SAP FIORI, React, Javascript, MTA.",
           },
         ],
       },

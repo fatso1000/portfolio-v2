@@ -2,6 +2,7 @@ import React from "react";
 import { Accordion } from "../../Accordion";
 import SoyHenryLogo from "../../../assets/soyhenry_logo.jfif";
 import Tec4Logo from "../../../assets/tec4.png";
+import AccentureLogo from "../../../assets/accenture_logo.png";
 import { useTranslation } from "react-i18next";
 
 export const Education = () => {
@@ -37,6 +38,16 @@ export const Education = () => {
             returnObjects: true,
           })}
           logo={SoyHenryLogo}
+        />
+        <Accordion
+          position={t("education.accenture.position")}
+          enterprise={t("education.accenture.enterprise")}
+          date={t("education.accenture.date")}
+          location={t("education.accenture.location")}
+          experiences={t("education.accenture.experiences", {
+            returnObjects: true,
+          })}
+          logo={AccentureLogo}
         />
       </div>
     </section>
