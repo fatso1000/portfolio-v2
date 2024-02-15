@@ -6,19 +6,14 @@ import AccentureLogo from "../../../assets/accenture_logo.png";
 import { useTranslation } from "react-i18next";
 
 export const Education = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <section id="education" className="section experience">
       <div className="experience__container">
         <h2>{t("header.education")}</h2>
       </div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
+      <div className="accordion--container">
         <Accordion
           position={t("education.eestn4.position")}
           enterprise={t("education.eestn4.enterprise")}

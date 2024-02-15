@@ -3,12 +3,12 @@ import { IoLogoLinkedin, IoMail, IoLogoGithub } from "react-icons/io5";
 import { useTranslation } from "react-i18next";
 
 export const ContactMe = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <section data-color="violet" id="contact-me" className="section contact-me">
       <div className="card">
-        <h2 style={{ color: "var(--secondary)" }}>{t("header.contact")}</h2>
+        <h2>{t("header.contact")}</h2>
         <span>
           {t("contactMe.text")} {"<3"}
         </span>
@@ -44,6 +44,7 @@ export const ContactMe = () => {
           display: "flex",
           flexDirection: "column",
           marginBottom: "2rem",
+          fontStyle: "italic",
         }}
       >
         <h5>{t("contactMe.designed")}&#128140;</h5>

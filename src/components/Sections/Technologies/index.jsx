@@ -13,7 +13,6 @@ import {
   SiReact,
   SiFigma,
   SiNextdotjs,
-  SiVite,
 } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
 import { VscOrganization } from "react-icons/vsc";
@@ -37,7 +36,7 @@ const TechSkills = (props) => (
 );
 
 export const Technologies = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const hardSkills = [
       { icon: <SiTypescript />, label: "Typescript" },
@@ -50,7 +49,6 @@ export const Technologies = () => {
       { icon: <IoLogoSass />, label: "Sass" },
       { icon: <SiNextdotjs />, label: "NextJS" },
       { icon: <IoLogoAngular />, label: "Angular" },
-      { icon: <SiVite />, label: "Vite" },
     ],
     softSkills = [
       {

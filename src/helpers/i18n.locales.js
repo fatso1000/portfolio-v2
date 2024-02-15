@@ -132,10 +132,6 @@ const es = {
         text: "Este proyecto es mi ultimo portfolio, es el mismo en el que estas viendo esto :p",
       },
       {
-        title: "XKCD Comic Search",
-        text: "Buscador de comics XKCD mediante su id, no funciona debido a la baja de la API",
-      },
-      {
         title: "MercadoLibre Clone",
         text: "Clon de mercado libre creado con react-native, solamente funcionalidades esteticas y de interfaz",
       },
@@ -213,10 +209,6 @@ const en = {
       {
         title: "Portfolio",
         text: "This project is my last portfolio, it is the same one in which you are seeing this",
-      },
-      {
-        title: "XKCD Comic Search",
-        text: "XKCD comics search engine through its id, does not work due to the cancellation of the API",
       },
       {
         title: "MercadoLibre Clone",

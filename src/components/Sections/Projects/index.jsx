@@ -1,12 +1,11 @@
 import React from "react";
-import XKCDImg from "../../../assets/projects/xkcd.jpg";
 import MELIImg from "../../../assets/projects/mercadolibre_clone.jpg";
 import PORTFOLIOImg from "../../../assets/projects/portfolio.jpg";
 import SOCLONEImg from "../../../assets/projects/so_clone.jpg";
 import PERSONALBLOGImg from "../../../assets/projects/personal_blog.png";
 import LearnLanguagesOnlineImg from "../../../assets/projects/learn_languages_online.jpg";
 import GAMESDBImg from "../../../assets/projects/gamesdb.jpg";
-import { IoGlobe, IoLogoGithub, IoLogoYoutube } from "react-icons/io5";
+import { IoGlobe, IoLogoGithub } from "react-icons/io5";
 import { useTranslation } from "react-i18next";
 
 const ProjectCard = (props) => (
@@ -16,7 +15,9 @@ const ProjectCard = (props) => (
     </div>
     <div className="cards__body">
       <h3>{props.title}</h3>
-      <span>{props.text}</span>
+      <span style={{ marginBottom: "auto", fontSize: "0.96em" }}>
+        {props.text}
+      </span>
       <div>
         {props.links.map((val, i) => (
           <a
@@ -35,7 +36,7 @@ const ProjectCard = (props) => (
 );
 
 export const Projects = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const extraData = [
     {
@@ -91,17 +92,6 @@ export const Projects = () => {
       ],
     },
     {
-      img: XKCDImg,
-      imgAlt: "XKCD",
-      links: [
-        {
-          href: "https://github.com/fatso1000/xkcd-react",
-          icon: <IoLogoGithub />,
-        },
-        { href: "https://youtu.be/R6dPAIne0AE", icon: <IoLogoYoutube /> },
-      ],
-    },
-    {
       img: MELIImg,
       imgAlt: "MERCADOLIBRE CLONE",
       links: [
@@ -132,15 +122,7 @@ export const Projects = () => {
       <div className="experience__container">
         <h2>{t("header.projects")}</h2>
       </div>
-      <div
-        style={{
-          display: "inline-flex",
-          flexDirection: "row",
-          flexWrap: "wrap",
-          width: "100%",
-          gap: 4,
-        }}
-      >
+      <div className="cards--container">
         {t("projects", { returnObjects: true }).map((val, i) => (
           <ProjectCard {...val} key={i} {...extraData[i]} />
         ))}

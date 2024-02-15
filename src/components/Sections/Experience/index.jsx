@@ -5,7 +5,7 @@ import SoyHenryLogo from "../../../assets/soyhenry_logo.jfif";
 import { useTranslation } from "react-i18next";
 
 export const Experience = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const logos = [MobeatsLogo, SoyHenryLogo];
 
@@ -18,12 +18,7 @@ export const Experience = () => {
       <div className="experience__container">
         <h2>{t("header.experience")}</h2>
       </div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
+      <div className="accordion--container">
         {t("experiences", { returnObjects: true }).map((val, i) => (
           <Accordion
             position={val.position}
