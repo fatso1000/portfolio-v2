@@ -1,7 +1,9 @@
 :root {
   --primary: #adb6a7;
-  --secondary: #0b2800;
-  --third: #ffe8de;
+  --secondary: rgba(11, 40, 0, 0.72);
+  --bg: rgba(0, 0, 0, 0.05);
+  --border-color: rgba(0, 0, 0, 0.1);
+  --third: rgba(0, 0, 0, 0.72);
   /* 36.8px */
   --fs-title: 2.3rem;
   --fs-title-mobile: 1.8rem;
@@ -25,7 +27,7 @@
 }
 
 .muted {
-  color: #67725f;
+  color: rgba(0, 0, 0, 0.55);
 }
 
 .app-container {
@@ -38,22 +40,22 @@
 }
 
 /* ACCORDION */
-.accordion ul {
+.experiences ul {
   list-style-type: none;
   margin-block-start: 1em;
   margin-block-end: 1em;
-  padding-inline-start: 40px;
+  padding-inline-start: 0;
 }
-.accordion li h3,
-.accordion li a {
+.experiences li h3,
+.experiences li a {
   font-weight: 900;
   font-size: 1.3rem;
 }
-.accordion li a {
+.experiences li a {
   width: auto;
   text-decoration: underline;
 }
-.accordion li {
+.experiences li {
   position: relative;
   margin: 0;
   padding-bottom: 1em;
@@ -61,24 +63,15 @@
   display: flex;
   flex-direction: column;
   column-gap: 5px;
-  color: var(--secondary);
+  color: var(--third);
 }
-.accordion li:before {
-  content: "";
-  background-color: var(--third);
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 6px;
-  width: 3px;
-}
-.accordion li:after {
+.experiences li:after {
   content: "";
   border-radius: 50%;
   background-color: var(--secondary);
   position: absolute;
   left: 1.3px;
-  top: 0;
+  top: 8px;
   height: 12px;
   width: 12px;
 }
@@ -102,9 +95,6 @@
 .accordion--container {
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--secondary);
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
 }
 
 .accordion .title {
@@ -212,7 +202,7 @@
   flex-direction: column;
   color: var(--third);
   background-color: rgba(116, 129, 108, 0.75);
-  border-bottom: 1px solid var(--third);
+  border-bottom: 1px solid var(--border-color);
   backdrop-filter: blur(20px);
 }
 
@@ -300,7 +290,7 @@
   padding: 0.4rem 0.6rem;
 }
 .navbar-progress a:hover {
-  color: var(--secondary);
+  color: var(--primary);
   background-color: var(--third);
   text-decoration: underline;
 }
@@ -309,7 +299,7 @@
   text-decoration: underline;
 }
 .navbar-progress a.active:hover {
-  color: var(--secondary);
+  color: var(--primary);
 }
 
 .navbar h5 {
@@ -446,6 +436,16 @@
   filter: none;
 }
 
+/* EDUCATION */
+.education__container {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 3rem;
+  border-radius: 20px;
+  background-color: var(--bg);
+  color: var(--secondary);
+}
+
 /* EXPERIENCE */
 .section.experience {
   display: flex;
@@ -454,19 +454,17 @@
 }
 .experience__container {
   display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  background: var(--secondary);
-  padding: 1rem;
-  color: var(--third);
-  border: 1px solid var(--secondary);
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  flex-direction: column;
+  padding: 1.5rem 3rem;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  color: var(--secondary);
 }
-.experience__container h2 {
+.experience__container h2,
+.education__container h2 {
   font-size: var(--fs-title);
   font-weight: 900;
+  margin-bottom: 0.5rem;
 }
 
 /* TECHNOLOGIES */
@@ -478,6 +476,7 @@
   font-size: var(--fs-title);
   margin-bottom: 2rem;
   font-weight: 900;
+  text-align: center;
 }
 
 .tech__body {
@@ -496,24 +495,21 @@
 }
 
 .technologies .tech__header {
-  background-color: var(--secondary);
   color: var(--primary);
   display: inline-flex;
   justify-content: space-around;
   width: 100%;
-  padding: 1rem 0rem;
+  padding: 1.5rem 3rem;
   align-items: center;
-  border: 1px solid var(--secondary);
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  text-align: center;
 }
 .technologies .tech__header h2 {
   font-size: var(--fs-normal);
-  color: var(--primary);
+  color: var(--third);
 }
 .technologies .tech__header span {
   font-size: var(--fs-title);
-  color: var(--third);
+  color: var(--secondary);
   font-weight: 900;
 }
 .technologies .tech__body {
@@ -521,10 +517,7 @@
   align-items: flex-start;
   display: flex;
   width: 100%;
-  background-color: transparent;
-  border: 1px solid var(--secondary);
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-top: 1px solid var(--border-color);
 }
 .hard-skills .list > div {
   border-radius: 5px;
@@ -556,15 +549,18 @@
   align-items: center;
   transition: 0.3s ease;
   color: var(--third);
-  border: 1px solid var(--secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
 }
 .projects .cards .img__container {
   width: 100%;
   height: 10rem;
-  background-color: var(--secondary);
+  background-color: var(--border-color);
   display: flex;
   align-items: center;
   justify-content: center;
+  border-top-left-radius: 19px;
+  border-top-right-radius: 19px;
 }
 .projects .cards .img__container img {
   width: 100%;
@@ -576,28 +572,62 @@
 }
 .projects .cards .cards__body a {
   font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  background: var(--secondary);
+  border-radius: 13px;
+  width: 100%;
+  color: var(--primary);
+  padding: 0.3rem;
+  flex: 1;
 }
 .projects .cards .cards__body {
   padding: 0.7rem 1rem;
   display: flex;
   row-gap: 7px;
   flex-direction: column;
-  align-items: center;
   justify-content: space-between;
   height: 100%;
   text-align: left;
 }
 .projects .cards .cards__body h3 {
-  color: var(--secondary);
   font-weight: 900;
   font-size: 1.3rem;
+}
+
+/* EDUCATION CARD */
+.experience-educations {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.education--card {
+  display: flex;
+  flex-direction: row;
+  gap: 0.7rem;
+  color: var(--third);
+  flex: 1 auto;
+}
+.education--card img {
+  width: 50px;
+  height: 50px;
+  border-radius: 999px;
+  background-color: white;
+  border: 1px solid var(--border-color);
+}
+.education--card__description h3 {
+  font-weight: 800;
+  line-height: 1rem;
+}
+.education--card__description span {
+  font-weight: 300;
+  line-height: 1rem;
 }
 
 /*  */
 
 .section {
   min-height: calc(100vh - 76px);
-  text-align: center;
   padding-top: 76px !important;
   scroll-snap-align: center;
 }
@@ -667,8 +697,10 @@
 .contact-me .card {
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 1.7rem;
   background: var(--secondary);
+  color: var(--primary);
   margin: auto 0px;
   border-radius: 20px;
 }
@@ -688,6 +720,7 @@ body.experience {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+  gap: 1rem;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
 }
@@ -711,6 +744,13 @@ body.experience {
   .cards:nth-last-child(2) {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
+  }
+  .experience__container,
+  .education__container {
+    padding: 1rem 1.5rem;
+  }
+  .experiences li {
+    margin-left: -50px;
   }
 }
 

@@ -45,6 +45,7 @@ export const ContactMe = () => {
           flexDirection: "column",
           marginBottom: "2rem",
           fontStyle: "italic",
+          textAlign: "center",
         }}
       >
         <h5>{t("contactMe.designed")}&#128140;</h5>

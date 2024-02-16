@@ -83,35 +83,44 @@ export const Technologies = () => {
       data-color="blue"
       className="section technologies"
     >
-      <div className="tech__header">
-        <TechHeader
-          title={t("technologies.header.experience")}
-          label={t("technologies.header.experienceLabel")}
-        />
-        <TechHeader
-          title={t("technologies.header.projects")}
-          label={t("technologies.header.projectsLabel")}
-        />
-        <TechHeader
-          title={t("technologies.header.professionalism")}
-          label={t("technologies.header.professionalismLabel")}
-        />
-      </div>
-      <div className="tech__body">
-        <div className="hard-skills">
-          <h2>Hard Skills</h2>
-          <div className="list">
-            {hardSkills.map(({ icon, label }, i) => (
-              <TechSkills icon={icon} label={label} key={i} />
-            ))}
-          </div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          border: "1px solid var(--border-color)",
+          borderRadius: "20px",
+        }}
+      >
+        <div className="tech__header">
+          <TechHeader
+            title={t("technologies.header.experience")}
+            label={t("technologies.header.experienceLabel")}
+          />
+          <TechHeader
+            title={t("technologies.header.projects")}
+            label={t("technologies.header.projectsLabel")}
+          />
+          <TechHeader
+            title={t("technologies.header.professionalism")}
+            label={t("technologies.header.professionalismLabel")}
+          />
         </div>
-        <div className="hard-skills">
-          <h2>Soft Skills</h2>
-          <div className="list">
-            {softSkills.map(({ icon, label }, i) => (
-              <TechSkills icon={icon} label={label} key={i} />
-            ))}
+        <div className="tech__body">
+          <div className="hard-skills">
+            <h2>Hard Skills</h2>
+            <div className="list">
+              {hardSkills.map(({ icon, label }, i) => (
+                <TechSkills icon={icon} label={label} key={i} />
+              ))}
+            </div>
+          </div>
+          <div className="hard-skills">
+            <h2>Soft Skills</h2>
+            <div className="list">
+              {softSkills.map(({ icon, label }, i) => (
+                <TechSkills icon={icon} label={label} key={i} />
+              ))}
+            </div>
           </div>
         </div>
       </div>

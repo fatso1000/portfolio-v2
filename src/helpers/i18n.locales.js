@@ -78,7 +78,7 @@ const es = {
           {
             title: "Técnico en Programación",
             description:
-              "Carrera de Técnico en Programación, desarrollé diversos proyectos para la escuela.",
+              "Bases de la programación, fundamentos de C, C++, PHP, Javascript, Sql, MySql, Python, Bases de datos No Relacionales y su estructura.",
             technologies:
               "React, javascript, C, C++, Python, Mysql, Arduino, nodeJs, RaspberryPi, Relational Databases.",
           },
@@ -93,7 +93,7 @@ const es = {
           {
             title: "Carrera Full-Stack",
             description:
-              "Carrera Full-Stack, bootcamp intensivo donde aprendes la mayoría de tecnologías y cómo desarrollar nuevos proyectos.",
+              "Bootcamp para desarrolladores Full-Stack donde aprenderás todo sobre Desarrollo web con React, Nodejs y postgresql. Bases de programación, Webpack, Bases de Datos, Testing, Typecript, Javascript, API, Deployment, etc.",
             technologies:
               "React Typescript, NodeJs Typescript, Postgresql, Redux, API, Data Structures, WebPack, Non-Relational databases",
           },
@@ -108,7 +108,7 @@ const es = {
           {
             title: "Sap BTP CAP-UI5",
             description:
-              "Desarrollo e introducción al mundo de SAP. Uso de todas las tecnologías SAP, centrándose en CAP y UI5.",
+              "Desarrollo e introducción al mundo de SAP. Uso de todas las tecnologías SAP, con foco en CAP y UI5. Bases de datos Hana, SQL, NodeJS, SAP FIORI, React, Javascript, MTA.",
             technologies: "SQL, NodeJS, SAP FIORI, React, Javascript, MTA.",
           },
         ],
@@ -117,19 +117,19 @@ const es = {
     projects: [
       {
         title: "Learn Lenguages Online",
-        text: "App web creada con la funcion de aprender idiomas de una manera facil y rapida!",
+        text: "App web creada donde puedes idiomas de una manera facil y rapida!",
       },
       {
         title: "Blog Personal",
-        text: "Blog personal creado con NextJS 13, prisma, postgresql. Donde subo cosas que me parecen importantes saber!",
+        text: "Blog personal creado con NextJS 13, prisma, postgresql.",
       },
       {
         title: "SO Clone",
-        text: "Este proyecto fue realizado para SoyHenry, utilizando una API privada para filtrar y buscar videojuegos. Actualmente está desactualizado, ya que la API que se utilizó ya no existe.",
+        text: "App creada con React que imita el funcionamiento de un Sistema Operativo como Mac Os y Windows.",
       },
       {
         title: "Portfolio",
-        text: "Este proyecto es mi ultimo portfolio, es el mismo en el que estas viendo esto :p",
+        text: "Este proyecto es mi ultimo portfolio, es el mismo en el que estas viendo esto :)",
       },
       {
         title: "MercadoLibre Clone",
@@ -196,23 +196,23 @@ const en = {
     projects: [
       {
         title: "Learn Lenguages Online",
-        text: "Web app created with the function of learning languages in an easy and fast way!",
+        text: "Web App where you can learn multiple lenguages for free! Created with NextJS 13, Prisma, PostgreSQL and hosted in Vercel.",
       },
       {
         title: "Personal Blog",
-        text: "Blog personal made with NextJS 13, prisma and postgresql. This place is where I post content I think is important to know!",
+        text: "Personal blog created with NextJS 13, prisma and postgresql.",
       },
       {
-        title: "SO Clone",
-        text: "This project was made for SoyHenry, using a private API to filter and search for video games. It is currently deprecated, because the API used no longer exists.",
+        title: "OS Clone",
+        text: "React app inspired in Operative Sistems like Mac OS and Windows.",
       },
       {
         title: "Portfolio",
-        text: "This project is my last portfolio, it is the same one in which you are seeing this",
+        text: "This is my portfolio, the same one you are in right now :)",
       },
       {
         title: "MercadoLibre Clone",
-        text: "MercadoLibre clone created with react-native, only aesthetic and interface functionalities",
+        text: "MercadoLibre clone created with react-native, only UI functionalities",
       },
       {
         title: "VideoGamesDB Search",
@@ -289,7 +289,7 @@ const en = {
           {
             title: "Programming Technician",
             description:
-              "Programming Technician career, developed various projects for the school.",
+              "Bases of the programming, the basics of C, C++, PHP, Javascript, Sql, MySql, Python, Non-Relational databases and his structure.",
             technologies:
               "React, javascript, C, C++, Python, Mysql, Arduino, nodeJs, RaspberryPi, Relational Databases.",
           },
@@ -304,7 +304,7 @@ const en = {
           {
             title: "Full-Stack Career",
             description:
-              "Full-Stack career, intensive bootcamp where you learn the majority of technologies and how to develop new projects.",
+              "Full-Stack developer bootcamp where you learn all about web Development with React, Nodejs and postgresql. Bases of programming, Webpack, Databases, Testing, Typescript, Javascript, API, Deployment, etc.",
             technologies:
               "React Typescript, NodeJs Typescript, Postgresql, Redux, API, Data Structures, WebPack, Non-Relational databases",
           },

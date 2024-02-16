@@ -18,7 +18,7 @@ const ProjectCard = (props) => (
       <span style={{ marginBottom: "auto", fontSize: "0.96em" }}>
         {props.text}
       </span>
-      <div>
+      <div style={{ display: "flex", width: "100%", gap: "0.3rem" }}>
         {props.links.map((val, i) => (
           <a
             href={val.href}
@@ -119,13 +119,15 @@ export const Projects = () => {
 
   return (
     <section id="projects" className="section projects">
-      <div className="experience__container">
-        <h2>{t("header.projects")}</h2>
-      </div>
-      <div className="cards--container">
-        {t("projects", { returnObjects: true }).map((val, i) => (
-          <ProjectCard {...val} key={i} {...extraData[i]} />
-        ))}
+      <div className="education__container">
+        <div>
+          <h2>{t("header.projects")}</h2>
+        </div>
+        <div className="cards--container">
+          {t("projects", { returnObjects: true }).map((val, i) => (
+            <ProjectCard {...val} key={i} {...extraData[i]} />
+          ))}
+        </div>
       </div>
     </section>
   );
