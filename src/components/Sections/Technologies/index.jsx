@@ -87,7 +87,7 @@ export const Technologies = () => {
         style={{
           display: "flex",
           flexDirection: "column",
-          border: "1px solid var(--border-color)",
+          border: "1.5px solid var(--border-color)",
           borderRadius: "20px",
         }}
       >

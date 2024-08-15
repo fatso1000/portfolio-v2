@@ -41,7 +41,7 @@ export const Projects = () => {
   const extraData = [
     {
       img: LearnLanguagesOnlineImg,
-      imgAlt: "LEARN LENGUAGES ONLINE",
+      imgAlt: "LEARN LANGUAGES ONLINE",
       links: [
         {
           href: "https://github.com/fatso1000/learn-languages",

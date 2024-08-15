@@ -131,7 +131,7 @@ const es = {
     },
     projects: [
       {
-        title: "Learn Lenguages Online",
+        title: "Learn Languages Online",
         text: "App web creada donde puedes idiomas de una manera facil y rapida!",
       },
       {
@@ -210,7 +210,7 @@ const en = {
     },
     projects: [
       {
-        title: "Learn Lenguages Online",
+        title: "Learn Languages Online",
         text: "Web App where you can learn multiple lenguages for free! Created with NextJS 13, Prisma, PostgreSQL and hosted in Vercel.",
       },
       {
