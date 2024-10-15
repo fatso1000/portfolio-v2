@@ -116,6 +116,10 @@ const es = {
     },
     projects: [
       {
+        title: "BSAS TRAVEL",
+        text: "Guía interactiva de Buenos Aires que ofrece recomendaciones, eventos y rutas turísticas con una interfaz intuitiva y responsiva. Desarrollada con React y Tailwind CSS.",
+      },
+      {
         title: "Learn Lenguages Online",
         text: "App web creada donde puedes idiomas de una manera facil y rapida!",
       },
@@ -194,6 +198,10 @@ const en = {
       },
     },
     projects: [
+      {
+        title: "BSAS TRAVEL",
+        text: "An interactive guide to Buenos Aires offering recommendations, events, and tourist routes with an intuitive and responsive interface. Built with React and Tailwind CSS.",
+      },
       {
         title: "Learn Lenguages Online",
         text: "Web App where you can learn multiple lenguages for free! Created with NextJS 13, Prisma, PostgreSQL and hosted in Vercel.",

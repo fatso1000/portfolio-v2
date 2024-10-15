@@ -4,6 +4,7 @@ import PORTFOLIOImg from "../../../assets/projects/portfolio.jpg";
 import SOCLONEImg from "../../../assets/projects/so_clone.jpg";
 import PERSONALBLOGImg from "../../../assets/projects/personal_blog.png";
 import LearnLanguagesOnlineImg from "../../../assets/projects/learn_languages_online.jpg";
+import BSASTRAVELImg from "../../../assets/projects/bsas_travel.png";
 import GAMESDBImg from "../../../assets/projects/gamesdb.jpg";
 import { IoGlobe, IoLogoGithub } from "react-icons/io5";
 import { useTranslation } from "react-i18next";
@@ -39,6 +40,20 @@ export const Projects = () => {
   const { t } = useTranslation();
 
   const extraData = [
+    {
+      img: BSASTRAVELImg,
+      imgAlt: "BSAS TRAVEL",
+      links: [
+        {
+          href: "https://github.com/fatso1000/bsas-travel",
+          icon: <IoLogoGithub />,
+        },
+        {
+          href: "https://bsas-travel.netlify.app/",
+          icon: <IoGlobe />,
+        },
+      ],
+    },
     {
       img: LearnLanguagesOnlineImg,
       imgAlt: "LEARN LENGUAGES ONLINE",
