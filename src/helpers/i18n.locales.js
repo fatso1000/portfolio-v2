@@ -53,10 +53,25 @@ const es = {
         ],
       },
       {
+        position: "Desarrollador Front End",
+        enterprise: "Dream Venture Studio",
+        date: "Mar 2024 - presente · 6 meses",
+        location: "Remoto, Estados Unidos",
+        experiences: [
+          {
+            title: "Mr Satyam",
+            link: "",
+            description:
+              "Plataforma web para cursos en línea en India, con aplicaciones desarrolladas tanto para los usuarios como para la administración.",
+            technologies: "React, Typescript, Jest, React-Class",
+          },
+        ],
+      },
+      {
         position: "Desarrollador Full Stack",
         enterprise: "SOY HENRY",
         date: "Dic 2020 - Abr 2021",
-        location: "Remote, Latin America",
+        location: "Remote, Latino America",
         experiences: [
           {
             title: "VideoGamesDB Buscador",
@@ -229,7 +244,7 @@ const en = {
     ],
     experiences: [
       {
-        position: "Front End Developer",
+        position: "Front-End Developer",
         enterprise: "MOBEATS",
         date: "April 2021 - Jul 2023 · 2 years",
         location: "Berazategui, Buenos Aires, Argentina",
@@ -272,7 +287,7 @@ const en = {
         ],
       },
       {
-        position: "Full Stack Developer",
+        position: "Full-Stack Developer",
         enterprise: "SOY HENRY",
         date: "Dec 2020 - Apr 2021",
         location: "Remote, Latin America",
@@ -283,6 +298,21 @@ const en = {
               "WebApp using a private API should filter and search for video games.",
             technologies:
               "React Typescript, NodeJs Typescript, Postgresql, Heroku",
+          },
+        ],
+      },
+      {
+        position: "Front-End Developer",
+        enterprise: "Dream Venture Studio",
+        date: "Mar 2024 - present · 6 months",
+        location: "Remote, United States",
+        experiences: [
+          {
+            title: "Mr Satyam",
+            link: "",
+            description:
+              "Web platform for online courses in India, with both user-facing and back-office applications developed.",
+            technologies: "React, Typescript, Jest, React-Class",
           },
         ],
       },
@@ -336,9 +366,9 @@ const en = {
     technologies: {
       header: {
         experience: "Experience",
-        experienceLabel: "2 Years",
+        experienceLabel: "+3 Years",
         projects: "Projects",
-        projectsLabel: "5+",
+        projectsLabel: "6+",
         professionalism: "Professionalism",
         professionalismLabel: "100%",
       },
