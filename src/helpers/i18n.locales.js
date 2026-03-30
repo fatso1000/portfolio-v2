@@ -82,6 +82,22 @@ const es = {
           },
         ],
       },
+      {
+        position: "Desarrollador Front End",
+        enterprise: "Growlat",
+        date: "Feb 2025 - presente",
+        location: "Hibrido, Argentina",
+        experiences: [
+          {
+            title: "Growlat",
+            link: "https://growlat.ai/",
+            description:
+              "Desarrollo y crecimiento continuo de la aplicación de usuario y backoffice para una plataforma omnicanal de Data Marketing Automation impulsada por IA.",
+            technologies:
+              "Vue 3, Pinia, PrimeVue, Vite, ApexCharts, Tailwind CSS",
+          },
+        ],
+      },
     ],
     education: {
       eestn4: {
@@ -173,9 +189,9 @@ const es = {
     technologies: {
       header: {
         experience: "Experiencia",
-        experienceLabel: "2 Años",
+        experienceLabel: "+4 Años",
         projects: "Proyectos",
-        projectsLabel: "5+",
+        projectsLabel: "7+",
         professionalism: "Profesionalismo",
         professionalismLabel: "100%",
       },
@@ -316,6 +332,22 @@ const en = {
           },
         ],
       },
+      {
+        position: "Front-End Developer",
+        enterprise: "Growlat",
+        date: "Feb 2025 - present",
+        location: "Hybrid, Argentina",
+        experiences: [
+          {
+            title: "Growlat",
+            link: "https://growlat.ai/",
+            description:
+              "Development and continuous growth of the user and backoffice applications for an AI-powered omnichannel Data Marketing Automation platform.",
+            technologies:
+              "Vue 3, Pinia, PrimeVue, Vite, ApexCharts, Tailwind CSS",
+          },
+        ],
+      },
     ],
     education: {
       eestn4: {
@@ -366,9 +398,9 @@ const en = {
     technologies: {
       header: {
         experience: "Experience",
-        experienceLabel: "+3 Years",
+        experienceLabel: "+4 Years",
         projects: "Projects",
-        projectsLabel: "6+",
+        projectsLabel: "7+",
         professionalism: "Professionalism",
         professionalismLabel: "100%",
       },

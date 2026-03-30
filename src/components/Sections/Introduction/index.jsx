@@ -1,5 +1,5 @@
 import React from "react";
-import ProfilePic from "../../../assets/perfil-copia.webp";
+import ProfilePic from "../../../assets/perfil.png";
 import { IoArrowDownOutline } from "react-icons/io5";
 import { GrLocationPin } from "react-icons/gr";
 import ArgentinaFlag from "../../../assets/flag-argentina.png";

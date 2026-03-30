@@ -2,6 +2,7 @@ import React from "react";
 import MobeatsLogo from "../../../assets/mobeats_logo.jfif";
 import SoyHenryLogo from "../../../assets/soyhenry_logo.jfif";
 import DreamVentureLogo from "../../../assets/dream_venture_logo.jpg";
+import GrowlatLogo from "../../../assets/growlat_logo.jpeg";
 import { useTranslation } from "react-i18next";
 
 const ExperienceComponent = (props) => {
@@ -45,7 +46,7 @@ const ExperienceComponent = (props) => {
 export const Experience = () => {
   const { t } = useTranslation();
 
-  const logos = [MobeatsLogo, SoyHenryLogo, DreamVentureLogo];
+  const logos = [MobeatsLogo, SoyHenryLogo, DreamVentureLogo, GrowlatLogo];
 
   return (
     <section
