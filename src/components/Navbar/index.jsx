@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
-import { IoMenu, IoLanguage } from "react-icons/io5";
-import { RiFileDownloadFill } from "react-icons/ri";
+import React, { useState, useEffect, useRef } from "react";
+import { Icon } from "@iconify/react";
 import { useTranslation } from "react-i18next";
 
 export const Navbar = () => {
   const [currentScreen, setCurrentScreen] = React.useState(0);
   const [showNav, setShowNav] = useState(false);
+  const menuRef = useRef(null);
 
   const { t, i18n } = useTranslation();
 
@@ -78,6 +78,17 @@ export const Navbar = () => {
     };
   }, []);
 
+  useEffect(() => {
+    if (!showNav) return;
+    const closeOnOutside = (e) => {
+      if (menuRef.current && !menuRef.current.contains(e.target)) {
+        setShowNav(false);
+      }
+    };
+    document.addEventListener("mousedown", closeOnOutside);
+    return () => document.removeEventListener("mousedown", closeOnOutside);
+  }, [showNav]);
+
   return (
     <header className={`navbar sticky`}>
       <div className="navbar__container">
@@ -102,47 +113,52 @@ export const Navbar = () => {
             {navbarScreens[currentScreen].name}
           </a>
         </nav>
-        <button
-          className="header-button"
-          onClick={() => {
-            setShowNav(!showNav);
-          }}
-        >
-          <IoMenu />
-        </button>
+        <div className="navbar-menu" ref={menuRef}>
+          <button
+            type="button"
+            className="header-button"
+            aria-expanded={showNav}
+            aria-controls="navbar-actions-menu"
+            aria-haspopup="true"
+            onClick={() => setShowNav((open) => !open)}
+          >
+            <Icon icon="lucide:menu" aria-hidden />
+          </button>
+          {showNav ? (
+            <nav
+              id="navbar-actions-menu"
+              className="navbar-dropdown-menu glass-panel"
+              aria-label={t("header.navbar.menuActions")}
+            >
+              <ul>
+                <li>
+                  <a
+                    className="navbar-dropdown-menu__item"
+                    href="https://drive.google.com/file/d/14r_HzEoU-iIMlepfS4Ze8HdNDlCBziE_/view?usp=sharing"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <Icon icon="lucide:file-down" aria-hidden />
+                    {t("header.navbar.download")}
+                  </a>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    className="navbar-dropdown-menu__item"
+                    onClick={() => {
+                      i18n.changeLanguage(i18n.language === "es" ? "en" : "es");
+                    }}
+                  >
+                    <Icon icon="lucide:languages" aria-hidden />
+                    {i18n.language === "es" ? "English" : "Español"}
+                  </button>
+                </li>
+              </ul>
+            </nav>
+          ) : null}
+        </div>
       </div>
-      {showNav && (
-        <nav
-          className="introduction__alert"
-          onClick={() => {
-            setShowNav(true);
-          }}
-        >
-          <ul>
-            <li>
-              <a
-                href="https://drive.google.com/file/d/14r_HzEoU-iIMlepfS4Ze8HdNDlCBziE_/view?usp=sharing"
-                target="_blank"
-                rel="noreferrer"
-                style={{ width: "calc(100% - 1rem)" }}
-              >
-                <RiFileDownloadFill />
-                {t("header.navbar.download")}
-              </a>
-            </li>
-            <li>
-              <button
-                onClick={() => {
-                  i18n.changeLanguage(i18n.language === "es" ? "en" : "es");
-                }}
-              >
-                <IoLanguage />
-                {i18n.language === "es" ? "English" : "Español"}
-              </button>
-            </li>
-          </ul>
-        </nav>
-      )}
     </header>
   );
 };

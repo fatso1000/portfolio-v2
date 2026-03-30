@@ -1,5 +1,5 @@
 import React from "react";
-import { IoLogoLinkedin, IoMail, IoLogoGithub } from "react-icons/io5";
+import { Icon } from "@iconify/react";
 import { useTranslation } from "react-i18next";
 
 export const ContactMe = () => {
@@ -14,11 +14,11 @@ export const ContactMe = () => {
         </span>
         <div style={{ margin: "1.2rem 0" }} className="contact-me__list">
           <div>
-            <IoMail />
+            <Icon icon="lucide:mail" aria-hidden />
             <span>agustinbenitez81@gmail.com</span>
           </div>
           <div>
-            <IoLogoLinkedin />
+            <Icon icon="simple-icons:linkedin" aria-hidden />
             <a
               href="https://www.linkedin.com/in/matias-benitez81/"
               target="_blank"
@@ -28,7 +28,7 @@ export const ContactMe = () => {
             </a>
           </div>
           <div>
-            <IoLogoGithub />
+            <Icon icon="simple-icons:github" aria-hidden />
             <a
               href="https://github.com/fatso1000"
               target="_blank"

@@ -1,24 +1,5 @@
 import React from "react";
-import {
-  IoHeartOutline,
-  IoTimeOutline,
-  IoLogoSass,
-  IoLogoAngular,
-} from "react-icons/io5";
-import {
-  SiTypescript,
-  SiRedux,
-  SiJavascript,
-  SiNodedotjs,
-  SiReact,
-  SiFigma,
-  SiNextdotjs,
-} from "react-icons/si";
-import { TbBrandReactNative } from "react-icons/tb";
-import { VscOrganization } from "react-icons/vsc";
-import { FaRegComments } from "react-icons/fa";
-import { HiOutlineBookOpen } from "react-icons/hi";
-import { BsPuzzle } from "react-icons/bs";
+import { Icon } from "@iconify/react";
 import { useTranslation } from "react-i18next";
 
 const TechHeader = (props) => (
@@ -28,54 +9,57 @@ const TechHeader = (props) => (
   </div>
 );
 
-const TechSkills = (props) => (
-  <div>
-    {props.icon}
-    <span>{props.label}</span>
-  </div>
-);
+/* Hard skills: Simple Icons for brands; Tabler for React Native (no SI slug). */
+const HARD_SKILL_GROUPS = [
+  {
+    group: "languages",
+    items: [
+      { icon: "simple-icons:typescript", label: "TypeScript" },
+      { icon: "simple-icons:javascript", label: "JavaScript" },
+    ],
+  },
+  {
+    group: "ui",
+    items: [
+      { icon: "simple-icons:react", label: "React" },
+      { icon: "simple-icons:redux", label: "Redux" },
+      { icon: "simple-icons:vuedotjs", label: "Vue" },
+      { icon: "simple-icons:pinia", label: "Pinia" },
+      { icon: "simple-icons:tailwindcss", label: "Tailwind" },
+      { icon: "tabler:brand-react-native", label: "React Native" },
+      { icon: "simple-icons:sass", label: "Sass" },
+      { icon: "simple-icons:nextdotjs", label: "Next.js" },
+      { icon: "simple-icons:angular", label: "Angular" },
+    ],
+  },
+  {
+    group: "tooling",
+    items: [
+      { icon: "simple-icons:nodedotjs", label: "Node.js" },
+      { icon: "simple-icons:figma", label: "Figma" },
+      { icon: "simple-icons:cursor", label: "Cursor" },
+      { icon: "simple-icons:googlegemini", label: "AI Studio" },
+    ],
+  },
+];
 
 export const Technologies = () => {
   const { t } = useTranslation();
 
-  const hardSkills = [
-      { icon: <SiTypescript />, label: "Typescript" },
-      { icon: <SiJavascript />, label: "Javascript" },
-      { icon: <SiReact />, label: "React" },
-      { icon: <SiRedux />, label: "Redux" },
-      { icon: <SiNodedotjs />, label: "NodeJS" },
-      { icon: <TbBrandReactNative />, label: "React Native" },
-      { icon: <SiFigma />, label: "Figma" },
-      { icon: <IoLogoSass />, label: "Sass" },
-      { icon: <SiNextdotjs />, label: "NextJS" },
-      { icon: <IoLogoAngular />, label: "Angular" },
-    ],
-    softSkills = [
-      {
-        icon: <VscOrganization />,
-        label: t("technologies.softSkills.teamWork"),
-      },
-      {
-        icon: <IoHeartOutline />,
-        label: t("technologies.softSkills.goodMood"),
-      },
-      {
-        icon: <HiOutlineBookOpen />,
-        label: t("technologies.softSkills.fastLearning"),
-      },
-      {
-        icon: <IoTimeOutline />,
-        label: t("technologies.softSkills.timeManagement"),
-      },
-      {
-        icon: <BsPuzzle />,
-        label: t("technologies.softSkills.problemSolving"),
-      },
-      {
-        icon: <FaRegComments />,
-        label: t("technologies.softSkills.communication"),
-      },
-    ];
+  /* Soft skills: single Lucide outline set for consistent stroke + weight next to pills. */
+  const softSkills = [
+    { id: "teamWork", icon: "lucide:users-round", label: t("technologies.softSkills.teamWork") },
+    { id: "goodMood", icon: "lucide:heart", label: t("technologies.softSkills.goodMood") },
+    { id: "fastLearning", icon: "lucide:book-open", label: t("technologies.softSkills.fastLearning") },
+    { id: "timeManagement", icon: "lucide:clock", label: t("technologies.softSkills.timeManagement") },
+    { id: "problemSolving", icon: "lucide:puzzle", label: t("technologies.softSkills.problemSolving") },
+    { id: "communication", icon: "lucide:message-circle", label: t("technologies.softSkills.communication") },
+    { id: "aiEnthusiast", icon: "lucide:sparkles", label: t("technologies.softSkills.aiEnthusiast") },
+    { id: "detailOriented", icon: "lucide:list-checks", label: t("technologies.softSkills.detailOriented") },
+    { id: "technicalWriting", icon: "lucide:file-text", label: t("technologies.softSkills.technicalWriting") },
+    { id: "iterativeDelivery", icon: "lucide:refresh-cw", label: t("technologies.softSkills.iterativeDelivery") },
+    { id: "knowledgeSharing", icon: "lucide:share-2", label: t("technologies.softSkills.knowledgeSharing") },
+  ];
 
   return (
     <section
@@ -83,14 +67,7 @@ export const Technologies = () => {
       data-color="blue"
       className="section technologies"
     >
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          border: "1.5px solid var(--border-color)",
-          borderRadius: "20px",
-        }}
-      >
+      <div className="glass-panel technologies__glass">
         <div className="tech__header">
           <TechHeader
             title={t("technologies.header.experience")}
@@ -106,19 +83,36 @@ export const Technologies = () => {
           />
         </div>
         <div className="tech__body">
-          <div className="hard-skills">
-            <h2>Hard Skills</h2>
-            <div className="list">
-              {hardSkills.map(({ icon, label }, i) => (
-                <TechSkills icon={icon} label={label} key={i} />
-              ))}
-            </div>
+          <div className="tech__column tech__column--hard">
+            <h2 className="tech__section-title">
+              {t("technologies.hardSkillsTitle")}
+            </h2>
+            {HARD_SKILL_GROUPS.map(({ group, items }) => (
+              <div className="tech-hard-group" key={group}>
+                <h3 className="tech-group__label">
+                  {t(`technologies.groups.${group}`)}
+                </h3>
+                <div className="tech-hard-grid">
+                  {items.map(({ icon, label }) => (
+                    <div key={label}>
+                      <Icon icon={icon} aria-hidden />
+                      <span>{label}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
-          <div className="hard-skills">
-            <h2>Soft Skills</h2>
-            <div className="list">
-              {softSkills.map(({ icon, label }, i) => (
-                <TechSkills icon={icon} label={label} key={i} />
+          <div className="tech__column tech__column--soft">
+            <h2 className="tech__section-title">
+              {t("technologies.softSkillsTitle")}
+            </h2>
+            <div className="tech-soft-pills">
+              {softSkills.map(({ id, icon, label }) => (
+                <div className="tech-soft-pill" key={id}>
+                  <Icon icon={icon} aria-hidden />
+                  <span>{label}</span>
+                </div>
               ))}
             </div>
           </div>

@@ -55,7 +55,7 @@ const es = {
       {
         position: "Desarrollador Front End",
         enterprise: "Dream Venture Studio",
-        date: "Mar 2024 - presente · 6 meses",
+        date: "Mar 2024 - Feb 2025 · 1 año",
         location: "Remoto, Estados Unidos",
         experiences: [
           {
@@ -184,7 +184,13 @@ const es = {
       education: "Educación",
       contact: "Contáctame",
       projects: "Proyectos",
-      navbar: { download: "Descargar CV" },
+      navbar: {
+        download: "Descargar CV",
+        menuActions: "Más acciones",
+      },
+    },
+    introduction: {
+      exploreAriaLabel: "Ir a la sección de tecnologías",
     },
     technologies: {
       header: {
@@ -195,6 +201,13 @@ const es = {
         professionalism: "Profesionalismo",
         professionalismLabel: "100%",
       },
+      hardSkillsTitle: "Habilidades técnicas",
+      softSkillsTitle: "Habilidades blandas",
+      groups: {
+        languages: "Lenguajes",
+        ui: "UI y frameworks",
+        tooling: "Herramientas y plataforma",
+      },
       softSkills: {
         teamWork: "Trabajo en Equipo",
         goodMood: "Buen Humor",
@@ -202,6 +215,11 @@ const es = {
         timeManagement: "Manejo del Tiempo",
         problemSolving: "Resolucion de Problemas",
         communication: "Comunicación",
+        aiEnthusiast: "Entusiasta de IA",
+        detailOriented: "Orientación al detalle",
+        technicalWriting: "Documentación y escritura técnica",
+        iterativeDelivery: "Entrega iterativa (ágil)",
+        knowledgeSharing: "Compartir conocimiento",
       },
     },
   },
@@ -226,6 +244,7 @@ const en = {
       projects: "Projects",
       navbar: {
         download: "Download CV",
+        menuActions: "More actions",
       },
     },
     projects: [
@@ -320,7 +339,7 @@ const en = {
       {
         position: "Front-End Developer",
         enterprise: "Dream Venture Studio",
-        date: "Mar 2024 - present · 6 months",
+        date: "Mar 2024 - Feb 2025 · 1 year",
         location: "Remote, United States",
         experiences: [
           {
@@ -395,6 +414,9 @@ const en = {
         ],
       },
     },
+    introduction: {
+      exploreAriaLabel: "Scroll to technologies section",
+    },
     technologies: {
       header: {
         experience: "Experience",
@@ -404,6 +426,13 @@ const en = {
         professionalism: "Professionalism",
         professionalismLabel: "100%",
       },
+      hardSkillsTitle: "Hard skills",
+      softSkillsTitle: "Soft skills",
+      groups: {
+        languages: "Languages",
+        ui: "UI & frameworks",
+        tooling: "Tooling & platform",
+      },
       softSkills: {
         teamWork: "Team Work",
         goodMood: "Good Mood",
@@ -411,6 +440,11 @@ const en = {
         timeManagement: "Time Management",
         problemSolving: "Problem Solving",
         communication: "Communication",
+        aiEnthusiast: "AI enthusiast",
+        detailOriented: "Detail-oriented",
+        technicalWriting: "Technical writing & docs",
+        iterativeDelivery: "Iterative / agile delivery",
+        knowledgeSharing: "Knowledge sharing",
       },
     },
   },

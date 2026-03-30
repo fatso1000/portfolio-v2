@@ -11,7 +11,12 @@ body {
 
 body {
   background-color: var(--primary);
-  color: var(--third);
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(74, 107, 83, 0.15), transparent 30%),
+    radial-gradient(circle at 85% 30%, rgba(139, 94, 60, 0.15), transparent 30%),
+    radial-gradient(circle at 50% 80%, rgba(74, 107, 83, 0.1), transparent 40%);
+  background-attachment: fixed;
+  color: var(--text-main);
   transition: background-color 1s ease;
   overflow-x: hidden;
 }
@@ -40,15 +45,16 @@ html {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: var(--bg);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgba(11, 40, 0, 1);
+  background: var(--secondary);
+  border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(11, 40, 0, 0.8);
+  background: #3c5643;
 }
