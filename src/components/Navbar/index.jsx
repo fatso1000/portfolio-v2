@@ -134,7 +134,7 @@ export const Navbar = () => {
                 <li>
                   <a
                     className="navbar-dropdown-menu__item"
-                    href="https://drive.google.com/file/d/14r_HzEoU-iIMlepfS4Ze8HdNDlCBziE_/view?usp=sharing"
+                    href={process.env.PUBLIC_URL + "/Matias_Benitez_NZ_Tech_Resume.docx"}
                     target="_blank"
                     rel="noreferrer"
                   >
