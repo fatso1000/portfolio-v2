@@ -240,20 +240,24 @@ img {
 
 .header-button {
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
   color: var(--text-main);
   background: transparent;
   border: 0;
-  column-gap: 30px;
-  align-items: center;
   font-weight: 600;
   padding: 0;
   cursor: pointer;
   border-radius: 999px;
   transition: 0.25s ease;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
 }
 .header-button svg {
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
   color: var(--sky-5);
 }
 
@@ -405,9 +409,12 @@ img {
   transition: 0.25s ease;
   font-weight: 700;
   font-size: 0.95rem;
-  padding: 0.4rem 0.85rem;
+  padding: 0.55rem 0.85rem;
   border-radius: 999px;
   text-decoration: none;
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
 }
 .navbar-progress a:hover {
   color: var(--text-main);
@@ -1042,6 +1049,9 @@ img {
   align-items: center;
   gap: 0.35rem;
   color: var(--accent-cyan-deep);
+  min-height: 40px;
+  padding: 0.45rem 0.55rem;
+  border-radius: 8px;
 }
 
 .experience-project-link__icon {
@@ -1327,8 +1337,9 @@ img {
   border: 1px solid rgba(255, 255, 255, 0.95);
   border-radius: 12px;
   width: 100%;
+  min-height: 44px;
   color: var(--accent-cyan-deep);
-  padding: 0.4rem;
+  padding: 0.55rem 0.4rem;
   flex: 1;
   transition: 0.25s ease;
   box-shadow:
@@ -1420,6 +1431,12 @@ img {
   text-underline-offset: 3px;
   color: var(--accent-cyan-deep);
   font-weight: 700;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 0.7rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
 }
 .contact-me__list svg {
   color: var(--accent-cyan-deep);
@@ -1471,10 +1488,14 @@ img {
 
 .section {
   min-height: calc(100vh - 76px);
+  min-height: calc(100dvh - 76px);
   padding-top: 76px !important;
   scroll-snap-align: center;
   padding-left: 10px;
   padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* About-me card grid (legacy) */
@@ -1574,16 +1595,39 @@ body.experience {
   .navbar h5 {
     font-size: 1.3rem;
   }
+  /* Show the technologies 3-stat header in a row on tablets. */
+  .technologies .tech__header {
+    flex-direction: row;
+    padding: 1.25rem 2rem;
+    column-gap: 1.5rem;
+  }
+  .technologies .tech__header > div {
+    flex: 1 1 0;
+  }
+  .technologies .tech__header > div > h2 {
+    font-size: 0.95rem;
+  }
+  .technologies .tech__header > div > span {
+    font-size: 1.8rem;
+  }
+  /* Soft skills should be 2 per row on tablet. */
+  .tech-soft-pills {
+    justify-content: center;
+  }
+  .tech-soft-pill {
+    font-size: 0.88rem;
+  }
 }
 
 @media only screen and (max-width: 768px) {
   .introduction__pic__container {
-    width: 14rem;
-    height: 14rem;
+    width: 12rem;
+    height: 12rem;
+    padding: 0.35rem;
   }
   .introduction__pic__container img {
-    width: 14rem;
-    height: 14rem;
+    width: 12rem;
+    height: 12rem;
   }
   .experience__container h2,
   .education__container h2,
@@ -1594,10 +1638,19 @@ body.experience {
     font-size: var(--fs-title-mobile);
   }
   .section {
-    padding: 0 0.5rem;
+    padding: 64px 0.75rem 1.5rem !important;
   }
   .introduction__title h2 {
     font-size: 2em;
+  }
+  /* Hero on phones: don't enforce 100dvh, let content hug the top. */
+  .introduction__container {
+    justify-content: flex-start;
+    row-gap: 1.25rem;
+    padding: 0 0.5rem;
+  }
+  .introduction__text-glass {
+    padding: 1.1rem 1.25rem;
   }
 
   .about-me__section {
@@ -1617,12 +1670,12 @@ body.experience {
     padding: 0.5rem 0;
   }
   .about-me__profile-pic {
-    width: 14rem;
-    height: 14rem;
+    width: 12rem;
+    height: 12rem;
   }
   .about-me__profile-pic > img {
-    width: 14rem;
-    height: 14rem;
+    width: 12rem;
+    height: 12rem;
   }
 
   .accordion img {
@@ -1647,6 +1700,15 @@ body.experience {
     flex-direction: column;
     padding: 1rem 0;
     row-gap: 0.5rem;
+  }
+  .technologies .tech__header > div {
+    flex: 1 1 auto;
+  }
+  .technologies .tech__header > div > h2 {
+    font-size: var(--fs-normal-mobile);
+  }
+  .technologies .tech__header > div > span {
+    font-size: var(--fs-title-mobile);
   }
   .technologies .tech__header span {
     font-size: var(--fs-title-mobile);
@@ -1693,5 +1755,110 @@ body.experience {
   .aero-bg__bubble--6 {
     width: 70px;
     height: 70px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  /* Phone-specific: smaller avatar, tighter header, compact pills. */
+  .introduction__pic__container {
+    width: 9.5rem;
+    height: 9.5rem;
+    padding: 0.3rem;
+  }
+  .introduction__pic__container img {
+    width: 9.5rem;
+    height: 9.5rem;
+  }
+  .introduction__title h2 {
+    font-size: 1.7rem;
+  }
+  .introduction__title h1 {
+    font-size: 0.95rem;
+  }
+  .introduction__text-glass {
+    padding: 1rem 1.1rem;
+  }
+  .navbar h5 {
+    font-size: 1.15rem;
+  }
+  .navbar-progress a {
+    font-size: 0.88rem;
+    padding: 0.35rem 0.7rem;
+  }
+  .navbar__container {
+    gap: 0.75rem;
+  }
+  .navbar {
+    padding: 0.2rem 0.9rem;
+  }
+  .education-timeline__item {
+    grid-template-columns: 3rem 1fr;
+    gap: 0.75rem;
+  }
+  .education-timeline__node {
+    width: 2.85rem;
+    height: 2.85rem;
+  }
+  .education-timeline__item:not(:last-child)::after {
+    left: 1.4rem;
+  }
+  .experience__container,
+  .education__container,
+  .projects__section-inner,
+  .contact-me .card {
+    padding: 1.1rem 1.15rem;
+  }
+  .tech-soft-pill {
+    padding: 0.45rem 0.8rem;
+    font-size: 0.85rem;
+  }
+  .tech-hard-grid {
+    grid-template-columns: repeat(auto-fill, minmax(4.5rem, 1fr));
+    gap: 0.5rem;
+  }
+  .tech-hard-grid > div {
+    padding: 0.55rem 0.4rem;
+  }
+  .tech-hard-grid svg {
+    width: 2rem;
+    height: 2rem;
+  }
+  .aero-bg__bubble--1 {
+    width: 130px;
+    height: 130px;
+  }
+  .aero-bg__bubble--2 {
+    width: 90px;
+    height: 90px;
+  }
+  .aero-bg__bubble--3 {
+    width: 170px;
+    height: 170px;
+  }
+  .aero-bg__bubble--4 {
+    width: 70px;
+    height: 70px;
+  }
+  .aero-bg__bubble--5 {
+    width: 110px;
+    height: 110px;
+  }
+  .aero-bg__bubble--6 {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+/* Small height: don't enforce 100dvh on very short viewports. */
+@media (max-height: 520px) {
+  .section {
+    min-height: auto !important;
+  }
+}
+
+/* Better safe-area handling for iOS notches. */
+@supports (padding: env(safe-area-inset-top)) {
+  .navbar {
+    top: calc(1rem + env(safe-area-inset-top));
   }
 }
