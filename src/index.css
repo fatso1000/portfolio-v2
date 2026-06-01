@@ -1,28 +1,67 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
-
 html,
 body {
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
-  font-family: "Noto Serif", serif;
+  font-family: "Nunito", "Segoe UI", "Helvetica Neue", system-ui, -apple-system,
+    Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 body {
-  background-color: var(--primary);
-  background-image: 
-    radial-gradient(circle at 15% 50%, rgba(74, 107, 83, 0.15), transparent 30%),
-    radial-gradient(circle at 85% 30%, rgba(139, 94, 60, 0.15), transparent 30%),
-    radial-gradient(circle at 50% 80%, rgba(74, 107, 83, 0.1), transparent 40%);
-  background-attachment: fixed;
   color: var(--text-main);
-  transition: background-color 1s ease;
+  /* Frutiger Aero: bright optimistic sky, soft sun glow at the top,
+     deeper aqua horizon below. Multi-stop so it never bands. */
+  background-color: var(--sky-2);
+  background-image:
+    radial-gradient(
+      ellipse 90% 60% at 50% -10%,
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0) 60%
+    ),
+    radial-gradient(
+      circle at 12% 18%,
+      rgba(255, 255, 255, 0.45),
+      rgba(255, 255, 255, 0) 28%
+    ),
+    radial-gradient(
+      circle at 88% 8%,
+      rgba(196, 232, 154, 0.55),
+      rgba(196, 232, 154, 0) 32%
+    ),
+    radial-gradient(
+      circle at 92% 78%,
+      rgba(125, 211, 232, 0.65),
+      rgba(125, 211, 232, 0) 36%
+    ),
+    radial-gradient(
+      circle at 8% 88%,
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0) 30%
+    ),
+    linear-gradient(
+      180deg,
+      #d4f1f8 0%,
+      #a8e1ee 22%,
+      #7dd3e8 48%,
+      #5ec4dc 72%,
+      #4fb8d4 100%
+    );
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
-button {
-  font-family: "Noto Serif", serif;
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
 }
 
 a {
@@ -38,23 +77,33 @@ html {
   scroll-behavior: smooth;
 }
 
-/* width */
+/* Frutiger Aero scrollbar — pale glass track, aqua pill handle. */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 12px;
+  height: 12px;
 }
-
-/* Track */
 ::-webkit-scrollbar-track {
-  background: var(--bg);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.15)
+  );
+  border-radius: 999px;
+  margin: 4px;
 }
-
-/* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--secondary);
-  border-radius: 10px;
+  background: linear-gradient(180deg, #b4e4ee 0%, #7dd3e8 50%, #4fb8d4 100%);
+  border-radius: 999px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85),
+    0 2px 4px rgba(20, 80, 110, 0.15);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #c8eef5 0%, #8fdded 50%, #5fc4d8 100%);
 }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #3c5643;
+/* Selection */
+::selection {
+  background: rgba(124, 195, 66, 0.4);
+  color: #0a2e36;
 }

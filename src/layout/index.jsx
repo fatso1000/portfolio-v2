@@ -6,18 +6,22 @@ import { Experience } from "../components/Sections/Experience";
 import { Introduction } from "../components/Sections/Introduction";
 import { Projects } from "../components/Sections/Projects";
 import { Technologies } from "../components/Sections/Technologies";
+import { Background } from "../components/Background";
 
 export const Layout = () => {
   return (
-    <main className="app-container">
-      <Navbar />
-      <Introduction />
-      {/* <AboutMe /> */}
-      <Technologies />
-      <Education />
-      <Experience />
-      <Projects />
-      <ContactMe />
-    </main>
+    <>
+      <Background />
+      <main className="app-container">
+        <Navbar />
+        <Introduction />
+        {/* <AboutMe /> */}
+        <Technologies />
+        <Education />
+        <Experience />
+        <Projects />
+        <ContactMe />
+      </main>
+    </>
   );
 };
