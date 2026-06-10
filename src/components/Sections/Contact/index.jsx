@@ -1,55 +1,56 @@
 import React from "react";
 import { Icon } from "@iconify/react";
 import { useTranslation } from "react-i18next";
+import { resumeUrl } from "../../../data/portfolio";
 
 export const ContactMe = () => {
   const { t } = useTranslation();
 
   return (
-    <section data-color="violet" id="contact-me" className="section contact-me">
-      <div className="card">
-        <h2>{t("header.contact")}</h2>
-        <span>
-          {t("contactMe.text")} {"<3"}
-        </span>
-        <div style={{ margin: "1.2rem 0" }} className="contact-me__list">
-          <div>
+    <section id="contact" className="section contact">
+      <div className="contact__panel glass-panel">
+        <span className="section-heading__eyebrow">{t("contact.eyebrow")}</span>
+        <h2>{t("contact.title")}</h2>
+        <p>{t("contact.intro")}</p>
+        <div className="contact__actions">
+          <a
+            className="button button--primary"
+            href="mailto:agustinbenitez81@gmail.com"
+          >
             <Icon icon="lucide:mail" aria-hidden />
-            <span>agustinbenitez81@gmail.com</span>
-          </div>
-          <div>
+            {t("contact.email")}
+          </a>
+          <a
+            className="button button--glass"
+            href="https://www.linkedin.com/in/matias-benitez81/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <Icon icon="simple-icons:linkedin" aria-hidden />
-            <a
-              href="https://www.linkedin.com/in/matias-benitez81/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Matias Benitez
-            </a>
-          </div>
-          <div>
+            LinkedIn
+          </a>
+          <a
+            className="button button--glass"
+            href="https://github.com/fatso1000"
+            target="_blank"
+            rel="noreferrer"
+          >
             <Icon icon="simple-icons:github" aria-hidden />
-            <a
-              href="https://github.com/fatso1000"
-              target="_blank"
-              rel="noreferrer"
-            >
-              fatso1000
-            </a>
-          </div>
+            GitHub
+          </a>
+          <a
+            className="button button--text"
+            href={resumeUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {t("header.navbar.download")}
+          </a>
         </div>
       </div>
-      <footer
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          marginBottom: "2rem",
-          fontStyle: "italic",
-          textAlign: "center",
-        }}
-      >
-        <h5>{t("contactMe.designed")}&#128140;</h5>
-        <h5 style={{ fontSize: "0.78em" }}>2023</h5>
+      <footer className="contact__footer">
+        <span>{t("contact.designed")}</span>
+        <span>{new Date().getFullYear()}</span>
       </footer>
     </section>
   );

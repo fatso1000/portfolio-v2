@@ -1,81 +1,29 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Icon } from "@iconify/react";
 import { useTranslation } from "react-i18next";
+import { navItems, resumeUrl } from "../../data/portfolio";
 
 export const Navbar = () => {
-  const [currentScreen, setCurrentScreen] = React.useState(0);
+  const [currentScreen, setCurrentScreen] = useState("home");
   const [showNav, setShowNav] = useState(false);
   const menuRef = useRef(null);
-
   const { t, i18n } = useTranslation();
 
-  const getScreen = () => {
-    const sectionScreens = [...document.querySelectorAll(".section")];
-    const findScreen = sectionScreens.find((val) =>
-      val ? isInViewport(val) : false
-    );
-    if (findScreen) {
-      const current = navbarScreens.findIndex(
-        (val) => val.href === findScreen.id
-      );
-      if (current > -1) setCurrentScreen(current);
-    }
-  };
-
-  const isInViewport = (el) => {
-    if (typeof window !== "undefined") {
-      const rect = el.getBoundingClientRect();
-      const scroll =
-        document.body.scrollTop + document.body.innerHeight ||
-        document.documentElement.clientHeight / 5;
-      if (
-        rect.top <= scroll &&
-        rect.top +
-          (document.body.innerHeight || document.documentElement.clientHeight) >
-          scroll
-      ) {
-        return true;
-      }
-      return false;
-    }
-  };
-
-  const navbarScreens = [
-    {
-      name: t("header.home"),
-      href: "home",
-    },
-    // {
-    //   name: t("header.aboutMe"),
-    //   href: "about-me",
-    // },
-    { name: t("header.technologies"), href: "technologies" },
-    { name: t("header.education"), href: "education" },
-    {
-      name: t("header.experience"),
-      href: "experience",
-    },
-    { name: t("header.projects"), href: "projects" },
-    {
-      name: t("header.contact"),
-      href: "contact-me",
-    },
-  ];
-
-  const calculateScrollDistance = () => {
-    getScreen();
-  };
-
   useEffect(() => {
-    window.addEventListener("scroll", () =>
-      requestAnimationFrame(() => calculateScrollDistance())
+    const sections = navItems
+      .map(({ id }) => document.getElementById(id))
+      .filter(Boolean);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (visible) setCurrentScreen(visible.target.id);
+      },
+      { rootMargin: "-25% 0px -60% 0px", threshold: [0, 0.2, 0.5] },
     );
-
-    return () => {
-      window.removeEventListener("scroll", () =>
-        requestAnimationFrame(() => calculateScrollDistance())
-      );
-    };
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
   }, []);
 
   useEffect(() => {
@@ -89,29 +37,39 @@ export const Navbar = () => {
     return () => document.removeEventListener("mousedown", closeOnOutside);
   }, [showNav]);
 
+  const changeLanguage = () => {
+    const language = i18n.language === "es" ? "en" : "es";
+    i18n.changeLanguage(language);
+    document.documentElement.lang = language;
+    setShowNav(false);
+  };
+
+  const closeMenu = (id) => {
+    setCurrentScreen(id);
+    setShowNav(false);
+  };
+
   return (
     <header className={`navbar sticky`}>
       <div className="navbar__container">
-        <div>
-          <h5>MB</h5>
-        </div>
-        <nav className="navbar-progress">
-          {navbarScreens.map((val, i) => (
+        <a
+          className="navbar__brand"
+          href="#home"
+          onClick={() => closeMenu("home")}
+        >
+          MB
+        </a>
+        <nav className="navbar-progress" aria-label={t("header.primaryNav")}>
+          {navItems.map((item) => (
             <a
-              href={`#${val.href}`}
-              className={currentScreen === i ? "active" : ""}
-              onClick={() => setCurrentScreen(i)}
-              key={i}
+              href={`#${item.id}`}
+              className={currentScreen === item.id ? "active" : ""}
+              onClick={() => closeMenu(item.id)}
+              key={item.id}
             >
-              {val.name}
+              {t(`header.${item.key}`)}
             </a>
           ))}
-          <a
-            href={`#${navbarScreens[currentScreen].href}`}
-            className="individual-nav active"
-          >
-            {navbarScreens[currentScreen].name}
-          </a>
         </nav>
         <div className="navbar-menu" ref={menuRef}>
           <button
@@ -120,9 +78,10 @@ export const Navbar = () => {
             aria-expanded={showNav}
             aria-controls="navbar-actions-menu"
             aria-haspopup="true"
+            aria-label={t("header.navbar.openMenu")}
             onClick={() => setShowNav((open) => !open)}
           >
-            <Icon icon="lucide:menu" aria-hidden />
+            <Icon icon={showNav ? "lucide:x" : "lucide:menu"} aria-hidden />
           </button>
           {showNav ? (
             <nav
@@ -131,10 +90,21 @@ export const Navbar = () => {
               aria-label={t("header.navbar.menuActions")}
             >
               <ul>
+                {navItems.map((item) => (
+                  <li className="navbar-dropdown-menu__nav-item" key={item.id}>
+                    <a
+                      className="navbar-dropdown-menu__item"
+                      href={`#${item.id}`}
+                      onClick={() => closeMenu(item.id)}
+                    >
+                      {t(`header.${item.key}`)}
+                    </a>
+                  </li>
+                ))}
                 <li>
                   <a
                     className="navbar-dropdown-menu__item"
-                    href={process.env.PUBLIC_URL + "/Matias_Benitez_NZ_Tech_Resume.docx"}
+                    href={resumeUrl}
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -146,9 +116,7 @@ export const Navbar = () => {
                   <button
                     type="button"
                     className="navbar-dropdown-menu__item"
-                    onClick={() => {
-                      i18n.changeLanguage(i18n.language === "es" ? "en" : "es");
-                    }}
+                    onClick={changeLanguage}
                   >
                     <Icon icon="lucide:languages" aria-hidden />
                     {i18n.language === "es" ? "English" : "Español"}

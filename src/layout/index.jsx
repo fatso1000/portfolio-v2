@@ -6,6 +6,7 @@ import { Experience } from "../components/Sections/Experience";
 import { Introduction } from "../components/Sections/Introduction";
 import { Projects } from "../components/Sections/Projects";
 import { Technologies } from "../components/Sections/Technologies";
+import { SelectedWork } from "../components/Sections/SelectedWork";
 import { Background } from "../components/Background";
 
 export const Layout = () => {
@@ -15,11 +16,11 @@ export const Layout = () => {
       <main className="app-container">
         <Navbar />
         <Introduction />
-        {/* <AboutMe /> */}
+        <SelectedWork />
+        <Projects />
+        <Experience />
         <Technologies />
         <Education />
-        <Experience />
-        <Projects />
         <ContactMe />
       </main>
     </>
