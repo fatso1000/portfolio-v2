@@ -60,12 +60,11 @@ export const Technologies = () => {
           title={t("capabilities.title")}
           intro={t("capabilities.intro")}
         />
-        <div className="capability-masonry">
-          {groups.map((group, groupIndex) => (
+        <div className="capability-grid">
+          {groups.map((group) => (
             <article
-              className={`capability-card glass-panel ${CARD_VARIANTS[group.id]}`}
+              className={`capability-card capability-card--${group.id} glass-panel ${CARD_VARIANTS[group.id]}`}
               key={group.id}
-              style={{ "--float-delay": `${groupIndex * -1.35}s` }}
             >
               <header className="capability-card__header">
                 <span className="capability-card__icon">
