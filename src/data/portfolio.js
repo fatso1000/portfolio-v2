@@ -2,7 +2,6 @@ import AccentureLogo from "../assets/accenture_logo.png";
 import DreamVentureLogo from "../assets/dream_venture_logo.jpg";
 import GrowlatLogo from "../assets/growlat_logo.jpeg";
 import MobeatsLogo from "../assets/mobeats_logo.jfif";
-import SoyHenryLogo from "../assets/soyhenry_logo.jfif";
 import Tec4Logo from "../assets/tec4.png";
 import BsasTravelImage from "../assets/projects/bsas_travel.png";
 import GamesDbImage from "../assets/projects/gamesdb.jpg";
@@ -13,7 +12,8 @@ import PersonalBlogImage from "../assets/projects/personal_blog.png";
 import PortfolioImage from "../assets/projects/portfolio.png";
 
 export const resumeUrl =
-  process.env.PUBLIC_URL + "/Matias_Benitez_NZ_Tech_Resume.docx";
+  process.env.PUBLIC_URL +
+  "/Matias_Benitez_NZ_Full_Stack_AI_Engineer_CV_2026_Auckland.pdf";
 
 export const navItems = [
   { id: "home", key: "home" },
@@ -75,13 +75,11 @@ export const experienceLogos = {
 
 export const educationLogos = {
   technicalSchool: Tec4Logo,
-  soyHenry: SoyHenryLogo,
   accenture: AccentureLogo,
 };
 
 export const capabilityIcons = {
-  frontend: "lucide:panels-top-left",
-  product: "lucide:chart-no-axes-combined",
+  fullstack: "lucide:layers-3",
   quality: "lucide:badge-check",
   platform: "lucide:database",
   ai: "lucide:sparkles",

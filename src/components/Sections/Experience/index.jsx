@@ -32,12 +32,9 @@ export const Experience = () => {
                   <span>{role.date}</span>
                   <h3>{role.position}</h3>
                   <p>
-                    {role.company} · {role.location}
+                    {role.company} · {role.scope}
                   </p>
                 </div>
-                {role.current ? (
-                  <strong>{t("experience.current")}</strong>
-                ) : null}
               </header>
               <p className="career-role__summary">{role.summary}</p>
               <details>

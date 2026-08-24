@@ -555,13 +555,17 @@ button {
 }
 
 .hero__code-card {
-    width: 245px;
+    width: 278px;
     left: 3%;
     bottom: 88px;
     font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
     font-size: 0.7rem;
     line-height: 1.65;
     transform: rotate(2.5deg);
+}
+
+.hero__code-card strong {
+    font-weight: 900;
 }
 
 .hero__code-card span,
@@ -1442,11 +1446,11 @@ button {
         top: 8px;
     }
     .hero__code-card {
-        width: 205px;
+        width: 230px;
         left: 0;
         bottom: 46px;
         padding: 13px;
-        font-size: 0.6rem;
+        font-size: 0.57rem;
     }
     .hero__component-card {
         right: 3px;

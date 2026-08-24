@@ -20,14 +20,17 @@ const en = {
       },
     },
     introduction: {
-      eyebrow: "Portfolio / 2026",
-      role: "Front-End Developer",
-      lead: "Web and mobile interfaces using Vue, React, TypeScript, and modern CSS.",
+      eyebrow: "Full-stack product engineering / 2026",
+      role: "Full-Stack Engineer",
+      lead:
+        "Web and mobile products with Vue 3, React, Node.js, TypeScript, REST APIs, and AI-enabled workflows.",
       experience: "4+ years experience",
-      location: "Auckland, New Zealand",
-      portraitAlt: "Matias Benitez, front-end engineer",
+      location: "Relocating to Auckland",
+      visa: "New Zealand Working Holiday Visa holder",
+      availability: "Available 16 September 2026",
+      portraitAlt: "Matias Benitez, full-stack engineer",
       viewWork: "View selected work",
-      canvasLabel: "Front-end development workspace",
+      canvasLabel: "Full-stack and AI-assisted development workspace",
     },
     selectedWork: {
       eyebrow: "Professional product work",
@@ -45,9 +48,9 @@ const en = {
           context:
             "An omnichannel data marketing platform where enterprise teams manage leads, campaigns, automations, and reporting from one product.",
           contribution:
-            "Developed and evolved user-facing and back-office experiences, including responsive dashboards, data visualizations, and REST API integrations.",
+            "Lead front-end architecture and delivery across user-facing and back-office experiences, including data-rich dashboards and REST API integrations.",
           outcome:
-            "A clearer, more maintainable product interface that helps teams work with complex marketing data and AI-assisted workflows.",
+            "Responsive, performant workflows that support AI-driven insights, lead management, and campaign analysis across desktop and mobile.",
           stack: [
             "Vue 3",
             "Pinia",
@@ -64,9 +67,9 @@ const en = {
           context:
             "A learning platform serving the Indian market across user-facing and administration experiences.",
           contribution:
-            "Led front-end refactoring across React and React Native, introduced stricter TDD practices, and improved custom CI/CD workflows.",
+            "Refactored the web and mobile platform with React and React Native, applying TDD practices and improving custom CI/CD pipelines.",
           outcome:
-            "A more maintainable delivery foundation with stronger testing discipline and more reliable deployment practices.",
+            "A more maintainable platform with fewer regressions and faster, more reliable deployments.",
           stack: [
             "React",
             "React Native",
@@ -81,11 +84,11 @@ const en = {
           company: "Mobeats",
           title: "Delivering products across industries and frameworks",
           context:
-            "A portfolio of healthcare, agriculture, e-commerce, and promotional-product applications with distinct product needs.",
+            "High-traffic applications, including Enfoke and Zecatdifapro, delivered across varied client requirements.",
           contribution:
-            "Built responsive web, mobile, and back-office interfaces while moving comfortably between React, Vue, Angular, React Native, and Node.js.",
+            "Developed and maintained full-stack and cross-platform features using React, Angular, Vue, React Native, and Node.js.",
           outcome:
-            "Consistent product delivery across varied domains, devices, and technical stacks while maintaining usability and cross-browser quality.",
+            "Responsive, dependable behaviour across browsers and devices, supported by systematic testing and debugging.",
           stack: [
             "React",
             "Vue",
@@ -160,23 +163,21 @@ const en = {
       eyebrow: "Career",
       title: "Experience",
       intro:
-        "A career shaped by adaptable front-end delivery, product collaboration, and steadily deeper ownership.",
-      current: "Current",
+        "Four years delivering web and mobile products, backed by strong front-end depth and a practical full-stack perspective.",
       details: "View role highlights",
       roles: [
         {
           id: "growlat",
           position: "Front-End Developer",
           company: "Growlat",
-          date: "February 2025 — Present",
-          location: "Hybrid",
-          current: true,
+          date: "February 2025 — September 2026",
+          scope: "B2B marketing platform",
           summary:
-            "Building and evolving an AI-powered omnichannel data marketing platform.",
+            "Leading front-end architecture and delivery for a Vue 3 marketing platform.",
           highlights: [
-            "Develop responsive user and back-office product experiences.",
-            "Build data dashboards and complex campaign-management interfaces.",
-            "Collaborate across product and backend teams on REST API integrations.",
+            "Build data-rich workflows and dashboards for AI-driven insights, lead management, and campaign analysis.",
+            "Improve responsive behaviour, performance, and cross-browser consistency across desktop and mobile.",
+            "Integrate product features with REST APIs and collaborate across product, design, and engineering.",
           ],
         },
         {
@@ -184,13 +185,13 @@ const en = {
           position: "Front-End Developer",
           company: "Dream Venture Studio",
           date: "March 2024 — January 2025",
-          location: "Remote, United States",
+          scope: "EdTech web and mobile",
           summary:
-            "Refactored and strengthened a large-scale EdTech platform for the Indian market.",
+            "Refactored a large-scale EdTech platform for the Indian market.",
           highlights: [
-            "Led front-end refactoring across React and React Native.",
-            "Introduced stricter Test-Driven Development practices.",
-            "Improved custom CI/CD workflows and deployment reliability.",
+            "Refactored web and mobile experiences using React and React Native.",
+            "Applied TDD practices to strengthen maintainability and reduce regressions.",
+            "Improved custom CI/CD pipelines for faster, more reliable deployments.",
           ],
         },
         {
@@ -198,13 +199,13 @@ const en = {
           position: "Front-End Developer",
           company: "Mobeats",
           date: "April 2021 — June 2023",
-          location: "Buenos Aires, Argentina",
+          scope: "Cross-platform product delivery",
           summary:
-            "Delivered web and mobile products for healthcare, agriculture, and commerce clients.",
+            "Developed and maintained high-traffic applications, including Enfoke and Zecatdifapro.",
           highlights: [
-            "Worked across React, Vue, Angular, React Native, and Node.js.",
-            "Built responsive interfaces and back-office applications.",
-            "Tested and debugged products across browsers and devices.",
+            "Delivered full-stack and cross-platform features using React, Angular, Vue, React Native, and Node.js.",
+            "Adapted implementation to varied client and product requirements.",
+            "Performed systematic testing and debugging for responsive, cross-browser behaviour.",
           ],
         },
       ],
@@ -213,37 +214,23 @@ const en = {
       eyebrow: "How I contribute",
       title: "Capabilities",
       intro:
-        "Tools matter most when they support good product decisions, maintainable systems, and dependable collaboration.",
+        "A full-stack toolkit grounded in front-end depth, dependable delivery, and practical AI-assisted development.",
       groups: [
         {
-          id: "frontend",
-          title: "Frontend systems",
+          id: "fullstack",
+          title: "Full-stack engineering",
           description:
-            "Build scalable web and mobile interfaces with clear component and state architecture.",
+            "Deliver web, mobile, and server-side features across modern JavaScript and TypeScript stacks.",
           skills: [
-            "TypeScript",
-            "JavaScript",
             "Vue 3",
             "React",
             "Angular",
             "React Native",
+            "Node.js",
+            "TypeScript",
+            "JavaScript ES6+",
             "HTML5",
             "CSS3 / Sass",
-          ],
-        },
-        {
-          id: "product",
-          title: "Product UI and data",
-          description:
-            "Turn complex workflows and information into responsive, approachable product experiences.",
-          skills: [
-            "Responsive UX",
-            "Design systems",
-            "Data visualization",
-            "ApexCharts",
-            "Tailwind CSS",
-            "PrimeVue",
-            "Figma",
           ],
         },
         {
@@ -265,33 +252,26 @@ const en = {
           id: "platform",
           title: "Backend and platform",
           description:
-            "Work effectively across API boundaries and understand the systems behind the interface.",
-          skills: [
-            "Node.js",
-            "REST APIs",
-            "PostgreSQL",
-            "MySQL",
-            "SAP BTP",
-            "Prisma",
-          ],
+            "Connect product experiences to server-side systems and platform services.",
+          skills: ["REST APIs", "Client-server integration", "SAP BTP"],
         },
         {
           id: "ai",
           title: "AI-assisted engineering",
           description:
-            "Use modern AI tooling to accelerate exploration, implementation, and technical communication.",
+            "Use modern AI tooling across implementation, debugging, and delivery.",
           skills: ["Codex", "Claude", "OpenCode", "Ollama", "MiniMax"],
         },
       ],
       collaborationEyebrow: "Working style",
       collaboration:
-        "Collaborative, detail-oriented, and comfortable learning quickly. I value clear communication, useful documentation, and small iterations that keep teams moving.",
+        "Strong front-end depth with a full-stack perspective, collaborating across product, design, and engineering in Agile teams.",
     },
     education: {
       eyebrow: "Foundations",
       title: "Education and certifications",
       intro:
-        "Formal programming foundations, full-stack training, and continued platform learning.",
+        "Formal programming foundations and certified SAP BTP platform knowledge.",
       formalTitle: "Formal education",
       certificationsTitle: "Training and certifications",
       formal: [
@@ -299,37 +279,29 @@ const en = {
           id: "technicalSchool",
           title: "Programming Technician",
           institution: "Escuela de Educación Técnica Nro. 4",
-          date: "Graduated 2020",
+          date: "2020 · Berazategui, Argentina",
           description:
-            "Six-year technical programme covering programming, databases, electronics, and software fundamentals.",
+            "Technical qualification in programming and software fundamentals.",
         },
       ],
       certifications: [
         {
-          id: "soyHenry",
-          title: "Full-Stack Development",
-          institution: "Soy Henry",
-          date: "2020 — 2021",
-          description:
-            "Intensive full-stack programme focused on React, Node.js, PostgreSQL, APIs, testing, and deployment.",
-        },
-        {
           id: "accenture",
-          title: "SAP BTP CAP-UI5",
+          title: "SAP BTP Developer Certification",
           institution: "Accenture",
           date: "2023",
           description:
-            "Platform training across SAP BTP, CAP, UI5, HANA, Fiori, Node.js, and MTA.",
+            "Developer certification for the SAP Business Technology Platform.",
         },
       ],
     },
     contact: {
-      eyebrow: "Let’s build something useful",
-      title:
-        "Looking for a front-end engineer who cares about the whole product?",
+      eyebrow: "Relocating to Auckland",
+      title: "Let’s build an ambitious product together.",
       intro:
-        "I am open to product engineering opportunities in New Zealand where I can help turn ambitious ideas into clear, dependable experiences.",
+        "Available from 16 September 2026 for full-stack, software engineering, or AI-enabled product roles in New Zealand.",
       email: "Email me",
+      phone: "Call me",
       designed: "Designed and developed by Matias Benitez",
       footerLabel: "Footer",
     },
@@ -355,14 +327,17 @@ const es = {
       },
     },
     introduction: {
-      eyebrow: "Portfolio / 2026",
-      role: "Desarrollador Front-End",
-      lead: "Interfaces web y mobile con Vue, React, TypeScript y CSS moderno.",
+      eyebrow: "Ingeniería de producto full-stack / 2026",
+      role: "Ingeniero Full-Stack",
+      lead:
+        "Productos web y mobile con Vue 3, React, Node.js, TypeScript, APIs REST y flujos potenciados por IA.",
       experience: "Más de 4 años de experiencia",
-      location: "Auckland, Nueva Zelanda",
-      portraitAlt: "Matias Benitez, ingeniero front-end",
+      location: "Próxima radicación en Auckland",
+      visa: "Visa Working Holiday de Nueva Zelanda",
+      availability: "Disponible desde el 16 de septiembre de 2026",
+      portraitAlt: "Matias Benitez, ingeniero full-stack",
       viewWork: "Ver trabajo destacado",
-      canvasLabel: "Espacio de trabajo de desarrollo front-end",
+      canvasLabel: "Espacio de desarrollo full-stack asistido por IA",
     },
     selectedWork: {
       eyebrow: "Trabajo profesional de producto",
@@ -380,9 +355,9 @@ const es = {
           context:
             "Plataforma omnicanal donde equipos empresariales gestionan leads, campañas, automatizaciones y reportes.",
           contribution:
-            "Desarrollé y evolucioné experiencias de usuario y back-office, dashboards responsivos, visualizaciones e integraciones REST.",
+            "Lidero la arquitectura y entrega front-end de experiencias de usuario y back-office, dashboards de datos e integraciones REST.",
           outcome:
-            "Una interfaz más clara y mantenible para trabajar con datos de marketing y flujos asistidos por IA.",
+            "Flujos responsivos y de alto rendimiento para insights con IA, gestión de leads y análisis de campañas en desktop y mobile.",
           stack: [
             "Vue 3",
             "Pinia",
@@ -399,9 +374,9 @@ const es = {
           context:
             "Plataforma educativa para el mercado de India con experiencias para estudiantes y administración.",
           contribution:
-            "Lideré refactors en React y React Native, incorporé prácticas TDD más estrictas y mejoré flujos CI/CD.",
+            "Refactoricé la plataforma web y mobile con React y React Native, aplicando TDD y mejorando pipelines CI/CD propios.",
           outcome:
-            "Una base más mantenible, con mejor disciplina de testing y despliegues más confiables.",
+            "Una plataforma más mantenible, con menos regresiones y despliegues más rápidos y confiables.",
           stack: [
             "React",
             "React Native",
@@ -416,11 +391,11 @@ const es = {
           company: "Mobeats",
           title: "Entregando productos entre industrias y frameworks",
           context:
-            "Aplicaciones de salud, agricultura, e-commerce y productos promocionales con necesidades distintas.",
+            "Aplicaciones de alto tráfico, incluidas Enfoke y Zecatdifapro, desarrolladas para distintos requerimientos de clientes.",
           contribution:
-            "Construí interfaces web, mobile y back-office usando React, Vue, Angular, React Native y Node.js.",
+            "Desarrollé y mantuve funcionalidades full-stack y multiplataforma con React, Angular, Vue, React Native y Node.js.",
           outcome:
-            "Entrega consistente en distintos dominios, dispositivos y stacks, manteniendo usabilidad y calidad cross-browser.",
+            "Comportamiento responsivo y confiable en distintos navegadores y dispositivos, mediante testing y debugging sistemáticos.",
           stack: [
             "React",
             "Vue",
@@ -496,23 +471,21 @@ const es = {
       eyebrow: "Carrera",
       title: "Experiencia",
       intro:
-        "Una carrera construida sobre entrega front-end adaptable, colaboración de producto y mayor responsabilidad.",
-      current: "Actual",
+        "Cuatro años entregando productos web y mobile, con sólida profundidad front-end y una perspectiva full-stack práctica.",
       details: "Ver detalles del rol",
       roles: [
         {
           id: "growlat",
           position: "Desarrollador Front-End",
           company: "Growlat",
-          date: "Febrero 2025 — Presente",
-          location: "Híbrido",
-          current: true,
+          date: "Febrero 2025 — Septiembre 2026",
+          scope: "Plataforma de marketing B2B",
           summary:
-            "Construcción y evolución de una plataforma omnicanal de marketing impulsada por IA.",
+            "Lidero la arquitectura y entrega front-end de una plataforma de marketing en Vue 3.",
           highlights: [
-            "Desarrollo experiencias responsivas de usuario y back-office.",
-            "Creo dashboards de datos e interfaces complejas de campañas.",
-            "Colaboro con producto y backend en integraciones REST.",
+            "Construyo flujos y dashboards de datos para insights con IA, gestión de leads y análisis de campañas.",
+            "Mejoro responsividad, rendimiento y consistencia cross-browser en desktop y mobile.",
+            "Integro funcionalidades con APIs REST y colaboro con producto, diseño e ingeniería.",
           ],
         },
         {
@@ -520,13 +493,13 @@ const es = {
           position: "Desarrollador Front-End",
           company: "Dream Venture Studio",
           date: "Marzo 2024 — Enero 2025",
-          location: "Remoto, Estados Unidos",
+          scope: "EdTech web y mobile",
           summary:
-            "Refactor y fortalecimiento de una plataforma EdTech para el mercado de India.",
+            "Refactoricé una plataforma EdTech a gran escala para el mercado de India.",
           highlights: [
-            "Lideré refactors en React y React Native.",
-            "Incorporé prácticas más estrictas de Test-Driven Development.",
-            "Mejoré flujos CI/CD y confiabilidad de despliegues.",
+            "Refactoricé experiencias web y mobile con React y React Native.",
+            "Apliqué TDD para mejorar la mantenibilidad y reducir regresiones.",
+            "Mejoré pipelines CI/CD propios para despliegues más rápidos y confiables.",
           ],
         },
         {
@@ -534,13 +507,13 @@ const es = {
           position: "Desarrollador Front-End",
           company: "Mobeats",
           date: "Abril 2021 — Junio 2023",
-          location: "Buenos Aires, Argentina",
+          scope: "Entrega de productos multiplataforma",
           summary:
-            "Entrega de productos web y mobile para salud, agricultura y comercio.",
+            "Desarrollé y mantuve aplicaciones de alto tráfico, incluidas Enfoke y Zecatdifapro.",
           highlights: [
-            "Trabajé con React, Vue, Angular, React Native y Node.js.",
-            "Construí interfaces responsivas y aplicaciones back-office.",
-            "Probé y depuré productos en múltiples navegadores y dispositivos.",
+            "Entregué funcionalidades full-stack y multiplataforma con React, Angular, Vue, React Native y Node.js.",
+            "Adapté la implementación a diferentes requerimientos de clientes y productos.",
+            "Realicé testing y debugging sistemáticos para asegurar comportamiento responsivo y cross-browser.",
           ],
         },
       ],
@@ -549,37 +522,23 @@ const es = {
       eyebrow: "Cómo contribuyo",
       title: "Capacidades",
       intro:
-        "Las herramientas importan cuando sostienen buenas decisiones de producto, sistemas mantenibles y colaboración confiable.",
+        "Un toolkit full-stack apoyado en profundidad front-end, entrega confiable y desarrollo práctico asistido por IA.",
       groups: [
         {
-          id: "frontend",
-          title: "Sistemas front-end",
+          id: "fullstack",
+          title: "Ingeniería full-stack",
           description:
-            "Construyo interfaces web y mobile escalables con arquitectura clara de componentes y estado.",
+            "Entrego funcionalidades web, mobile y de servidor con stacks modernos de JavaScript y TypeScript.",
           skills: [
-            "TypeScript",
-            "JavaScript",
             "Vue 3",
             "React",
             "Angular",
             "React Native",
+            "Node.js",
+            "TypeScript",
+            "JavaScript ES6+",
             "HTML5",
             "CSS3 / Sass",
-          ],
-        },
-        {
-          id: "product",
-          title: "UI de producto y datos",
-          description:
-            "Convierto flujos e información compleja en experiencias responsivas y accesibles.",
-          skills: [
-            "UX responsiva",
-            "Sistemas de diseño",
-            "Visualización de datos",
-            "ApexCharts",
-            "Tailwind CSS",
-            "PrimeVue",
-            "Figma",
           ],
         },
         {
@@ -601,33 +560,26 @@ const es = {
           id: "platform",
           title: "Backend y plataforma",
           description:
-            "Trabajo efectivamente sobre límites de API y comprendo los sistemas detrás de la interfaz.",
-          skills: [
-            "Node.js",
-            "APIs REST",
-            "PostgreSQL",
-            "MySQL",
-            "SAP BTP",
-            "Prisma",
-          ],
+            "Conecto experiencias de producto con sistemas de servidor y servicios de plataforma.",
+          skills: ["APIs REST", "Integración cliente-servidor", "SAP BTP"],
         },
         {
           id: "ai",
           title: "Ingeniería asistida por IA",
           description:
-            "Uso herramientas modernas de IA para acelerar exploración, implementación y comunicación técnica.",
+            "Uso herramientas modernas de IA durante implementación, debugging y entrega.",
           skills: ["Codex", "Claude", "OpenCode", "Ollama", "MiniMax"],
         },
       ],
       collaborationEyebrow: "Forma de trabajo",
       collaboration:
-        "Colaborativo, detallista y cómodo aprendiendo rápido. Valoro la comunicación clara, documentación útil e iteraciones pequeñas.",
+        "Sólida profundidad front-end con perspectiva full-stack, colaborando con producto, diseño e ingeniería en equipos Agile.",
     },
     education: {
       eyebrow: "Fundamentos",
       title: "Educación y certificaciones",
       intro:
-        "Fundamentos formales de programación, formación full-stack y aprendizaje continuo de plataformas.",
+        "Fundamentos formales de programación y conocimiento certificado de la plataforma SAP BTP.",
       formalTitle: "Educación formal",
       certificationsTitle: "Formación y certificaciones",
       formal: [
@@ -635,37 +587,29 @@ const es = {
           id: "technicalSchool",
           title: "Técnico en Programación",
           institution: "Escuela de Educación Técnica Nro. 4",
-          date: "Graduado en 2020",
+          date: "2020 · Berazategui, Argentina",
           description:
-            "Programa técnico de seis años sobre programación, bases de datos, electrónica y fundamentos de software.",
+            "Título técnico en programación y fundamentos de software.",
         },
       ],
       certifications: [
         {
-          id: "soyHenry",
-          title: "Desarrollo Full-Stack",
-          institution: "Soy Henry",
-          date: "2020 — 2021",
-          description:
-            "Programa intensivo enfocado en React, Node.js, PostgreSQL, APIs, testing y despliegue.",
-        },
-        {
           id: "accenture",
-          title: "SAP BTP CAP-UI5",
+          title: "Certificación de Desarrollador SAP BTP",
           institution: "Accenture",
           date: "2023",
           description:
-            "Formación en SAP BTP, CAP, UI5, HANA, Fiori, Node.js y MTA.",
+            "Certificación de desarrollo para SAP Business Technology Platform.",
         },
       ],
     },
     contact: {
-      eyebrow: "Construyamos algo útil",
-      title:
-        "¿Buscas un ingeniero front-end que se preocupe por todo el producto?",
+      eyebrow: "Próxima radicación en Auckland",
+      title: "Construyamos juntos un producto ambicioso.",
       intro:
-        "Estoy abierto a oportunidades de ingeniería de producto en Nueva Zelanda donde pueda convertir ideas ambiciosas en experiencias claras y confiables.",
+        "Disponible desde el 16 de septiembre de 2026 para roles full-stack, de ingeniería de software o de productos potenciados por IA en Nueva Zelanda.",
       email: "Enviar email",
+      phone: "Llamar",
       designed: "Diseñado y desarrollado por Matias Benitez",
       footerLabel: "Pie de página",
     },

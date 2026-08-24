@@ -28,6 +28,14 @@ export const Introduction = () => {
             {t("introduction.location")}
             <img src={NewZealandFlag} width="18" height="18" alt="" />
           </span>
+          <span>
+            <Icon icon="lucide:badge-check" aria-hidden />
+            {t("introduction.visa")}
+          </span>
+          <span>
+            <Icon icon="lucide:calendar-check-2" aria-hidden />
+            {t("introduction.availability")}
+          </span>
         </div>
         <div className="hero__actions">
           <a href="#selected-work" className="button button--primary">
@@ -58,20 +66,23 @@ export const Introduction = () => {
           <img src={ProfilePic} alt={t("introduction.portraitAlt")} />
         </div>
         <div className="hero__code-card glass-panel" aria-hidden>
-          <span>interface</span> ProductUI {"{"}
+          <span>const</span> engineer = {"{"}
           <br />
-          &nbsp;&nbsp;responsive: <strong>true</strong>;
+          &nbsp;&nbsp;frontend: [<strong>"Vue 3"</strong>, <strong>"React"</strong>],
           <br />
-          &nbsp;&nbsp;accessible: <strong>true</strong>;
+          &nbsp;&nbsp;backend: <strong>"Node.js + REST"</strong>,
+          <br />
+          &nbsp;&nbsp;workflow: <strong>"AI-assisted"</strong>,
           <br />
           {"}"}
         </div>
         <div className="hero__component-card glass-panel" aria-hidden>
-          <span>Component stack</span>
+          <span>Full-stack toolkit</span>
           <div>
             <Icon icon="simple-icons:vuedotjs" />
             <Icon icon="simple-icons:react" />
             <Icon icon="simple-icons:typescript" />
+            <Icon icon="simple-icons:nodedotjs" />
           </div>
         </div>
       </div>

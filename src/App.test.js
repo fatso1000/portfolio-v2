@@ -11,13 +11,26 @@ test("presents the evidence-led hero and primary actions", () => {
 
   expect(
     screen.getByRole("heading", {
-      name: /Matias Benitez Front-End Developer/i,
+      name: /Matias Benitez Full-Stack Engineer/i,
     }),
   ).toBeInTheDocument();
   expect(
     screen.getByRole("link", { name: /View selected work/i }),
   ).toHaveAttribute("href", "#selected-work");
-  expect(screen.getAllByRole("link", { name: /Download CV/i })).toHaveLength(2);
+  const resumeLinks = screen.getAllByRole("link", { name: /Download CV/i });
+  expect(resumeLinks).toHaveLength(2);
+  resumeLinks.forEach((link) =>
+    expect(link).toHaveAttribute(
+      "href",
+      "/Matias_Benitez_NZ_Full_Stack_AI_Engineer_CV_2026_Auckland.pdf",
+    ),
+  );
+  expect(
+    screen.getByText(/New Zealand Working Holiday Visa holder/i),
+  ).toBeInTheDocument();
+  expect(
+    screen.getByText(/Available 16 September 2026/i),
+  ).toBeInTheDocument();
 });
 
 test("includes every section in the navigation menu", () => {
@@ -57,7 +70,7 @@ test("switches the portfolio to Spanish", () => {
 
   expect(
     screen.getByRole("heading", {
-      name: /Matias Benitez Desarrollador Front-End/i,
+      name: /Matias Benitez Ingeniero Full-Stack/i,
     }),
   ).toBeInTheDocument();
 });

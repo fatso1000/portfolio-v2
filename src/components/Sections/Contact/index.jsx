@@ -20,6 +20,10 @@ export const ContactMe = () => {
             <Icon icon="lucide:mail" aria-hidden />
             {t("contact.email")}
           </a>
+          <a className="button button--glass" href="tel:+541158298399">
+            <Icon icon="lucide:phone" aria-hidden />
+            {t("contact.phone")}
+          </a>
           <a
             className="button button--glass"
             href="https://www.linkedin.com/in/matias-benitez81/"

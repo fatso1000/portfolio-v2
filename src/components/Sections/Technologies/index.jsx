@@ -5,24 +5,16 @@ import { SectionHeader } from "../../SectionHeader";
 import { capabilityIcons } from "../../../data/portfolio";
 
 const SKILL_ICONS = {
-  frontend: [
-    "simple-icons:typescript",
-    "simple-icons:javascript",
+  fullstack: [
     "simple-icons:vuedotjs",
     "simple-icons:react",
     "simple-icons:angular",
     "tabler:brand-react-native",
+    "simple-icons:nodedotjs",
+    "simple-icons:typescript",
+    "simple-icons:javascript",
     "simple-icons:html5",
     "simple-icons:sass",
-  ],
-  product: [
-    "lucide:monitor-smartphone",
-    "lucide:component",
-    "lucide:chart-no-axes-combined",
-    "simple-icons:apexcharts",
-    "simple-icons:tailwindcss",
-    "simple-icons:primevue",
-    "simple-icons:figma",
   ],
   quality: [
     "simple-icons:jest",
@@ -34,12 +26,9 @@ const SKILL_ICONS = {
     "lucide:refresh-cw",
   ],
   platform: [
-    "simple-icons:nodedotjs",
     "lucide:plug-zap",
-    "simple-icons:postgresql",
-    "simple-icons:mysql",
+    "lucide:network",
     "simple-icons:sap",
-    "simple-icons:prisma",
   ],
   ai: [
     "simple-icons:openai",
@@ -51,8 +40,7 @@ const SKILL_ICONS = {
 };
 
 const CARD_VARIANTS = {
-  frontend: "capability-card--hero",
-  product: "capability-card--tall",
+  fullstack: "capability-card--hero",
   quality: "capability-card--compact",
   platform: "capability-card--wide",
   ai: "capability-card--compact",
