@@ -25,9 +25,7 @@ const en = {
       lead:
         "Web and mobile products with Vue 3, React, Node.js, TypeScript, REST APIs, and AI-enabled workflows.",
       experience: "4+ years experience",
-      location: "Relocating to Auckland",
-      visa: "New Zealand Working Holiday Visa holder",
-      availability: "Available 16 September 2026",
+      location: "New Zealand",
       portraitAlt: "Matias Benitez, full-stack engineer",
       viewWork: "View selected work",
       canvasLabel: "Full-stack and AI-assisted development workspace",
@@ -296,10 +294,10 @@ const en = {
       ],
     },
     contact: {
-      eyebrow: "Relocating to Auckland",
+      eyebrow: "Let’s build something useful",
       title: "Let’s build an ambitious product together.",
       intro:
-        "Available from 16 September 2026 for full-stack, software engineering, or AI-enabled product roles in New Zealand.",
+        "Open to full-stack, software engineering, and AI-enabled product opportunities.",
       email: "Email me",
       phone: "Call me",
       designed: "Designed and developed by Matias Benitez",
@@ -332,9 +330,7 @@ const es = {
       lead:
         "Productos web y mobile con Vue 3, React, Node.js, TypeScript, APIs REST y flujos potenciados por IA.",
       experience: "Más de 4 años de experiencia",
-      location: "Próxima radicación en Auckland",
-      visa: "Visa Working Holiday de Nueva Zelanda",
-      availability: "Disponible desde el 16 de septiembre de 2026",
+      location: "Nueva Zelanda",
       portraitAlt: "Matias Benitez, ingeniero full-stack",
       viewWork: "Ver trabajo destacado",
       canvasLabel: "Espacio de desarrollo full-stack asistido por IA",
@@ -604,10 +600,10 @@ const es = {
       ],
     },
     contact: {
-      eyebrow: "Próxima radicación en Auckland",
+      eyebrow: "Construyamos algo útil",
       title: "Construyamos juntos un producto ambicioso.",
       intro:
-        "Disponible desde el 16 de septiembre de 2026 para roles full-stack, de ingeniería de software o de productos potenciados por IA en Nueva Zelanda.",
+        "Abierto a oportunidades full-stack, de ingeniería de software y de productos potenciados por IA.",
       email: "Enviar email",
       phone: "Llamar",
       designed: "Diseñado y desarrollado por Matias Benitez",

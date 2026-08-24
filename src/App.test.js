@@ -25,12 +25,7 @@ test("presents the evidence-led hero and primary actions", () => {
       "/Matias_Benitez_NZ_Full_Stack_AI_Engineer_CV_2026_Auckland.pdf",
     ),
   );
-  expect(
-    screen.getByText(/New Zealand Working Holiday Visa holder/i),
-  ).toBeInTheDocument();
-  expect(
-    screen.getByText(/Available 16 September 2026/i),
-  ).toBeInTheDocument();
+  expect(screen.getByText("New Zealand")).toBeInTheDocument();
 });
 
 test("includes every section in the navigation menu", () => {

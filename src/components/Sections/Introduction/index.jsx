@@ -28,14 +28,6 @@ export const Introduction = () => {
             {t("introduction.location")}
             <img src={NewZealandFlag} width="18" height="18" alt="" />
           </span>
-          <span>
-            <Icon icon="lucide:badge-check" aria-hidden />
-            {t("introduction.visa")}
-          </span>
-          <span>
-            <Icon icon="lucide:calendar-check-2" aria-hidden />
-            {t("introduction.availability")}
-          </span>
         </div>
         <div className="hero__actions">
           <a href="#selected-work" className="button button--primary">
