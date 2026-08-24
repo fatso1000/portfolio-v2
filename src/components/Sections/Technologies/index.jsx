@@ -60,7 +60,7 @@ export const Technologies = () => {
           title={t("capabilities.title")}
           intro={t("capabilities.intro")}
         />
-        <div className="capability-grid">
+        <div className="capability-layout">
           {groups.map((group) => (
             <article
               className={`capability-card capability-card--${group.id} glass-panel ${CARD_VARIANTS[group.id]}`}

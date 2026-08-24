@@ -4,6 +4,9 @@ import "./index.css";
 import "./i18n";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { applyCapabilityLayout } from "./utils/capabilityLayout";
+
+applyCapabilityLayout(document.documentElement, window.navigator.userAgent);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
