@@ -108,6 +108,13 @@ const en = {
       preview: "project preview",
       featured: [
         {
+          id: "togetherExpenses",
+          title: "Daily Expenses",
+          description:
+            "A privacy-first PWA for tracking daily expenses and grocery budgets with client-side OCR receipt scanning, weekly limits, multi-currency support, and encrypted Firebase sync.",
+          stack: ["Vue 3", "TypeScript", "Pinia", "Firebase", "PWA"],
+        },
+        {
           id: "bsasTravel",
           title: "BSAS Travel",
           description:
@@ -412,6 +419,13 @@ const es = {
       source: "Ver código",
       preview: "vista previa del proyecto",
       featured: [
+        {
+          id: "togetherExpenses",
+          title: "Daily Expenses",
+          description:
+            "PWA enfocada en privacidad para el control de gastos diarios y presupuestos de compras con escaneo OCR de recibos en el cliente, límites semanales, soporte multimoneda y sincronización cifrada con Firebase.",
+          stack: ["Vue 3", "TypeScript", "Pinia", "Firebase", "PWA"],
+        },
         {
           id: "bsasTravel",
           title: "BSAS Travel",

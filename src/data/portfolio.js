@@ -10,6 +10,7 @@ import MercadoLibreImage from "../assets/projects/mercadolibre_clone.jpg";
 import OsCloneImage from "../assets/projects/so_clone.jpg";
 import PersonalBlogImage from "../assets/projects/personal_blog.png";
 import PortfolioImage from "../assets/projects/portfolio.png";
+import TogetherExpensesImage from "../assets/projects/together_expenses.png";
 
 export const resumeUrl =
   process.env.PUBLIC_URL +
@@ -32,6 +33,11 @@ export const workAssets = {
 };
 
 export const projectAssets = {
+  togetherExpenses: {
+    image: TogetherExpensesImage,
+    source: "https://github.com/fatso1000/together-expenses",
+    live: "https://expenses-tracker-fec08.web.app/#/",
+  },
   bsasTravel: {
     image: BsasTravelImage,
     source: "https://github.com/fatso1000/bsas-travel",
